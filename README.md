@@ -30,6 +30,15 @@ Final group project of the Makers Academy bootcamp during weeks 11 and 12, we de
 
 ## How to run locally
 
+### Set up
+#### Client
+* To initialise an empty react application `npx create-react-app ./` in the client directory
+* `npm install axios moment react-file-base64 redux redux-thunk` (in order of being installed: to make api requests, a library to work with time and date, to convert images, asynchronous actions using redux)
+
+#### Server
+* `npm init -y` to initialise an empty package.json file
+* `npm install body-parser cors express mongoose nodemon` to install all necessary dependencies (in order of being installed: enable app to send recipe requests, enable cross origin requests, framework of the application, create models for the recipes, to have the browser reload everytime a change is made)
+
 ## Card wall
 We used a [Trello](https://trello.com/b/b9m4qtRa/brainsonbrioche) board to keep track of the features we want to implement. We organised tickets amongst the team and moved the tickets accordingly to demonstrate at what stage that feature's at (To do/In progress/In review etc.).
 
