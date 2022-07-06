@@ -30,8 +30,9 @@ const Recipes = () => {
   return (
     <>
       <h1>RECIPES</h1>
-      <Recipe recipe={recipes[0]}/>
-      <Recipe recipe={recipes[1]}/>
+      {recipes.map((recipe) => (
+        <Recipe recipe={recipe}/>
+      ))}
     </>
   )
 }
