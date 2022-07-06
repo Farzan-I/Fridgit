@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Recipe = () => {
+const Recipe = (props) => {
   return (
-    <h1>RECIPE</h1>
+    <h1>{props.recipe}</h1>
   );
 }
+
 
 export default Recipe
