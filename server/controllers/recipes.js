@@ -1,5 +1,6 @@
-import Recipes from '../externalApi/recipes.js';
+import fetchRecipes from '../externalApi/recipes.js';
 
 export const getRecipes = (req, res) => {
-  res.send(Recipes);
+    fetchRecipes()
+      .then(response => res.send(response))
 }
