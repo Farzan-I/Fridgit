@@ -4,10 +4,9 @@ import { useSelector } from 'react-redux';
 import Recipe from './Recipe/Recipe';
 
 const Recipes = () => {
-  const recipes = useSelector((state) => state.recipes);
-
-  console.log(recipes)
-
+  const recipes = useSelector((state) => state);
+  const meals = useSelector((state) => state.meals)
+  
   // return (
   //   !recipes.length ? <CircularProgress /> : (
   //     <Grid>

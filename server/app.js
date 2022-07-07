@@ -5,6 +5,7 @@ import cors from 'cors';
 
 // Importing routes
 import recipesRoutes from './routes/recipes.js';
+import mealDataRoutes from './routes/mealData.js'
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/recipes', recipesRoutes);
+app.use('/meals', mealDataRoutes)
 
 const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 4000;

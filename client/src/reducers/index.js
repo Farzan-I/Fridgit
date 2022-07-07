@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux'; 
 
-import recipes from './recipes'
+import recipes from './recipes.js'
 
-export default combineReducers({ recipes })
+import meals from './fetchMeals.js'
+
+export default combineReducers({ 
+  meals,
+  recipes
+})
