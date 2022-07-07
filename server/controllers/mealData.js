@@ -1,6 +1,7 @@
-import mealData from '../externalApi/mealData.js'
+import fetchMealData from '../externalApi/mealData.js'
 
 export const getMealData = (req, res) => {
-  res.send(mealData)
+  fetchMealData()
+  .then(response => res.send(response))
 }
 
