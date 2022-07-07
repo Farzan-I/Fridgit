@@ -5,3 +5,5 @@
     }
   }
 }
+
+//had to run npm install --save-dev @babel/plugin-transform-modules-commonjs
