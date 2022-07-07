@@ -4,3 +4,4 @@ export const getRecipes = (req, res) => {
     fetchRecipes()
       .then(response => res.send(response))
 }
+
