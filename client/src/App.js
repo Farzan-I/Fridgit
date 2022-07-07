@@ -15,16 +15,12 @@ const App = () => {
   }, [dispatch]);
 
   return (
-
     <div>
       <Navbar />
       <Input />
       <Meals />
     </div>
-  
   );
-
-
 }
 
 export default App;
