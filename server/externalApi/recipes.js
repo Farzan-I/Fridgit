@@ -26,3 +26,7 @@ const fetchRecipes = () => {
 }
 
 export default fetchRecipes;
+
+// introduce a form/fetch (localhost/ingredients) send value of input form
+
+// 
