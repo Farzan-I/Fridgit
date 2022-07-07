@@ -5,7 +5,7 @@ const fetchMealData = () => {
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       params: {
-        ingredients: 'pork, sage',
+        ingredients: 'turbot',
         number: '5',
         ignorePantry: 'true',
         ranking: '1'
