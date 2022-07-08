@@ -6,6 +6,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 const Input = () => {
+
+  // const [searchData, setSearchData] = useState({
+  //   ingredients: ''
+  // })
+
+  // const clear = () => {
+  //   // setCurrentId(0);
+  //   setSearchData({ ingredients: '' });
+  // };
+
   // const mealsUrl = 'http://localhost:4000/meals/search';
 
   // const searchMeals = () => axios.post(mealsUrl, {
@@ -16,6 +26,7 @@ const Input = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //this is what prevents the page re-rendering
     
     dispatch(getMealData("beef, potatoes"));
   };
