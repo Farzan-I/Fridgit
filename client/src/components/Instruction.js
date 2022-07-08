@@ -3,7 +3,20 @@ import axios from 'axios';
 import { getMealData } from '../actions/fetchMeals.js'
 import { useDispatch, useSelector } from 'react-redux';
 
+//inside each meal container, need code to say that when tile is clicked 
+//on, send this request to the server. This returns response to change 
+//state of something called instructions, initially empty in state, once 
+//state changes and is populated with instructions, all that gets
+//printed into instructions container
 
+//server needs:
+//route
+//controller
+
+//client needs:
+//reducers
+//check actions
+//Instruction component 
 
 const Input = () => {
 
