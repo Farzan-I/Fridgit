@@ -25,7 +25,9 @@ Final group project of the Makers Academy bootcamp during weeks 11 and 12, we de
 - [Mongoose](https://mongoosejs.com) to model objects in MongoDB.
 - [ESLint](https://eslint.org) for linting.
 - [Jest](https://jestjs.io/) for testing.
+- [Redux](https://redux.js.org/) to help with consistency across client, server, and native environments and make testing easier.
 - [Cypress](https://www.cypress.io/) for end-to-end testing.
+- [Axios](https://axios-http.com/) promise based HTTP client for the browser and node.js.
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html) for styling of the webpages.
 
 ## How to run locally
@@ -69,6 +71,12 @@ I would like to see the steps of the recipe.
 ## Further User Stories
 
 ## Minimum Viable Product (MVP)
+<details>
+<summary> 🍽 Search bar on the home page </summary>
+
+* User can type an ingredient and get a maximum of 5 recipes given back
+* 
+</details>
 
 ## Wireframes
 ![Wireframe 1](public/images/_____.png)
