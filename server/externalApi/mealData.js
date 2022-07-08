@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const fetchMealData = () => {
+const fetchMealData = (input = 'turbot') => {
     const options = {
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       params: {
-        ingredients: 'turbot',
+        ingredients: input,
         number: '5',
         ignorePantry: 'true',
         ranking: '1'
