@@ -4,9 +4,8 @@ import { useSelector } from 'react-redux';
 import Meal from './Meal/Meal.js'
 
 export default function Meals() {
-  const mealsData = useSelector((state) => state.meals)
+  const mealsData = useSelector((state) => state.meals) // meals is defined in reducers-index
   
-
   const meals = mealsData.map((meal) => {
     return (
       <Meal 

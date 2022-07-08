@@ -10,6 +10,7 @@ import { getMealData } from './actions/fetchMeals.js'
 const App = () => {
   const dispatch = useDispatch();
 
+  // this is the call to the backend
   useEffect(() => {
     dispatch(getMealData());
   }, [dispatch]);

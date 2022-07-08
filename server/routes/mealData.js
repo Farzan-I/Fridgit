@@ -4,7 +4,7 @@ import { getMealData, searchMealDB } from '../controllers/mealData.js'
 
 const router = express.Router();
 
-router.get('/', getMealData);
-router.post('/', searchMealDB);
+router.post('/', getMealData);
+router.post('/search', searchMealDB);
 
 export default router;
