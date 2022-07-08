@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { getMealData } from '../actions/fetchMeals.js'
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,14 +7,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Input = () => {
 
-  // const [searchData, setSearchData] = useState({
-  //   ingredients: ''
-  // })
+  const [searchData, setSearchData] = useState({
+    ingredients: ''
+  })
 
-  // const clear = () => {
-  //   // setCurrentId(0);
-  //   setSearchData({ ingredients: '' });
-  // };
+  const clear = () => {
+    // setCurrentId(0);
+    setSearchData({ ingredients: '' });
+  };
 
   // const mealsUrl = 'http://localhost:4000/meals/search';
 
@@ -28,7 +28,7 @@ const Input = () => {
     e.preventDefault();
     //this is what prevents the page re-rendering
     
-    dispatch(getMealData("beef, potatoes"));
+    dispatch(getMealData(searchData.ingredients));
   };
 
   return (
@@ -38,7 +38,7 @@ const Input = () => {
           type="text"
           className="form--input"
           placeholder="Ingredients here..."
-          value="Egg"
+          value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
         />
         <input type="submit" />
       </form>
