@@ -8,8 +8,18 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: azure;
+  text-align: center;
+  background-color: #376E6F;
+  animation-name: example;
+  animation-duration: 10s;
 }
+
+@keyframes example {
+  0%   {background-color: #376E6F;}
+  50%  {background-color: #00887A;}
+  100% {background-color: #376E6F;}
+}
+
 
 .gray {
   color: gray
@@ -29,7 +39,7 @@ nav {
   padding: 30px 25px;
   left: 0px;
   top: 0px;
-  background-color: blueviolet;
+  background-color: #da7b93;
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
@@ -41,8 +51,9 @@ nav {
 }
 
 .nav--title {
-  color: #F1E9DA;
+  color: #376E6F;
   font-size: 40px;
+  -webkit-text-stroke: 0.000005px black;
 }
 
 .nav--tagline {
@@ -52,22 +63,25 @@ nav {
 
 .form {
   display: grid;
+  text-align: center;
   padding: 20px;
   height: 50px;
 }
 .form--input {
   font-family: "Inter", sans-serif;
+  text-align: center;
   border-radius: 5px;
-  border: 1px solid #D5D4D8;
-  text-indent: 5px
+  border: 1px solid #ed3390;
+  text-indent: 5px;
 }
 
 .form--button {
   font-family: "Inter", sans-serif;
+  text-align: center;
   grid-column: 2 / -1;
   border-radius: 5px;
   color: white;
-  background: blueviolet;
+  background: #da7b93;
 }
 
 .meal-card {
@@ -108,4 +122,38 @@ nav {
 
 .meal-card--like-thumb {
   width: 10px;
+}
+
+.input--header {
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: #DA7B93;
+  
+}
+
+.instructions--header {
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: #DA7B93;
+}
+
+.recipe--instructions {
+  padding: 30px;
+  text-align: center;
+  color: #DA7B93;
+}
+
+.home--link {
+  text-align: right;
+}
+
+.about--link {
+
+  text-align: right;
+}
+
+.contact--link {
+  text-align: right;
 }

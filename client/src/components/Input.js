@@ -33,6 +33,7 @@ const Input = () => {
 
   return (
     <div className="form">
+      <h1 className="input--header">What's in your fridge?</h1>
       <form onSubmit={handleSubmit}>
         <input 
           type="text"
@@ -40,7 +41,7 @@ const Input = () => {
           placeholder="Ingredients here..."
           value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
         />
-        <input type="submit" />
+        <input type="submit" className="form--button"/>
       </form>
     </div>
   );
