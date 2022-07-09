@@ -3,19 +3,18 @@ import React from "react"
 
 const Instruction = (props) => {
 
-  console.log(props.instructionData[0].steps)
-
-
-  if (props.instructionData[0].steps) {
-    const instructionList = props.instructionData[0].steps.map((step) => {
+  
+  console.log(props.instructionData)
+  
+  if (props.instructionData.analyzedInstructions[0]) {
+    const instructionList = props.instructionData.analyzedInstructions[0].steps.map((step) => {
     return (
       <div>
-      <ul>
-      <li>
-      {step.step}
-      </li>
-
-      </ul>
+        <ul>
+          <li>
+          {step.step}
+          </li>
+        </ul>
       </div>
       )
     })
@@ -29,6 +28,8 @@ const Instruction = (props) => {
 } else {
   return (<div>
     <h1>Instructions</h1>
+    <p>Sorry this recipe does not have any available instructions. Please visit</p>
+    <a href={props.instructionData.sourceUrl}>{props.instructionData.sourceUrl}</a>
   </div>)
 }
 
