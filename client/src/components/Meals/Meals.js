@@ -8,18 +8,21 @@ export default function Meals() {
   const mealsData = useSelector((state) => state.meals) // meals is defined in reducers-index
   
   const instructionData = useSelector((state) => state.instructions)
+  console.log(instructionData)
 
-  const instructions = {instructionData: instructionData}
-  
-  console.log("Meals component:" + instructionData)
-  const meals = mealsData.map((meal) => {
-    return (
-      <>
+  let instructions = {instructionData: [{steps: {step: "No Instructions"}}]}
+
+  if (instructionData !== []) {
+    instructions = {instructionData: instructionData}
+    
+  } 
+    console.log("Meals component:" + instructionData)
+    const meals = mealsData.map((meal) => {
+      return (
       <Meal 
         key={meal.id}
         {...meal}
       />
-      </>
     )
   })
 
@@ -28,10 +31,12 @@ export default function Meals() {
     <section className="meal--list">
       {meals}
     </section>
-     {/* <Instruction
+    <section className="instructions--tile">
+     <Instruction
         {...instructions}
-      /> */}
-      
+      />
+
+    </section>
     </div>
   )
 }
