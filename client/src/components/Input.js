@@ -11,16 +11,10 @@ const Input = () => {
     ingredients: ''
   })
 
-  const clear = () => {
-    // setCurrentId(0);
-    setSearchData({ ingredients: '' });
-  };
-
-  // const mealsUrl = 'http://localhost:4000/meals/search';
-
-  // const searchMeals = () => axios.post(mealsUrl, {
-  //   search: "chicken, bacon, leeks"
-  // })
+  // const clear = () => {
+  //   // setCurrentId(0);
+  //   setSearchData({ ingredients: '' });
+  // };
 
   const dispatch = useDispatch();
 

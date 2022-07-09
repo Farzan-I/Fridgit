@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Meals from './components/Meals/Meals.js'
 import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
+import SignUp from './components/SignUp.js'
 import { useDispatch } from "react-redux";
 
 import { getMealData } from './actions/fetchMeals.js'
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <SignUp />
       <Input />
       <Meals />
     </div>
