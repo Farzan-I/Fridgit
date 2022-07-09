@@ -20,9 +20,6 @@ const App = () => {
     dispatch(getMealInstructions());
   }, [dispatch]);
 
-  
- 
-
   return (
     <div>
       <Navbar />

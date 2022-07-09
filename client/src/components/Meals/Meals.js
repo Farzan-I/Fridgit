@@ -10,12 +10,6 @@ export default function Meals() {
   const instructionData = useSelector((state) => state.instructions)
   console.log(instructionData)
 
-  let instructions = {instructionData: [{steps: {step: "No Instructions"}}]}
-
-  if (instructionData !== []) {
-    instructions = {instructionData: instructionData}
-    
-  } 
     console.log("Meals component:" + instructionData)
     const meals = mealsData.map((meal) => {
       return (
@@ -33,9 +27,8 @@ export default function Meals() {
     </section>
     <section className="instructions--tile">
      <Instruction
-        {...instructions}
+        {...instructionData}
       />
-
     </section>
     </div>
   )

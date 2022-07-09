@@ -4,10 +4,10 @@ import React from "react"
 const Instruction = (props) => {
 
   
-  console.log(props.instructionData)
+  console.log(props.analyzedInstructions[0])
   
-  if (props.instructionData.analyzedInstructions[0]) {
-    const instructionList = props.instructionData.analyzedInstructions[0].steps.map((step) => {
+  if (props.analyzedInstructions[0]) {
+    const instructionList = props.analyzedInstructions[0].steps.map((step) => {
     return (
       <div>
         <ul>
@@ -29,7 +29,7 @@ const Instruction = (props) => {
   return (<div>
     <h1>Instructions</h1>
     <p>Sorry this recipe does not have any available instructions. Please visit</p>
-    <a href={props.instructionData.sourceUrl}>{props.instructionData.sourceUrl}</a>
+    <a href={props.sourceUrl}>{props.sourceUrl}</a>
   </div>)
 }
 
