@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 
 import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
+import { addUser } from "./reducers/addUser.js";
 
 const App = () => {
 

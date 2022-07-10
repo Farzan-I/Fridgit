@@ -18,7 +18,6 @@ const SignUp = ({Signup, error}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("SignUp form:" + userData.userName)  
     dispatch(addUser(userData));
   };
 

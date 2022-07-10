@@ -8,9 +8,7 @@ export default function Meals() {
   const mealsData = useSelector((state) => state.meals) // meals is defined in reducers-index
   
   const instructionData = useSelector((state) => state.instructions)
-  console.log(instructionData)
 
-    console.log("Meals component:" + instructionData)
     const meals = mealsData.map((meal) => {
       return (
       <Meal 

@@ -2,9 +2,6 @@ import React from "react"
 
 
 const Instruction = (props) => {
-
-  
-  console.log(props.analyzedInstructions[0])
   
   if (props.analyzedInstructions[0]) {
     const instructionList = props.analyzedInstructions[0].steps.map((step) => {
