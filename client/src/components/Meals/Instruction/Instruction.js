@@ -1,4 +1,5 @@
 import React from "react"
+import '../../../style.css'
 
 
 const Instruction = (props) => {
@@ -21,14 +22,14 @@ const Instruction = (props) => {
   
   return (
     <div>
-      <h1> Instructions</h1>
+      <h1> Instructions:</h1>
       {instructionList}
     </div>
   )
 } else {
   return (<div>
-    <h1>Instructions</h1>
-    <p>Sorry this recipe does not have any available instructions. Please visit</p>
+    <h1>Instructions:</h1>
+    <p className="recipe--instructions">Sorry this recipe does not have any available instructions. Please visit:</p>
     <a href={props.sourceUrl}>{props.sourceUrl}</a>
   </div>)
 }

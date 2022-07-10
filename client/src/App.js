@@ -22,9 +22,17 @@ const App = () => {
 
   return (
     <div>
+
       <Navbar />
-      <Input />
-      <Meals />
+
+      <section className="instructions--header">
+        <Input />
+      </section>
+
+      <section className="instructions--header">
+        <Meals />
+      </section>
+
     </div>
   );
 }
