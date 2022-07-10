@@ -73,6 +73,7 @@ nav {
 }
 .form--input {
   display: flex;
+  /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
   border: 1px solid #ed3390;
