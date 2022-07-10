@@ -7,8 +7,8 @@
 
 body {
   margin: 0;
+  display: flex;
   font-family: 'Inter', sans-serif;
-  text-align: center;
   background-color: #376E6F;
   animation-name: example;
   animation-duration: 10s;
@@ -63,13 +63,11 @@ nav {
 
 .form {
   display: grid;
-  text-align: center;
   padding: 20px;
   height: 50px;
 }
 .form--input {
   font-family: "Inter", sans-serif;
-  text-align: center;
   border-radius: 5px;
   border: 1px solid #ed3390;
   text-indent: 5px;
@@ -77,7 +75,6 @@ nav {
 
 .form--button {
   font-family: "Inter", sans-serif;
-  text-align: center;
   grid-column: 2 / -1;
   border-radius: 5px;
   color: white;
@@ -127,7 +124,6 @@ nav {
 .input--header {
   padding: 30px;
   font-family: 'Lobster', cursive;
-  text-align: center;
   color: #DA7B93;
   
 }
@@ -135,13 +131,11 @@ nav {
 .instructions--header {
   padding: 30px;
   font-family: 'Lobster', cursive;
-  text-align: center;
   color: #DA7B93;
 }
 
 .recipe--instructions {
   padding: 30px;
-  text-align: center;
   color: #DA7B93;
 }
 

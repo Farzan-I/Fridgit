@@ -11,11 +11,11 @@ const Instruction = (props) => {
     const instructionList = props.analyzedInstructions[0].steps.map((step) => {
     return (
       <div>
-        <ol>
+        <ul>
           <li>
           {step.step}
           </li>
-        </ol>
+        </ul>
       </div>
       )
     })
