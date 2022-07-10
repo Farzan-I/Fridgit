@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
 /* give everything a min-width */
 
 * {
@@ -10,18 +10,12 @@
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: #376E6F;
-  animation-name: example;
-  animation-duration: 10s;
-}
+  background-image: url('../public/tile.png');
+  /* background-size: cover; */
 
-@keyframes example {
-  0%   {background-color: #376E6F;}
-  50%  {background-color: #00887A;}
-  100% {background-color: #376E6F;}
 }
-
 
 .gray {
   color: gray
@@ -66,24 +60,28 @@ nav {
 .form {
   display: flex;
   flex-direction: column;
-  background-color: grey;
+  padding-left: 8px;
+  /* background-color: grey; */
   /* display: grid; */
-  padding: 20px;
-  height: 50px;
+  /* height: 50px; */
 }
 .form--input {
-  display: flex;
+  /* display: flex; */
   /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid #ed3390;
+  border: 1px solid rgb(128, 28, 28);
   text-indent: 5px;
+  width: 200px;
 }
 
 .form--button {
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
+  margin: 10px;
+  border-style: solid;
+  border-color: #730071;
   color: white;
   background: #da7b93;
 }
@@ -98,7 +96,7 @@ nav {
 }
 
 .meal--list {
-  padding: 30px;
+  /* padding: 30px; */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -126,10 +124,11 @@ nav {
 
 .meal-card--like-thumb {
   width: 10px;
+  margin: 5px;
 }
 
 .input--header {
-  padding: 30px;
+  /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color: #DA7B93;
   
@@ -152,8 +151,10 @@ nav {
 }
 
 .recipe--instructions {
-  padding: 30px;
-  color: #DA7B93;
+  /* padding: 30px; */
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 14px;
+  color: #545154;
 }
 
 .logo-and-title {
@@ -185,15 +186,17 @@ nav {
 }
 
 .home--link {
+  font-size: 25px;
   text-align: right;
 }
 
 .about--link {
-
+  font-size: 25px;
   text-align: right;
 }
 
 .contact--link {
+  font-size: 25px;
   text-align: right;
 }
 
@@ -201,5 +204,4 @@ nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
 }

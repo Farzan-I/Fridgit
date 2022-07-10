@@ -32,19 +32,34 @@ const Input = () => {
   };
 
   return (
-    <div className="form">
+    <div>
       <h1 className="input--header">What's in your fridge?</h1>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text"
-          className="form--input"
-          placeholder="Ingredients here..."
-          value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
-        />
-        <input type="submit" className="form--button"/>
-        
-      </form>
+
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input 
+            type="text"
+            className="form--input"
+            placeholder="Ingredients here..."
+            value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+          />
+          <input type="submit" className="form--button"/>
+        </form>
+      </div>
     </div>
+    
+    // <div className="form">
+    //   <form onSubmit={handleSubmit}>
+    //     <input 
+    //       type="text"
+    //       className="form--input"
+    //       placeholder="Ingredients here..."
+    //       value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+    //     />
+    //     <input type="submit" className="form--button"/>
+        
+    //   </form>
+    // </div>
   );
 }
 
