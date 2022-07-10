@@ -5,6 +5,7 @@ import cors from 'cors';
 
 // Importing routes
 import mealDataRoutes from './routes/mealData.js'
+import instructionDataRoutes from './routes/instructionData.js'
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use('/meals', mealDataRoutes)
+app.use('/instructions', instructionDataRoutes)
 
 // this is connection is failing. to be investigated
 // const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";

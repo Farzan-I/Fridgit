@@ -1,8 +1,14 @@
 import React from "react";
+import { getMealInstructions } from "../../../actions/fetchInstructions.js";
+import { useDispatch } from "react-redux";
 
 export default function Meal(props) {
+  const dispatch = useDispatch()
+  
   const handleClick = () => {
     console.log(props.id)
+
+    dispatch(getMealInstructions(props.id))
   }
 
   return (
