@@ -1,5 +1,6 @@
 //experiment - part of trying to get mongoose to stop crashing the app
 //same for default.json (can't write comments in json files)
+//also added devDependencies to the main package.json file
 
 import mongoose from 'mongoose';
 import config from 'config';

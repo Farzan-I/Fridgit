@@ -10,6 +10,7 @@ import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
 
 const App = () => {
+
   const dispatch = useDispatch();
 
   // this is the call to the backend

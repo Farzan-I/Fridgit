@@ -5,19 +5,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
-const SignUp = () => {
-
-  
+const SignUp = ({Signup, error}) => {
+   
   const [userData, setUserData] = useState({
     userName: '',
     password: '',
     email: ''
   })
-
-  // const handleChange = (e) => {
-  //   const {name, value} = e.target  
-  //   this.setState({[name]:value}) 
-  // }
 
   // const clear = () => {
   //   // setCurrentId(0);
@@ -28,12 +22,17 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(userData)
+    //handleSubmit works, now just need to use it to send the data somewhere... 
+    // SignUp(userData)
     console.log('form submitted')
-    //this should prevent the page re-rendering, but it doesn't...
-    //have to refresh to get page back...
-    //need to reset state?
-  
-    //what happens when we submit? Where does the data go... 
+    
+    //what happens when we submit? Where does the data go...??? 
+
+    //Do we need to call this SignUp function somewhere outside of the 
+    //component? In the tutorial I was watching (https://www.youtube.com/watch?v=91qEdc6dSUs), he calls it from the App.js, but 
+    //that seems wrong for our setup...
+
     
     dispatch(addUser(userData));
   };
@@ -48,24 +47,26 @@ const SignUp = () => {
           className="form--input"
           placeholder="Choose username"
           required 
-          // onChange={this.handleChange}
-          // value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+          onChange={e => setUserData({...userData, userName: e.target.value})} value={userData.userName}
         />
         <input 
           type="password"
           name="password"
           className="form--input"
           placeholder="Choose password"
-          // value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+          required
+          onChange={e => setUserData({...userData, password: e.target.value})} value={userData.password}
         />
         <input 
           type="email"
           name="email"
           className="form--input"
           placeholder="Enter your email"
-          // value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+          required
+          onChange={e => setUserData({...userData, email: e.target.value})} value={userData.email}
         />
-        {/* <input type="submit" value="sign up" /> */}
+        {/* <input type="submit" value="sign up" /> */} 
+        {/* not sure which is preferable, submit or button */}
         <button>Signup</button>
       </form>
     </div>
