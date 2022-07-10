@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* give everything a min-width */
+
 * {
   box-sizing: border-box;
 }
@@ -36,7 +38,7 @@ body {
 
 nav {
   height: 90px;
-  padding: 30px 25px;
+  /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
   background-color: #da7b93;
@@ -62,11 +64,15 @@ nav {
 }
 
 .form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  /* display: grid; */
   padding: 20px;
   height: 50px;
 }
 .form--input {
+  display: flex;
   font-family: "Inter", sans-serif;
   border-radius: 5px;
   border: 1px solid #ed3390;
@@ -128,7 +134,17 @@ nav {
   
 }
 
-.instructions--header {
+.search-container {
+  /* margin-top: 10px; */
+  display: flex;
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  color: #DA7B93;
+}
+
+.meals-container {
+  /* margin-top: 10px; */
+  display: flex;
   padding: 30px;
   font-family: 'Lobster', cursive;
   color: #DA7B93;
@@ -137,6 +153,34 @@ nav {
 .recipe--instructions {
   padding: 30px;
   color: #DA7B93;
+}
+
+.logo-and-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-container {
+  padding-left: 10px;
+  padding-right: 20px;
+  /* background-color: grey; */
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  flex-direction: row;
+  /* align-items: start; */
+  justify-content: space-between;
+
+}
+
+.nav-links {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 15%;
+  align-items: end;
 }
 
 .home--link {
@@ -150,4 +194,11 @@ nav {
 
 .contact--link {
   text-align: right;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
 }

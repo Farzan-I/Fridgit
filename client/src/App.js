@@ -21,17 +21,17 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="app">
 
-      <Navbar />
+      <Navbar className="nav"/>
 
-      <section className="instructions--header">
+      <div className="search-container">
         <Input />
-      </section>
+      </div>
 
-      <section className="instructions--header">
+      <div className="meals-container">
         <Meals />
-      </section>
+      </div>
 
     </div>
   );

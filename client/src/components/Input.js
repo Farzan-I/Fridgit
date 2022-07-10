@@ -42,6 +42,7 @@ const Input = () => {
           value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
         />
         <input type="submit" className="form--button"/>
+        
       </form>
     </div>
   );
