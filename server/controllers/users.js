@@ -1,30 +1,15 @@
-const User = require('../models/users');
+import User from '../models/user.js'
+// const User = require('../models/users');
 
-const UsersController = { 
+export const CreateUser = (req, res) => {
+  const user = new User(req.body.userData);
+  console.log("I'm in the controller, but not in control" + req.body.userData.email)
 
-  New: (req, res) => {
-    res.render("users/new", {
-      session: req.session.user,
-      error: req.flash("error"),
-    });
-  },
-
-  CreateUser: (req, res) => {
-    const user = new User(req.body);
-
-    user
-      .save()
-      .then(() => {
-        res.status(201).redirect("/sessions/new");
-      })
-      
-      .catch((err) => {
-        if (err.code === 11000) req.flash("error", "Email taken. Better luck next time.");
-
-        res.redirect("/users/new");
-
-      });
-  },
+  user
+    .save((err) => {
+      if (err) {
+        throw err
+      }
+    })
+    .then(res.send);
 }
-
-module.exports = UsersController; 

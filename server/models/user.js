@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   
-  name: {
+  userName: {
     type: String,
     require: true,
   },
@@ -18,9 +18,9 @@ const userSchema = new mongoose.Schema({
     unique: true,
   },
 
-  // fridge: {
-  //   type: [String]
-  // }
+  fridge: {
+    type: [String]
+  }
 
 });
 

@@ -11,6 +11,8 @@ const Input = () => {
     ingredients: ''
   })
 
+  // SHS - implement clear
+
   // const clear = () => {
   //   // setCurrentId(0);
   //   setSearchData({ ingredients: '' });

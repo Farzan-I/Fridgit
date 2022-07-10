@@ -6,7 +6,7 @@ export const fetchMeals = (mealString) => axios.post(mealsUrl, mealString)
 const instructionsUrl = 'http://localhost:4000/instructions';
 export const fetchInstructions = (mealId) => axios.post(instructionsUrl, mealId)
 
-const addUserUrl = 'http://localhost:4000/addUser';
+const addUserUrl = 'http://localhost:4000/user/add';
 //= //this is where I get confused - where are we sending the userData
 export const addUser = (userData) => axios.post(addUserUrl, userData)
 
