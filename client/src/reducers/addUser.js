@@ -7,6 +7,8 @@ export default (user = {
   switch (action.type) {
     case 'SEND_USER_DATA':
       return action.payload;
+    case 'VERIFY_USER':
+      return action.payload;
     default:
       return user;
   }

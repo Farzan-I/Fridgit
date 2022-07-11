@@ -7,6 +7,7 @@ import cors from 'cors';
 import mealDataRoutes from './routes/mealData.js'
 import instructionDataRoutes from './routes/instructionData.js'
 import usersRoutes from './routes/users.js'
+import sessionsRoutes from './routes/sessions.js'
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use('/meals', mealDataRoutes)
 app.use('/instructions', instructionDataRoutes)
 app.use('/user', usersRoutes)
+app.use('/sessions', sessionsRoutes)
 
 const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 4000;
