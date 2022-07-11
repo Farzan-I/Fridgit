@@ -50,6 +50,12 @@ nav {
   right: 100;
 }
 
+.nav--username {
+  margin-left: 100;
+  right: 100;
+  padding: 100;
+}
+
 .form {
   display: grid;
   padding: 20px;
