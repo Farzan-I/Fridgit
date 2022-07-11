@@ -25,8 +25,8 @@ const Instruction = (props) => {
   )
 } else {
   return (<div className="recipe--instructions">
-    <h1>Instructions:</h1>
-    <p className="recipe--instructions">Sorry this recipe does not have any available instructions. Please visit:</p>
+    <h1 className="instructions-title">Instructions:</h1>
+    <p >Sorry this recipe does not have any available instructions. Please visit:</p>
     <a href={props.sourceUrl}>{props.sourceUrl}</a>
   </div>)
 }
