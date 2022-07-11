@@ -6,7 +6,7 @@ const fetchMealData = (input = 'turbot') => {
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       params: {
         ingredients: input,
-        number: '5',
+        number: '15',
         ignorePantry: 'true',
         ranking: '1'
       },

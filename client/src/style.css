@@ -43,6 +43,12 @@ nav {
 }
 
 
+.nav--username {
+  margin-left: 100;
+  right: 100;
+  padding: 100;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -229,4 +235,8 @@ nav {
 
 .ingredient--list {
   display: flex;
+}
+
+.signup-form {
+  margin-left: 25;
 }
