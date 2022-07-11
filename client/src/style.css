@@ -8,20 +8,11 @@
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
   background-image: url('../public/tile.png');
 }
-
-/* .gray {
-  color: gray
-} */
-
-/* .bold {
-  font-weight: bold
-} */
 
 .bold-gray, .instructions-title {
 
@@ -31,7 +22,6 @@ body {
 
 nav {
   height: 100px;
-  /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
   background-color: #950740;
@@ -94,7 +84,7 @@ nav {
   flex-direction: row;
   gap: 20px;
   overflow-y: auto;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .meal--title {
@@ -129,7 +119,6 @@ nav {
 }
 
 .search-container {
-  /* margin-top: 10px; */
   display: flex;
   padding: 30px;
   color: #DA7B93;
@@ -144,10 +133,10 @@ nav {
 }
 
 .recipe--instructions {
-  border: brown;
+  border: linear-gradient(#950740, #c3073f);
   border-style: solid;
   border-width: 20px;
-  background-color: burlywood;
+  background-color: #FFFFFFCD;
   padding: 30px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 14px;
@@ -184,20 +173,7 @@ nav {
   margin: 16px;
   color: rgba(255, 255, 255, 0.802);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
-  
-  /* padding: 5px; */
 }
-
-/* .about--link {
-  font-size: 25px;
-  text-align: right;
-}
-
-.contact--link {
-  font-size: 25px;
-  text-align: right;
-} */
 
 .app {
   display: flex;
@@ -211,9 +187,9 @@ nav {
 }
 
 .used-ingredient--tile {
+  /* display: inline-block; */
   background-color: white;
   color: green;
-  /* color: #950740; */
   padding: 5px 5px;
   border-radius: 2px;
   border-color: brown;
@@ -221,9 +197,10 @@ nav {
 }
 
 .missed-ingredient--tile {
+  display: inline-block;
   background-color: white;
   color: red;
-  padding: 5px 5px;
+  padding-left: 5px;
   border-radius: 2px;
   border-color: brown;
   border-radius: 1px;
@@ -231,18 +208,19 @@ nav {
 }
 
 .used-ingredients {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: auto ; 
   align-items: flex-start;
-  
 }
 
 .missed-ingredients {
   display: flex;
+  /* display: inline-block; */
   flex-direction: column;
   justify-content: auto ; 
   align-items:flex-start;
+
 }
 
 .missed-ingredient--plus {
