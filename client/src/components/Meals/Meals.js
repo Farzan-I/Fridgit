@@ -10,15 +10,14 @@ export default function Meals() {
   
   const [showInstruction, setShowInstruction] = useState(false)
 
-console.log(mealsData)
-    const meals = mealsData.map((meal) => {
-      return (
-      <Meal 
-        key={meal.id}
-        {...meal}
-        setShowInstruction={setShowInstruction}
-      />
-    )
+  const meals = mealsData.map((meal) => {
+    return (
+    <Meal 
+      key={meal.id}
+      {...meal}
+      setShowInstruction={setShowInstruction}
+    />
+  )
   })
 
   return (

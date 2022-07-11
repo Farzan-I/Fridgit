@@ -1,11 +1,13 @@
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (instructions = {
-  "analyzedInstructions": [""]
+export default (user = {
+  "userId": "",
+  "userName": "",
+  "fridge": []
 }, action) => {
   switch (action.type) {
-    case 'FETCH_INSTRUCTIONS':
+    case 'SEND_USER_DATA':
       return action.payload;
     default:
-      return instructions;
+      return user;
   }
 }
