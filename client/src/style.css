@@ -99,6 +99,16 @@ nav {
   display: flex;          
   flex-direction: column; 
   position: relative;
+  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+.meal--ingredient-count {
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.meal-card--likes-count {
+  margin-top: 3px;
 }
 
 .meal--list {
@@ -107,7 +117,7 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 20px;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .meal--title {
@@ -125,11 +135,11 @@ nav {
 
 .meal-card--info {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
 }
 
 .meal-card--like-thumb {
-  width: 10px;
+  width: 12px;
   margin: 5px;
 }
 
