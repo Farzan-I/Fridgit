@@ -185,12 +185,14 @@ nav {
   align-items: end;
 }
 
-.home--link {
-  font-size: 25px;
+.home--link, .about--link, .contact--link {
+  font-size: 20px;
   text-align: right;
+  margin: 10px;
+  /* padding: 5px; */
 }
 
-.about--link {
+/* .about--link {
   font-size: 25px;
   text-align: right;
 }
@@ -198,7 +200,7 @@ nav {
 .contact--link {
   font-size: 25px;
   text-align: right;
-}
+} */
 
 .app {
   display: flex;
