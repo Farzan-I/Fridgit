@@ -10,20 +10,51 @@ export const CreateSession = (req, res) => {
 
   User.findOne({ email: email }).exec(function (error, user) {
     if (error) {
-      console.log("error", "Email or password incorrect 1");
+      console.log("Kenny Login error");
     } else if (!user) {
       console.log("error", "Email incorrect");
-    } else if (user.password != password) {
-      console.log('password incorrect')
-    }
-      else if (user.password = password) {
-      res.send({
-        _id: user._id,
-        userName: user.userName,
-        email: user.email,
-        fridge: user.fridge
-      })
+    } else {
+        user.comparePassword(password, function (matchError, isMatch) {
+          if (matchError) {
+            console.log("error", "Email or password incorrect bcrypt 1");
+          } else if (!isMatch) {
+            console.log("error", "Email or password incorrect bcrypt 2");
+          } else {
+            console.log(req.session.user)
+            req.session.user = user;
+            res.send({
+              _id: user._id,
+              userName: user.userName,
+              email: user.email,
+              fridge: user.fridge
+            })
+          }
+        });
     }
   })
 }
 
+//acebook example 
+
+// User.findOne({ email: email }).exec(function (error, user) {
+//   if (error) {
+//     req.flash("error", "Email or password incorrect");
+//     res.redirect("/sessions/new");
+//   } else if (!user) {
+//     req.flash("error", "Email or password incorrect");
+//     res.redirect("/sessions/new");
+//   } else {
+//     user.comparePassword(password, function (matchError, isMatch) {
+//       if (matchError) {
+//         req.flash("error", "Email or password incorrect");
+//         res.redirect("/sessions/new");
+//       } else if (!isMatch) {
+//         req.flash("error", "Email or password incorrect");
+//         res.redirect("/sessions/new");
+//       } else {
+//         req.session.user = user;
+//         res.redirect("/posts");
+//       }
+//     });
+//   }
+// });
