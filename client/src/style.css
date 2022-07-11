@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+/* give everything a min-width */
 
 * {
   box-sizing: border-box;
@@ -7,8 +9,12 @@
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Inter', sans-serif;
-  background-color: azure;
+  background-image: url('../public/tile.png');
+  /* background-size: cover; */
+
 }
 
 .gray {
@@ -26,10 +32,10 @@ body {
 
 nav {
   height: 90px;
-  padding: 30px 25px;
+  /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
-  background-color: blueviolet;
+  background-color: #da7b93;
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
@@ -41,8 +47,9 @@ nav {
 }
 
 .nav--title {
-  color: #F1E9DA;
+  color: #376E6F;
   font-size: 40px;
+  -webkit-text-stroke: 0.000005px black;
 }
 
 .nav--tagline {
@@ -57,27 +64,36 @@ nav {
 }
 
 .form {
-  display: grid;
-  padding: 20px;
-  height: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  /* background-color: grey; */
+  /* display: grid; */
+  /* height: 50px; */
 }
 .form--input {
+  /* display: flex; */
+  /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid #D5D4D8;
-  text-indent: 5px
+  border: 1px solid rgb(128, 28, 28);
+  text-indent: 5px;
+  width: 200px;
 }
 
 .form--button {
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
+  margin: 10px;
+  border-style: solid;
+  border-color: #730071;
   color: white;
-  background: blueviolet;
+  background: #da7b93;
 }
 
 .meal-card {
-  width: 175px;
+  width: 250px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
@@ -86,7 +102,7 @@ nav {
 }
 
 .meal--list {
-  padding: 30px;
+  /* padding: 30px; */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -102,8 +118,8 @@ nav {
 }
 
 .meal-card--image {
-  height: 130px;
-  width: 175px;
+  width: 225px;
+  height: auto;
   border-radius: 9px;
 }
 
@@ -114,4 +130,132 @@ nav {
 
 .meal-card--like-thumb {
   width: 10px;
+  margin: 5px;
+}
+
+.input--header {
+  /* padding: 30px; */
+  font-family: 'Lobster', cursive;
+  color: #DA7B93;
+  
+}
+
+.search-container {
+  /* margin-top: 10px; */
+  display: flex;
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  color: #DA7B93;
+}
+
+.meals-container {
+  /* margin-top: 10px; */
+  display: flex;
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  color: #DA7B93;
+}
+
+.recipe--instructions {
+  /* padding: 30px; */
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 14px;
+  color: #545154;
+}
+
+.logo-and-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-container {
+  padding-left: 10px;
+  padding-right: 20px;
+  /* background-color: grey; */
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  flex-direction: row;
+  /* align-items: start; */
+  justify-content: space-between;
+
+}
+
+.nav-links {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 15%;
+  align-items: end;
+}
+
+.home--link, .about--link, .contact--link {
+  font-size: 20px;
+  text-align: right;
+  margin: 10px;
+  /* padding: 5px; */
+}
+
+/* .about--link {
+  font-size: 25px;
+  text-align: right;
+}
+
+.contact--link {
+  font-size: 25px;
+  text-align: right;
+} */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.used-ingredient--tile {
+  background-color: white;
+  color: green;
+  padding: 5px 5px;
+  border-radius: 2px;
+  border-color: brown;
+  font-weight: bold;
+}
+
+.missed-ingredient--tile {
+  background-color: white;
+  color: red;
+  padding: 5px 5px;
+  border-radius: 2px;
+  border-color: brown;
+  border-radius: 1px;
+  font-weight: bold;
+}
+
+.used-ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto ; 
+  align-items: flex-start;
+  
+}
+
+.missed-ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto ; 
+  align-items:flex-start;
+}
+
+.missed-ingredient--plus {
+  color: gray
+}
+
+.ingredient--list {
+  display: flex;
+}
+
+.signup-form {
+  margin-left: 25;
 }

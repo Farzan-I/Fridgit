@@ -21,7 +21,6 @@ app.use('/instructions', instructionDataRoutes)
 app.use('/user', usersRoutes)
 
 const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";
-
 const PORT = process.env.PORT || 4000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

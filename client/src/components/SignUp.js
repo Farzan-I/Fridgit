@@ -49,8 +49,6 @@ const SignUp = ({Signup, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
-        {/* <input type="submit" value="sign up" /> */} 
-        {/* not sure which is preferable, submit or button */}
         <button>Signup</button>
       </form>
     </div>
