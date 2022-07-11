@@ -22,10 +22,11 @@ const App = () => {
     dispatch(getMealInstructions());
   }, [dispatch]);
 
+  
   return (
     <div className="app">
 
-      <Navbar className="nav"/>
+      <Navbar />
       <SignUp />
 
       <div className="search-container">

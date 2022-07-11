@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React, { useState } from "react";
 import { addUser } from '../actions/addUser.js'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -23,7 +22,7 @@ const SignUp = ({Signup, error}) => {
 
   return (
     <div className="signup-form">
-      <h2>Signup</h2>
+      <h2>Join the no-waste revolution...</h2>
       <form onSubmit={handleSubmit}>
         <input 
           type="text"
