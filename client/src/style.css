@@ -276,3 +276,103 @@ nav {
 .login-field {
   background-color: grey;
 }
+
+.dropDownSignUp-container {
+  background-color: grey;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*/ --------- drop-down-sign-up -------------/*/
+
+.main-drop-down-container {
+
+  display: flex;
+  font-family: sans-serif;
+  width: 30vw;
+  background-color: grey;
+  height: 5vh;
+  z-index: 2;
+  position: relative;
+;
+
+}
+
+.drop-down-container {
+    display: flex;
+    width: 30vw;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+
+.drop-down-header {
+  display: flex;
+  width: 100%;
+justify-content: center;
+  /* margin-bottom: 0.8em;
+  padding: 0.4em 2em 0.4em 1em; */
+  /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #3faffa;
+  background: white;
+  width: 100%;
+}
+
+.drop-down-list-container {
+  display: flex;
+  background-color: cyan;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  /* border: 2px solid #e5e5e5; */
+  box-sizing: border-box;
+  color: #3faffa;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.drop-down-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+  
+.drop-down-list-item {
+  list-style: none;
+  margin: 5px;
+  width: 95%;
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
+  border: 1px solid rgb(128, 28, 28);
+  text-indent: 5px;
+}
+
+.fields-container {
+  display: flex;
+  padding-top: 10px;
+  min-width: 30vw;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+}
+
+.sign-up-button {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+ 

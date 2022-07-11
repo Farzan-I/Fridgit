@@ -4,7 +4,8 @@ import Meals from './components/Meals/Meals.js'
 import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
 import SignUp from './components/SignUp.js'
-
+import styled from 'styled-components';
+import SignUpDropDown from "./components/SignUpDropDown.js";
 
 import { useDispatch } from "react-redux";
 
