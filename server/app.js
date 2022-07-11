@@ -19,7 +19,7 @@ app.use('/meals', mealDataRoutes)
 app.use('/instructions', instructionDataRoutes)
 
 // this is connection is failing. to be investigated
-// const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION_URL = "mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))

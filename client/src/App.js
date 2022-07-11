@@ -21,10 +21,18 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <Navbar />
-      <Input />
-      <Meals />
+    <div className="app">
+
+      <Navbar className="nav"/>
+
+      <div className="search-container">
+        <Input />
+      </div>
+
+      <div className="meals-container">
+        <Meals />
+      </div>
+
     </div>
   );
 }
