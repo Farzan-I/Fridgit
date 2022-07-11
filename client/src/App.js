@@ -4,7 +4,7 @@ import Meals from './components/Meals/Meals.js'
 import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
 import SignUp from './components/SignUp.js'
-import Login from './components/Login.js'
+
 
 import { useDispatch } from "react-redux";
 
@@ -30,7 +30,6 @@ const App = () => {
 
       <Navbar />
       <SignUp />
-      <Login />
 
       <div className="search-container">
         <Input />

@@ -30,8 +30,8 @@ const Login = ({Login, error}) => {
 
   return (
     <div className="login-form">
-      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
+        
         <input 
           type="email"
           name="email"
@@ -40,6 +40,7 @@ const Login = ({Login, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
+        
         <input 
           type="password"
           name="password"
@@ -48,6 +49,7 @@ const Login = ({Login, error}) => {
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
+        
         <button>Login</button>
       </form>
     </div>
