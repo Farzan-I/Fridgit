@@ -20,8 +20,7 @@ export const CreateSession = (req, res) => {
           } else if (!isMatch) {
             console.log("error", "Email or password incorrect bcrypt 2");
           } else {
-            console.log(req.session.user)
-            req.session.user = user;
+            console.log(user)
             res.send({
               _id: user._id,
               userName: user.userName,
@@ -33,28 +32,3 @@ export const CreateSession = (req, res) => {
     }
   })
 }
-
-//acebook example 
-
-// User.findOne({ email: email }).exec(function (error, user) {
-//   if (error) {
-//     req.flash("error", "Email or password incorrect");
-//     res.redirect("/sessions/new");
-//   } else if (!user) {
-//     req.flash("error", "Email or password incorrect");
-//     res.redirect("/sessions/new");
-//   } else {
-//     user.comparePassword(password, function (matchError, isMatch) {
-//       if (matchError) {
-//         req.flash("error", "Email or password incorrect");
-//         res.redirect("/sessions/new");
-//       } else if (!isMatch) {
-//         req.flash("error", "Email or password incorrect");
-//         res.redirect("/sessions/new");
-//       } else {
-//         req.session.user = user;
-//         res.redirect("/posts");
-//       }
-//     });
-//   }
-// });
