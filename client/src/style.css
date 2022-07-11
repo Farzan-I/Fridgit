@@ -71,7 +71,7 @@ nav {
 }
 
 .meal-card {
-  width: 175px;
+  width: 250px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
@@ -96,8 +96,8 @@ nav {
 }
 
 .meal-card--image {
-  height: 130px;
-  width: 175px;
+  width: 225px;
+  height: auto;
   border-radius: 9px;
 }
 
@@ -108,4 +108,46 @@ nav {
 
 .meal-card--like-thumb {
   width: 10px;
+}
+
+.used-ingredient--tile {
+  background-color: white;
+  color: green;
+  padding: 5px 5px;
+  border-radius: 2px;
+  border-color: brown;
+  font-weight: bold;
+}
+
+.missed-ingredient--tile {
+  background-color: white;
+  color: red;
+  padding: 5px 5px;
+  border-radius: 2px;
+  border-color: brown;
+  border-radius: 1px;
+  font-weight: bold;
+}
+
+.used-ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto ; 
+  align-items: flex-start;
+  
+}
+
+.missed-ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto ; 
+  align-items:flex-start;
+}
+
+.missed-ingredient--plus {
+  color: gray
+}
+
+.ingredient--list {
+  display: flex;
 }
