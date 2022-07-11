@@ -13,11 +13,21 @@ const SignUp = ({Signup, error}) => {
     fridge: []
   })
 
+  const clear = () => {
+    // setCurrentId(0);
+    setUserData({ 
+      userName: '',
+      email: '',
+      password: '',
+     });
+  }; 
+
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(addUser(userData));
+    clear()
   };
 
   return (

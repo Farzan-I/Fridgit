@@ -3,7 +3,6 @@ import { getMealData } from '../actions/fetchMeals.js'
 import { useDispatch } from 'react-redux';
 
 
-
 const Input = () => {
 
   const [searchData, setSearchData] = useState({
@@ -11,11 +10,11 @@ const Input = () => {
   })
 
   // const mealsUrl = 'http://localhost:4000/meals/search';
-
-  // const clear = () => {
-  //   // setCurrentId(0);
-  //   setSearchData({ ingredients: '' });
-  // };
+  
+  const clear = () => {
+    // setCurrentId(0);
+    setSearchData({ ingredients: '' });
+  }; 
 
   const dispatch = useDispatch();
 
@@ -23,6 +22,7 @@ const Input = () => {
     event.preventDefault();
     //this is what prevents the page re-rendering  
     dispatch(getMealData(searchData.ingredients));
+    clear()
   };
 
   return (

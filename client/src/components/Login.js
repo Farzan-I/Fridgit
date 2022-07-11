@@ -8,17 +8,24 @@ import { useDispatch, useSelector } from 'react-redux';
 const Login = ({Login, error}) => {
    
   const [userData, setUserData] = useState({
-    userName: '',
     email: '',
     password: '',
-    fridge: []
   })
+
+  const clear = () => {
+    // setCurrentId(0);
+    setUserData({ 
+      email: '',
+      password: '',
+     });
+  }; 
 
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(loginUser(userData));
+    clear()
   };
 
   return (
