@@ -19,4 +19,13 @@ describe('User model', () => {
   it('has a username', () => {
     expect(user.userName).toBe('Test name')
   })
+  it('has an email', () => {
+    expect(user.email).toBe('test@test.com')
+  })
+  it('has a fridge', () => {
+    expect(user.fridge).toEqual([])
+  })
+  it('has a password', () => {
+    expect(user.password).not.toBe("")
+  })
 })
