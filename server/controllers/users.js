@@ -14,3 +14,12 @@ export const CreateUser = (req, res) => {
       })
     })
 }
+
+export const AddFridgeItem = (req, res) => {
+  User.findByIdAndUpdate(
+    req.body.userID, 
+    {$push: {fridge: req.body.fridgeItem},
+  }, res.send({
+    addedItem: req.body.fridgeItem
+  }))
+}
