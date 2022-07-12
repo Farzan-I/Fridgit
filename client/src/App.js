@@ -33,7 +33,7 @@ const App = () => {
       <Navbar />
       {/* {!loggedInStatus && */}
         <>
-      <SignUpDropDown />
+      {/* <SignUpDropDown /> */}
       {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
         </>
       {/* } */}

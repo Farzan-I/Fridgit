@@ -7,8 +7,13 @@
   box-sizing: border-box;
 }
 
+.whole-page {
+  
+}
+
 body {
-  margin: 0;
+  border: 1px solid #000;
+	margin: auto;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
@@ -29,6 +34,31 @@ body {
   color: gray;
   font-weight: bold;
 }
+
+
+/* ----------nav-------------------*/
+
+.nav-container {
+  padding-left: 10px;
+  padding-right: 20px;
+  /* background-color: grey; */
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  flex-direction: row;
+  /* align-items: start; */
+  justify-content: space-between;
+}
+
+.nav-links {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 15%;
+  align-items: end;
+}
+
 
 nav {
   height: 90px;
@@ -169,27 +199,6 @@ nav {
   justify-content: space-around;
 }
 
-.nav-container {
-  padding-left: 10px;
-  padding-right: 20px;
-  /* background-color: grey; */
-  display: flex;
-  height: 100%;
-  width: 100vw;
-  flex-direction: row;
-  /* align-items: start; */
-  justify-content: start;
-}
-
-.nav-links {
-  /* background-color: white; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 15%;
-  align-items: end;
-}
-
 .home--link, .about--link, .contact--link {
   font-size: 20px;
   text-align: right;
@@ -282,6 +291,20 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
+
+/*/ --------- dropdowns-container -------------/*/
+
+.main-drop-down-container {
+  display: flex;
+  background-color: grey;
+  flex-direction: row;
+  z-index: 1;
+  flex-wrap: nowrap;
+  min-width: 30vw;
+  min-height: 90px;
+}
+
+
 
 /*/ --------- drop-down-sign-up -------------/*/
 
