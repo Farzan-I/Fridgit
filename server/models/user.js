@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
+let collectionName = 'User'
+export const setCollectionName = (collection) =>{
+  collectionName = collection 
+}
+
 const userSchema = new mongoose.Schema({
   
   userName: {
@@ -58,6 +63,6 @@ userSchema.methods.comparePassword = function (password, callback) {
   });
 };
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model(collectionName, userSchema);
 
 export default User;
