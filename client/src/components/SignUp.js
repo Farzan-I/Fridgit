@@ -21,7 +21,7 @@ const SignUp = ({Signup, error}) => {
   };
 
   return (
-    <div className="signup-form">
+    <div className="session--form">
       <h2>Join the no-waste revolution...</h2>
       <form onSubmit={handleSubmit}>
         <input 

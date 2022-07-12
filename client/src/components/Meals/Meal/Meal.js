@@ -16,7 +16,7 @@ export default function Meal(props) {
     return props.missedIngredients.length === 0 ? true : false
   }
 
-  const ingredientCount = `${props.usedIngredients.length}/${(props.usedIngredients.length + props.missedIngredients.length)} Ingredients`
+  const ingredientCount = `${props.usedIngredients.length}/${(props.usedIngredients.length + props.missedIngredients.length)} `
   
 
   const usedIngredients = props.usedIngredients.map((ingredient) => {
@@ -25,6 +25,7 @@ export default function Meal(props) {
             key={ingredient.id}
             name={ingredient.name}
             id={ingredient.id}
+            measure={ingredient.originalName}
           />
       )
   })
@@ -35,6 +36,7 @@ export default function Meal(props) {
         key={ingredient.id}
         name={ingredient.name}
         id={ingredient.id}
+        measure={ingredient.originalName}
       />
     )
   })
@@ -43,18 +45,18 @@ export default function Meal(props) {
 
   return (
     <div className="meal-card" >
-      <div className="meal-info" onClick={handleClick}>
+      <div className="meal-card--info" onClick={handleClick}>
         <img className="meal-card--image" src={props.image} alt="meal"></img>
         <p className="meal--title">{props.title}</p>
-        <div className="meal-card--info">
+        <div className="meal-card--spec">
           <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
           <span className="meal-card--likes-count">{props.likes}</span>
           <div className="meal--ingredient-count">
-            {ingredientCount}
+            <span className="bold">{ingredientCount}</span>Ingredients
           </div>
         </div>
+      {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
       </div>
-      {isReadyToMake() && <div>Ready to Make ✅</div>}
       <div className="ingredient-info">
       <p className="bold-gray">Ingredients you have:</p>
         <div className="used-ingredients">

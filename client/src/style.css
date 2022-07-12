@@ -28,6 +28,8 @@ body {
 .bold-gray {
   color: gray;
   font-weight: bold;
+  margin-top: -1px;
+  margin-left: 5px;
 }
 
 nav {
@@ -93,22 +95,44 @@ nav {
 }
 
 .meal-card {
-  width: 250px;
+
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
-  flex-direction: column; 
+  flex-direction: row; 
   position: relative;
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
 }
 
-.meal--ingredient-count {
-  margin-top: 3px;
+.ingredient-info {
   margin-left: 10px;
 }
 
+.badge {
+  margin-top: 50px;
+}
+
+.meal--badge {
+  background-color: #da7b93;
+  width:auto;
+  color: #f6f6f6;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1.5px;
+  padding: 5px 5px;
+  margin-left: 5px;
+}
+
+.meal--ingredient-count {
+  margin-top: -2px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
 .meal-card--likes-count {
-  margin-top: 3px;
+  margin-top: -2px;
+  font-size: 15px;
+  margin-right: 15px;
 }
 
 .meal--list {
@@ -117,7 +141,7 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .meal--title {
@@ -125,6 +149,8 @@ nav {
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
+  margin-left: 2px;
+  
 }
 
 .meal-card--image {
@@ -134,13 +160,20 @@ nav {
 }
 
 .meal-card--info {
+  width: 225px;
+}
+
+.meal-card--spec {
   display: flex;
-  align-items:flex-start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 }
 
 .meal-card--like-thumb {
-  width: 12px;
-  margin: 5px;
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  margin-right: 5px;
 }
 
 .input--header {
@@ -224,12 +257,27 @@ nav {
   flex-wrap: wrap;
 }
 
+.badge {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.badge--list {
+  display: flex;
+  font-family: "Inter";
+}
+
+
 .used-ingredient--tile {
   background-color: white;
   color: green;
   padding: 5px 5px;
-  border-radius: 2px;
-  border-color: brown;
+  margin-left: 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #f6f6f6;
   font-weight: bold;
 }
 
@@ -237,9 +285,11 @@ nav {
   background-color: white;
   color: red;
   padding: 5px 5px;
-  border-radius: 2px;
-  border-color: brown;
-  border-radius: 1px;
+  margin-left: 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #f6f6f6;
   font-weight: bold;
 }
 
@@ -248,14 +298,18 @@ nav {
   flex-direction: column;
   justify-content: auto ; 
   align-items: flex-start;
+  padding-bottom: 10px;
+  border-radius: 1px;
   
 }
 
 .missed-ingredients {
+  
   display: flex;
   flex-direction: column;
   justify-content: auto ; 
   align-items:flex-start;
+  padding-bottom: 15px;
 }
 
 .missed-ingredient--plus {
@@ -266,6 +320,7 @@ nav {
   display: flex;
 }
 
-.signup-form {
-  margin-left: 25;
+.session--form {
+  margin-left: 25px;
+  color: #DA7B93;
 }

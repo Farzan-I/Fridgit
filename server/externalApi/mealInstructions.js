@@ -1,11 +1,12 @@
 import axios from 'axios';
+import authKey from '../auth.js';
 
 const fetchInstructions = (input = '1003464') => {
   const options = {
     method: 'GET',
     url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${input}/information`,
     headers: {
-      'X-RapidAPI-Key': 'b9052fa1b0mshe5a3cada7e50498p1a517cjsn6c055d673a00',
+      'X-RapidAPI-Key': authKey,
       'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
     }
   };
