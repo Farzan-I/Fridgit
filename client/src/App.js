@@ -32,7 +32,7 @@ const App = () => {
       <Navbar />
       {!loggedInStatus &&
         <>
-      <SignUp />
+      {/* <SignUp /> */}
       {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
         </>
       }

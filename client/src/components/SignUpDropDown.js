@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import styled from "styled-components";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../actions/addUser.js'
+import SignUp from "./SignUp.js";
 
 //need to move all of this to sign-up. No need for two different components and routes
 //are already established
@@ -46,8 +47,9 @@ export default function SignUpDropDown() {
           <div className="drop-down-list-container">
             <div className="drop-down-list">
               <form className="fields-container" onSubmit={handleSubmit}>
+                <SignUp/>
 
-                  <input 
+                  {/* <input 
                     type="text"
                     name="username"
                     className="drop-down-list-item"
@@ -55,28 +57,28 @@ export default function SignUpDropDown() {
                     required 
                     value={userData.userName} onChange={e => setUserData({...userData, userName: e.target.value})}
                   />
-    
-                  <input 
+     */}
+                  {/* <input 
                     type="password"
                     name="password"
                     className="drop-down-list-item"
                     placeholder="Choose password"
                     required
                     value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
-                  />
+                  /> */}
            
                 
-                  <input
+                  {/* <input
                     type="email"
                     name="email"
                     className="drop-down-list-item"
                     placeholder="Enter your email"
                     required
                     value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
-                  />
+                  /> */}
           
                   <div className="sign-up-button">
-                    <button>Signup</button>
+                    {/* <button>Signup</button> */}
                   </div>
               </form>
             </div>
