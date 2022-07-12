@@ -1,4 +1,5 @@
 import axios from 'axios';
+import authKey from '../auth.js';
 
 const fetchMealData = (input = 'turbot') => {
     const options = {
@@ -11,7 +12,7 @@ const fetchMealData = (input = 'turbot') => {
         ranking: '1'
       },
       headers: {
-        'X-RapidAPI-Key': '202b97b4f1mshb0fffa196885901p101664jsn054d3907db41',
+        'X-RapidAPI-Key': authKey,
         'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
       }
     };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from 'react-redux';
+import MealBadge from "./MealBadge.js"
 
 import Meal from './Meal/Meal.js'
 import Instruction from "./Instruction/Instruction.js"
@@ -10,6 +11,22 @@ export default function Meals() {
   
   const [showInstruction, setShowInstruction] = useState(false)
 
+  console.log(instructionData)
+
+  const mealBadges = () => {
+    let keyArray = ["vegetarian", "vegan", "dairyFree", "glutenFree", "veryPopular", "cheap", "sustainable", "lowFodmap"]
+
+    let mealBadges = keyArray.map((key) => {
+      if (instructionData[key] === true) {
+        return (
+          <MealBadge name={key}/>
+        )
+      }
+    })
+    return mealBadges
+
+    }
+  
   const meals = mealsData.map((meal) => {
     return (
     <Meal 
@@ -25,12 +42,18 @@ export default function Meals() {
     <section className="meal--list">
       {meals}
     </section>
-    <section className="instructions--tile">
+    {showInstruction &&
+    <section className="badge--list">
+      {mealBadges()}
+    </section>
+    }
      {showInstruction && 
+    <section className="instructions--tile">
       <Instruction
         {...instructionData}
-      />}
+      /> 
     </section>
+      }
     </div>
   )
 }

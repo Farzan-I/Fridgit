@@ -9,6 +9,7 @@ server/.DS_Store
 /coverage
 
 # production
+server/auth.js
 /build
 
 # misc
