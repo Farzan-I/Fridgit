@@ -46,9 +46,9 @@ export default function SignUpDropDown() {
         {isOpen && (
           <div className="drop-down-list-container">
             <div className="drop-down-list">
-              <form className="fields-container">
+              {/* <form className="fields-container"> */}
                 <SignUp/>
-              </form>
+              {/* </form> */}
             </div>
           </div>
         )}

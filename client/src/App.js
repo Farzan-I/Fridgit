@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 
 import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
+import SignUpDropDown from "./components/SignUpDropDown.js";
 
 const App = () => {
 
@@ -32,7 +33,7 @@ const App = () => {
       <Navbar />
       {/* {!loggedInStatus && */}
         <>
-      {/* <SignUp /> */}
+      <SignUpDropDown />
       {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
         </>
       {/* } */}
