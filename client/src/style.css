@@ -105,6 +105,35 @@ nav {
   background-color: #730071;
 }
 
+.fridge--container {
+  display: flex;
+  justify-content: column;
+}
+
+.fridge--contents {
+  max-width: 500px;
+  height: 500px;
+  width: 700px;
+  background-image: url('../public/fridge-interior.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+}
+
+.fridge--item-tile {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: black;
+  padding: 5px 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(111,111,111,0);
+  font-weight: bold;
+}
+
 .meal-card {
 
   font-size: 12px;
