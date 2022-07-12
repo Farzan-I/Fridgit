@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Login from './Login.js'
+import SignUpDropDown from "./SignUpDropDown.js";
 
 export default function Navbar() {
+
+  
   const userData  = useSelector((state) => state.user)
 
+  const [loggedInStatus, setLoggedInStatus] = useState(false)
+  //haven't worked out how to implement this. Need Archie
+
   return (
-    <nav>
+    <nav> 
       <div className="nav-container">
         <div className="logo-and-title">
           <img className="nav--logo" src='./brains-on-brioche.png' alt="logo"></img>
           <h3 className="nav--title">Brains On Brioche</h3>
           {userData.userName && <h2 className="nav--username">Hi, {userData.userName}!</h2>}
         </div>    
-        <div className="nav-links">
-          <a href="http://localhost:3000/" className="home--link">Fridge</a>
-          <a href="" className="about--link">About_Us</a>
-          <a href="" className="contact--link">Contact_Us</a>
+        <div className="login-container">
+        <Login setLoggedInStatus={setLoggedInStatus}/>
+          <SignUpDropDown/>
         </div>
+        {/* <div className="nav-links">
+          <a href="http://localhost:3000/" className="home--link">Fridge</a>
+          <a href="" className="about--link">About Us</a>
+          <a href="" className="contact--link">Contact Us</a>
+        </div> */} 
       </div>
     </nav>
+
   )
 }
 

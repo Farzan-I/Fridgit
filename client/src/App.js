@@ -33,7 +33,7 @@ const App = () => {
       {!loggedInStatus &&
         <>
       <SignUp />
-      <Login setLoggedInStatus={setLoggedInStatus}/>
+      {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
         </>
       }
       <div className="search-container">
