@@ -5,15 +5,14 @@ require('../mongodb_helper');
 
 describe('User model', () => {
   let user;
-  // beforeEach((done) => {
-  //   mongoose.connection.collections.users.drop(() => {
-  //     done();
-  //   });
-  user = new User({
-    userName: 'Test name',
-    email: 'test@test.com',
-    password: 'Test password',
-    fridge: []
+
+  beforeEach(() => {
+    user = new User({
+      userName: 'Test name',
+      email: 'test@test.com',
+      password: 'Test password',
+      fridge: []
+    });
   });
 
   it('has a username', () => {
@@ -28,4 +27,19 @@ describe('User model', () => {
   it('has a password', () => {
     expect(user.password).not.toBe("")
   })
+  it('has an id', () => {
+    expect(user._id).not.toBe(null)
+  })
+  // it('can save a user', (done) => {
+  //   user.save((err) => {
+  //     expect(err).toBeNull();
+
+  //     done();
+  //   });
+  //   User.find((error, users) => {
+  //     expect(error).toBeNull();
+
+  //     expect(users[0].userName).toBe('Test name');
+  //   });
+  // })
 })
