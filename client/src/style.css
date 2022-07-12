@@ -38,7 +38,6 @@ body {
   font-weight: bold;
 }
 
-
 /* ----------nav-------------------*/
 
 .nav-container {
@@ -62,21 +61,29 @@ body {
   align-items: end;
 }
 
-
 nav {
   height: 90px;
   /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
   background-color: #da7b93;
+  /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   font-family: 'Lobster', cursive;
+
+.instructions--tile {
+  display: flex;
+  align-items: flex-start;
+}
+
+.link--ref {
+  color:#730071
 }
 
 .nav--logo {
-  max-width: 100px
+  max-width: 120px
 }
 
 .nav--title {
@@ -88,12 +95,14 @@ nav {
 .nav--tagline {
   font-family: "Inter", sans-serif;
   right: 100;
+  /* -webkit-text-stroke: 0.1px black; */
+  font-family: 'Lobster', cursive;
 }
 
 .nav--username {
-  margin-left: 100;
-  right: 100;
-  padding: 100;
+  font-family: "Inter";
+  text-align: right;
+  color: rgba(255, 255, 255, 0.802);
 }
 
 .form {
@@ -119,10 +128,11 @@ nav {
   grid-column: 2 / -1;
   border-radius: 5px;
   margin: 10px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: #730071;
   color: white;
   background: #da7b93;
+  background-color: #730071;
 }
 
 .meal-card {
@@ -132,6 +142,41 @@ nav {
   display: flex;          
   flex-direction: column; 
   position: relative;
+  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ingredient-info {
+  margin-left: 10px;
+  max-width: 200px;
+}
+
+.badge {
+  margin-top: 50px;
+}
+
+.meal--badge {
+  background-color: #da7b93;
+  width:auto;
+  color: #f6f6f6;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1.5px;
+  padding: 5px 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.meal--ingredient-count {
+  margin-top: -2px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.meal-card--likes-count {
+  margin-top: -2px;
+  font-size: 15px;
+  margin-right: 15px;
 }
 
 .meal--list {
@@ -170,7 +215,6 @@ nav {
   /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color: #DA7B93;
-  
 }
 
 .search-container {
@@ -191,9 +235,30 @@ nav {
 
 .recipe--instructions {
   /* padding: 30px; */
+  max-width: 750px;
+  margin-left: 6px;
+  margin-right: 5px;
+  margin-top: 2px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 2px;
+  background-color: white;
+  padding: 30px;
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 18px;
+}
+
+.recipe--measures {
+  max-width: 500px;
+  margin-left: 5px;
+  margin-top: 2px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 2px;
+  background-color: white;
+  padding: 30px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 14px;
-  color: #545154;
 }
 
 .logo-and-title {
@@ -224,7 +289,17 @@ nav {
   flex-wrap: wrap;
 }
 
+.home--link, .about--link, .contact--link {
+  font-size: 20px;
+  text-align: right;
+  margin: 16px;
+  color: rgba(255, 255, 255, 0.802);
+  font-family: "Inter";
+  font-weight: bold;
+}
+
 .used-ingredient--tile {
+  display: inline-block;
   background-color: white;
   color: green;
   padding: 5px 5px;
@@ -256,6 +331,12 @@ nav {
   flex-direction: column;
   justify-content: auto ; 
   align-items:flex-start;
+  flex-direction: column;
+  justify-content: auto ; 
+  align-items: flex-start;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  padding-bottom: 15px;
 }
 
 .missed-ingredient--plus {

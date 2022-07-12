@@ -28,7 +28,7 @@ const App = () => {
   // const [loggedInStatus, setLoggedInStatus] = useState(false)
  
   return (
-    <div className="app">
+    <div>
 
       <Navbar />
       {/* {!loggedInStatus && */}
