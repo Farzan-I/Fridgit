@@ -22,7 +22,7 @@ export default function Meals() {
 
   return (
     <div>
-    <section className="meal--list">
+    <section className="meal--list" data-cy="meal-list">
       {meals}
     </section>
     <section className="instructions--tile">

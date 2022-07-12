@@ -36,10 +36,10 @@ export default function Meal(props) {
   
 
   return (
-    <div className="meal-card" >
+    <div className="meal-card" data-cy="meal--card">
       <div className="meal-info" onClick={handleClick}>
         <img className="meal-card--image" src={props.image} alt="meal"></img>
-        <p className="meal--title">{props.title}</p>
+        <p className="meal--title" data-cy="meal--title">{props.title}</p>
         <div className="meal-card--info">
           <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
           <span>{props.likes}</span>
