@@ -1,6 +1,6 @@
 # Brains On Brioche
 
-| [Contributors](#contributors) | [Project description](#project-description) | [Production](#production) | [Demo](#demo) | [Technologies used](#technologies-used) | [How to run locally](#how-to-run-locally) | [Card wall](#card-wall) | [Team approach](#team-approach) | [User stories](#user-stories) | [Further User Stories](#further-user-stories) | [Minimum Viable Product](#minimum-viable-product-mvp) | [Wireframes](#wireframes) | [Edge cases](#edge-cases) | [Future improvements](#future-improvements) |
+| [![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | [![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description)| [![Production](https://img.shields.io/badge/-Production-red)](#production) | [![Demo](https://img.shields.io/badge/-Demo-inactive)](#demo) | [![Technologies used](https://img.shields.io/badge/-Technologies%20used-yellow)](#technologies-used) | [![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-blue)](#how-to-run-locally) | [![Card wall](https://img.shields.io/badge/-Card%20wall-orange)](#card-wall) | [![Team approach](https://img.shields.io/badge/-Team%20approach-informational)](#team-approach) | [![User stories](https://img.shields.io/badge/-User%20stories-green)](#user-stories) | [![Further User Stories](https://img.shields.io/badge/-Further%20User%20Stories-blueviolet)](#further-user-stories) | [![Minimum Viable Product](https://img.shields.io/badge/-%20Minimum%20Viable%20Product-lightgrey)](#minimum-viable-product-mvp) | [![Wireframes](https://img.shields.io/badge/-Wireframes-important)](#wireframes) | [![Edge cases](https://img.shields.io/badge/-Edge%20cases-brown)](#edge-cases) | [![Future improvements](https://img.shields.io/badge/-Future%20Improvements-skyblue)](#future-improvements) |
 
 ## Contributors:
 - [Alexandros Papagiannis](https://github.com/Alexandros91)
@@ -25,16 +25,16 @@ In conclusion, all members of our team we are extremely happy with our effort in
 ![home](public/images/_____.png)
 
 ## Technologies Used
-- [Express](https://expressjs.com/) web framework for Node.js.
-- [Nodemon](https://nodemon.io/) to reload the server automatically.
-- [React](https://reactjs.org/) to build user interfaces.
-- [Mongoose](https://mongoosejs.com) to model objects in MongoDB.
-- [ESLint](https://eslint.org) for linting.
-- [Jest](https://jestjs.io/) for testing.
-- [Redux](https://redux.js.org/) to help with consistency across client, server, and native environments and make testing easier.
-- [Cypress](https://www.cypress.io/) for end-to-end testing.
-- [Axios](https://axios-http.com/) promise based HTTP client for the browser and node.js.
-- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) for styling of the webpages.
+- [![Express](https://img.shields.io/badge/-Express-lightpink)](https://expressjs.com/) web framework for Node.js.
+- [![Nodemon](https://img.shields.io/badge/-Nodemon-navy)](https://nodemon.io/) to reload the server automatically.
+- [![React](https://img.shields.io/badge/-React-green)](https://reactjs.org/) to build user interfaces.
+- [![Mongoose](https://img.shields.io/badge/-Mongoose-brown)](https://mongoosejs.com) to model objects in MongoDB.
+- [![ESLint](https://img.shields.io/badge/-ESLint-violet)](https://eslint.org) for linting.
+- [![Jest](https://img.shields.io/badge/-Jest-beige)](https://jestjs.io/) for testing.
+- [![Redux](https://img.shields.io/badge/-Redux-grey)](https://redux.js.org/) to help with consistency across client, server, and native environments and make testing easier.
+- [![Cypress](https://img.shields.io/badge/-Cypress-cyan)](https://www.cypress.io/) for end-to-end testing.
+- [![Axios](https://img.shields.io/badge/-Axios-fccb71)](https://axios-http.com/) promise based HTTP client for the browser and node.js.
+- [![CSS](https://img.shields.io/badge/-CSS-5454e9)](https://www.w3.org/Style/CSS/Overview.en.html) for styling of the webpages.
 
 ## How to run locally
 
@@ -46,6 +46,8 @@ In conclusion, all members of our team we are extremely happy with our effort in
 #### Server
 * `npm init -y` to initialise an empty package.json file
 * `npm install body-parser cors express mongoose nodemon` to install all necessary dependencies (in order of being installed: enable app to send recipe requests, enable cross origin requests, framework of the application, create models for the recipes, to have the browser reload everytime a change is made)
+
+#### Cypress
 
 ## Card wall
 We used a [Trello](https://trello.com/b/b9m4qtRa/brainsonbrioche) board to keep track of the features we want to implement. We organised tickets amongst the team and moved the tickets accordingly to demonstrate at what stage that feature's at (To do/In progress/In review etc.).
