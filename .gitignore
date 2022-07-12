@@ -32,3 +32,4 @@ client/build/robots.txt
 client/build/static/js/main.0edfe30b.js
 client/build/static/js/main.0edfe30b.js.LICENSE.txt
 client/build/static/js/main.0edfe30b.js.map
+.env
