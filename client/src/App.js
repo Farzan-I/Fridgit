@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"; 
-// import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import React, { useEffect, useState } from "react"; 
 import Meals from './components/Meals/Meals.js'
 import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
@@ -24,14 +23,19 @@ const App = () => {
     dispatch(getMealInstructions());
   }, [dispatch]);
 
-  
+
+  const [loggedInStatus, setLoggedInStatus] = useState(false)
+ 
   return (
-    <div className="app">
+    <div>
 
       <Navbar />
+      {!loggedInStatus &&
+        <>
       <SignUp />
-      <Login />
-
+      <Login setLoggedInStatus={setLoggedInStatus}/>
+        </>
+      }
       <div className="search-container">
         <Input />
       </div>

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React, { useState } from "react";
 import { loginUser } from '../actions/loginUserAction.js'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 
-const Login = ({Login, error}) => {
+const Login = (props, {Login, error}) => {
    
   const [userData, setUserData] = useState({
     userName: '',
@@ -19,10 +18,11 @@ const Login = ({Login, error}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(loginUser(userData));
+    props.setLoggedInStatus(true)
   };
 
   return (
-    <div className="login-form">
+    <div className="session--form">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input 
@@ -43,7 +43,11 @@ const Login = ({Login, error}) => {
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
+<<<<<<< HEAD
         <button data-cy="login-button">Login</button>
+=======
+        <button className="form--button">Login</button>
+>>>>>>> 8e02710e9ac2510d2274056b29bfe84354f22837
       </form>
     </div>
   );

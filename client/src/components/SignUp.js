@@ -21,7 +21,7 @@ const SignUp = ({Signup, error}) => {
   };
 
   return (
-    <div className="signup-form">
+    <div className="session--form">
       <h2>Join the no-waste revolution...</h2>
       <form onSubmit={handleSubmit}>
         <input 
@@ -51,7 +51,11 @@ const SignUp = ({Signup, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
+<<<<<<< HEAD
         <button data-cy="signup-button">Signup</button>
+=======
+        <button className="form--button">Signup</button>
+>>>>>>> 8e02710e9ac2510d2274056b29bfe84354f22837
       </form>
     </div>
   );

@@ -14,39 +14,69 @@ body {
   background-image: url('../public/tile.png');
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .bold-gray, .instructions-title {
 
   color: rgb(99, 99, 99);
   font-weight: bold;
+  margin-top: -1px;
+  margin-left: 5px;
+}
+
+.instructions--tile {
+  display: flex;
+  align-items: flex-start;
+}
+
+.link--ref {
+  color:#730071
 }
 
 nav {
   height: 100px;
-  left: 0px;
-  top: 0px;
-  background-color: #950740;
-  background-image: linear-gradient(#950740, #c3073f);
+  background-color: #DA7B93;
+  /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
-  align-items: center;
-  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  align-items: space-between;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav--logo {
-  max-width: 100px
+  max-width: 120px
 }
 
 .nav--title {
   color: rgba(255, 255, 255, 0.802);
   font-size: 40px;
-  -webkit-text-stroke: 0.1px black;
+  /* -webkit-text-stroke: 0.1px black; */
   font-family: 'Lobster', cursive;
 }
 
+.nav-container {
+  padding-left: 10px;
+  padding-right: 20px;
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  -webkit-text-stroke: 0.1px black;
+}
 
 .nav--username {
-  margin-left: 100;
-  right: 100;
-  padding: 100;
+  font-family: "Inter";
+  text-align: right;
+  color: rgba(255, 255, 255, 0.802);
 }
 
 .form {
@@ -69,19 +99,54 @@ nav {
   grid-column: 2 / -1;
   border-radius: 5px;
   margin: 10px;
-  border-style: solid;
+  /* border-style: solid; */
   border-color: #730071;
   color: white;
-  background-color: #950740;
+  background-color: #730071;
 }
 
 .meal-card {
-  width: 250px;
+
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
-  flex-direction: column; 
+  flex-direction: row; 
   position: relative;
+  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ingredient-info {
+  margin-left: 10px;
+  max-width: 200px;
+}
+
+.badge {
+  margin-top: 50px;
+}
+
+.meal--badge {
+  background-color: #da7b93;
+  width:auto;
+  color: #f6f6f6;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1.5px;
+  padding: 5px 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.meal--ingredient-count {
+  margin-top: -2px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.meal-card--likes-count {
+  margin-top: -2px;
+  font-size: 15px;
+  margin-right: 15px;
 }
 
 .meal--list {
@@ -89,8 +154,7 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 20px;
-  overflow-y: auto;
-  padding-bottom: 40px;
+  overflow-x: scroll;
 }
 
 .meal--title {
@@ -99,7 +163,8 @@ nav {
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 2px;
+  
 }
 
 .meal-card--image {
@@ -109,19 +174,25 @@ nav {
 }
 
 .meal-card--info {
+  width: 225px;
+}
+
+.meal-card--spec {
   display: flex;
-  align-items: center;
-  color: #950740;
+  justify-content: flex-start;
+  margin-bottom: 15px;
 }
 
 .meal-card--like-thumb {
-  width: 10px;
-  margin: 5px;
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  margin-right: 5px;
 }
 
 .input--header {
   font-family: 'Lobster', cursive;
-  color: #950740;
+  color: #DA7B93;
 }
 
 .search-container {
@@ -139,14 +210,31 @@ nav {
 }
 
 .recipe--instructions {
-  border: linear-gradient(#950740, #c3073f);
-  border-style: solid;
-  border-width: 20px;
-  background-color: #FFFFFFCD;
+  max-width: 750px;
+  margin-left: 6px;
+  margin-right: 5px;
+  margin-top: 2px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 2px;
+  background-color: white;
+  padding: 30px;
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 18px;
+  
+}
+
+.recipe--measures {
+  max-width: 500px;
+  margin-left: 5px;
+  margin-top: 2px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 2px;
+  background-color: white;
   padding: 30px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 14px;
-  color: #545154;
 }
 
 .logo-and-title {
@@ -155,50 +243,39 @@ nav {
   justify-content: space-around;
 }
 
-.nav-container {
-  padding-left: 10px;
-  padding-right: 20px;
-  display: flex;
-  height: 100%;
-  width: 100vw;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
-  -webkit-text-stroke: 0.1px black;
-}
 
 .home--link, .about--link, .contact--link {
   font-size: 20px;
   text-align: right;
   margin: 16px;
   color: rgba(255, 255, 255, 0.802);
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Inter";
+  font-weight: bold;
 }
 
-.app {
+
+.badge {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.badge--list {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  font-family: "Inter";
 }
 
-.ingredient-info {
-  font-family: 'Edu SA Beginner', cursive;
-  font-size: 14px;
-}
 
 .used-ingredient--tile {
-  /* display: inline-block; */
+  display: inline-block;
   background-color: white;
   color: green;
   padding: 5px 5px;
-  border-radius: 2px;
-  border-color: brown;
+  margin-left: 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #f6f6f6;
   font-weight: bold;
 }
 
@@ -206,10 +283,12 @@ nav {
   display: inline-block;
   background-color: white;
   color: red;
-  padding-left: 5px;
-  border-radius: 2px;
-  border-color: brown;
-  border-radius: 1px;
+  padding: 5px 5px;
+  margin-left: 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #f6f6f6;
   font-weight: bold;
 }
 
@@ -218,15 +297,19 @@ nav {
   flex-direction: column;
   justify-content: auto ; 
   align-items: flex-start;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  
 }
 
 .missed-ingredients {
-  display: flex;
-  /* display: inline-block; */
+  
   flex-direction: column;
   justify-content: auto ; 
-  align-items:flex-start;
-
+  align-items: flex-start;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  padding-bottom: 15px;
 }
 
 .missed-ingredient--plus {
@@ -237,6 +320,7 @@ nav {
   display: flex;
 }
 
-.signup-form {
-  margin-left: 25;
+.session--form {
+  margin-left: 25px;
+  color: #DA7B93;
 }
