@@ -15,7 +15,7 @@ export default function Navbar() {
           <h3 className="nav--title">Brains On Brioche</h3>
           {userData.userName && <h2 className="nav--username">Hi, {userData.userName}!</h2>}
         </div>    
-        <div className="main-drop-down-container">
+        <div className="navbar-main-drop-down-container">
           <div className="signup-dropdown-container">  
             <SignUpDropDown/>
           </div>

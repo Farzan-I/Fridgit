@@ -38,7 +38,7 @@ export default function SignUpDropDown() {
   const toggling = () => setIsOpen(!isOpen);
   
   return (
-    // <div className="main-drop-down-container">
+    <div className="main-drop-down-container">
       <div className="drop-down-container">
         <div className="drop-down-header" onClick={toggling}>
        {"Create Account"}
@@ -53,6 +53,6 @@ export default function SignUpDropDown() {
           </div>
         )}
       </div>
-    // </div>
+    </div>
   );
 }
