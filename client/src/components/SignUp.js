@@ -25,6 +25,7 @@ const SignUp = ({Signup, error}) => {
       <h2>Join the no-waste revolution...</h2>
       <form onSubmit={handleSubmit}>
         <input 
+          data-cy="signup-username"
           type="text"
           name="username"
           className="form--input"
@@ -33,6 +34,7 @@ const SignUp = ({Signup, error}) => {
           value={userData.userName} onChange={e => setUserData({...userData, userName: e.target.value})}
         />
         <input 
+          data-cy="signup-password"
           type="password"
           name="password"
           className="form--input"
@@ -41,6 +43,7 @@ const SignUp = ({Signup, error}) => {
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
         <input 
+          data-cy="signup-email"
           type="email"
           name="email"
           className="form--input"
@@ -48,7 +51,7 @@ const SignUp = ({Signup, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
-        <button>Signup</button>
+        <button data-cy="signup-button">Signup</button>
       </form>
     </div>
   );

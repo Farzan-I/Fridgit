@@ -9,8 +9,8 @@ export default function Navbar() {
       <div className="nav-container">
         <div className="logo-and-title">
           <img className="nav--logo" src='./brains-on-brioche.png' alt="logo"></img>
-          <h3 className="nav--title">Brains On Brioche</h3>
-          {userData.userName && <h2 className="nav--username">Hi, {userData.userName}!</h2>}
+          <h3 className="nav--title" data-cy="nav-title">Brains On Brioche</h3>
+          {userData.userName && <h2 className="nav--username" data-cy="nav-username">Hi, {userData.userName}!</h2>}
         </div>    
         <div className="nav-links">
           <a href="http://localhost:3000/" className="home--link">Fridge</a>
