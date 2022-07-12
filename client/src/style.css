@@ -298,8 +298,9 @@ nav {
 /*/ --------- dropdowns-container -------------/*/
 
 .main-drop-down-container {
+  margin-top: 25px;;
   display: flex;
-  background-color: grey;
+  /* background-color: grey; */
   flex-direction: row;
   justify-content: space-around;
   padding-top: 10px;
@@ -321,7 +322,7 @@ nav {
   margin-top: 10px;
   height: 200px;
   width: 30%;
-  background-color: cyan;
+  /* background-color: cyan; */
   flex-shrink: 0;
   /* overflow: hidden; */
   /* z-index: 2;
@@ -333,7 +334,7 @@ nav {
   display: flex;
   font-family: sans-serif;
   width: 30%;
-  background-color: grey;
+  /* background-color: grey; */
   height: 5vh;
   z-index: 2;
   position: relative;
@@ -345,7 +346,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: yellow;
+  /* background-color: yellow; */
   max-width: 200px;
   min-width: 200px;
 }
@@ -369,15 +370,16 @@ nav {
   font-weight: 500;
   font-size: 1.3rem;
   color: #3faffa;
-  background: rgb(150, 202, 192);
+  /* background: rgb(150, 202, 192); */
   
 }
 
 .drop-down-list-container {
+  margin-top: 0px;
   display: flex;
   width: 100%;
   /* background-color: cyan; */
-  align-items: center;
+  align-items: flex-start;
   height: 100px;
   box-sizing: border-box;
   color: #3faffa;
@@ -392,7 +394,7 @@ nav {
   margin-top: 30px;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   background-color: white;
 }
   
@@ -411,7 +413,7 @@ nav {
   padding-top: 10px;
   /* min-width: 30%; */
   flex-direction: column;
-  background-color: white;
+  /* background-color: white; */
   align-items: center;
 }
 
@@ -434,6 +436,6 @@ nav {
   align-items: center;
   max-width: 200px;
   min-width: 200px;
-  background-color: #730071;
+  /* background-color: #730071; */
 }
  

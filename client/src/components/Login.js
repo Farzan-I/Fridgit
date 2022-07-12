@@ -22,7 +22,7 @@ const Login = (props, {Login, error}) => {
   };
 
   return (
-    <div className="session--form">
+    <div>
       <form onSubmit={handleSubmit}>
         <input 
           type="email"
@@ -40,7 +40,7 @@ const Login = (props, {Login, error}) => {
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
-        <button  className="drop-down-list-item">Login</button>
+        <button className="drop-down-list-item">Login</button>
       </form>
     </div>
   );
