@@ -9,29 +9,29 @@ import SignUp from "./SignUp.js";
 
 export default function SignUpDropDown() {
 
-  const [userData, setUserData] = useState({
-    userName: '',
-    email: '',
-    password: '',
-    fridge: []
-  })
+  // const [userData, setUserData] = useState({
+  //   userName: '',
+  //   email: '',
+  //   password: '',
+  //   fridge: []
+  // })
 
-  const clear = () => {
-    // setCurrentId(0);
-    setUserData({ 
-      userName: '',
-      email: '',
-      password: '',
-     });
-  }; 
+  // const clear = () => {
+  //   // setCurrentId(0);
+  //   setUserData({ 
+  //     userName: '',
+  //     email: '',
+  //     password: '',
+  //    });
+  // }; 
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    dispatch(addUser(userData));
-    // clear()
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   dispatch(addUser(userData));
+  //   // clear()
+  // };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,40 +46,8 @@ export default function SignUpDropDown() {
         {isOpen && (
           <div className="drop-down-list-container">
             <div className="drop-down-list">
-              <form className="fields-container" onSubmit={handleSubmit}>
+              <form className="fields-container">
                 <SignUp/>
-
-                  {/* <input 
-                    type="text"
-                    name="username"
-                    className="drop-down-list-item"
-                    placeholder="Choose username"
-                    required 
-                    value={userData.userName} onChange={e => setUserData({...userData, userName: e.target.value})}
-                  />
-     */}
-                  {/* <input 
-                    type="password"
-                    name="password"
-                    className="drop-down-list-item"
-                    placeholder="Choose password"
-                    required
-                    value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
-                  /> */}
-           
-                
-                  {/* <input
-                    type="email"
-                    name="email"
-                    className="drop-down-list-item"
-                    placeholder="Enter your email"
-                    required
-                    value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
-                  /> */}
-          
-                  <div className="sign-up-button">
-                    {/* <button>Signup</button> */}
-                  </div>
               </form>
             </div>
           </div>
