@@ -48,7 +48,7 @@ const SignUp = ({Signup, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
-        <button>Signup</button>
+        <button className="form--button">Signup</button>
       </form>
     </div>
   );

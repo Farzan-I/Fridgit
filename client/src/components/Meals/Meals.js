@@ -4,20 +4,21 @@ import MealBadge from "./MealBadge.js"
 
 import Meal from './Meal/Meal.js'
 import Instruction from "./Instruction/Instruction.js"
+import Measures from "./Measures/Measures.js"
 
 export default function Meals() {
   const mealsData = useSelector((state) => state.meals) // meals is defined in reducers-index
-  const instructionData = useSelector((state) => state.instructions)
+  const recipeData = useSelector((state) => state.instructions)
   
   const [showInstruction, setShowInstruction] = useState(false)
 
-  console.log(instructionData)
+  
 
   const mealBadges = () => {
     let keyArray = ["vegetarian", "vegan", "dairyFree", "glutenFree", "veryPopular", "cheap", "sustainable", "lowFodmap"]
 
     let mealBadges = keyArray.map((key) => {
-      if (instructionData[key] === true) {
+      if (recipeData[key] === true) {
         return (
           <MealBadge name={key}/>
         )
@@ -39,9 +40,11 @@ export default function Meals() {
 
   return (
     <div>
-    <section className="meal--list">
-      {meals}
-    </section>
+      <section className="meal--list">
+    {/* <div className="meal-list-parent"> */}
+        {meals}
+    {/* </div> */}
+      </section>
     {showInstruction &&
     <section className="badge--list">
       {mealBadges()}
@@ -50,8 +53,11 @@ export default function Meals() {
      {showInstruction && 
     <section className="instructions--tile">
       <Instruction
-        {...instructionData}
+        {...recipeData}
       /> 
+      <Measures 
+        {...recipeData}
+      />
     </section>
       }
     </div>
