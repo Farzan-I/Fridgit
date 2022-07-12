@@ -13,9 +13,12 @@
 
 body {
   border: 1px solid #000;
-	margin: auto;
+  min-height: 100vh;
+  min-width: 100vw;
+	margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
   background-image: url('../public/tile.png');
   /* background-size: cover; */
@@ -289,7 +292,7 @@ nav {
   background-color: grey;
   flex-direction: row;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 /*/ --------- dropdowns-container -------------/*/
@@ -298,9 +301,10 @@ nav {
   display: flex;
   background-color: grey;
   flex-direction: row;
+  justify-content: space-around;
   z-index: 1;
   flex-wrap: nowrap;
-  min-width: 30vw;
+  /* min-width: 30vw; */
   min-height: 90px;
 }
 
@@ -312,7 +316,7 @@ nav {
 
   display: flex;
   font-family: sans-serif;
-  width: 30vw;
+  width: 30%;
   /* background-color: grey; */
   height: 5vh;
   z-index: 2;
@@ -321,9 +325,14 @@ nav {
 
 }
 
+.signup-dropdown-container {
+  display: flex;
+  align-items: end;
+}
+
 .drop-down-container {
     display: flex;
-    width: 30vw;
+    /* width: 30%; */
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
@@ -333,8 +342,8 @@ nav {
 
 .drop-down-header {
   display: flex;
-  width: 50%;
-justify-content: center;
+  width: 100%;
+  justify-content: center;
   /* margin-bottom: 0.8em;
   padding: 0.4em 2em 0.4em 1em; */
   /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
@@ -350,7 +359,7 @@ justify-content: center;
   background-color: cyan;
   align-items: center;
   padding: 0;
-  margin: 0;
+  /* margin-top: 90px; */
   background: #ffffff;
   /* border: 2px solid #e5e5e5; */
   box-sizing: border-box;
@@ -362,6 +371,7 @@ justify-content: center;
 .drop-down-list {
   display: flex;
   width: 100%;
+  margin-top: 90px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -381,7 +391,7 @@ justify-content: center;
 .fields-container {
   display: flex;
   padding-top: 10px;
-  min-width: 30vw;
+  /* min-width: 30%; */
   flex-direction: column;
   background-color: white;
   align-items: center;
@@ -396,5 +406,12 @@ justify-content: center;
   align-items: center;
   justify-content: center;
 
+}
+
+/*/ --------- drop-down-login -------------/*/
+
+.login-dropdown-container {
+  display: flex;
+  align-items: end;
 }
  

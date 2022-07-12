@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { addUser } from '../actions/addUser.js'
 import { useDispatch } from 'react-redux';
 
-
-
 const SignUp = ({Signup, error}) => {
    
   const [userData, setUserData] = useState({
@@ -21,7 +19,7 @@ const SignUp = ({Signup, error}) => {
   };
 
   return (
-    <div className="session--form">
+    <div>
       <form onSubmit={handleSubmit}>
         <input 
           type="text"

@@ -38,7 +38,7 @@ export default function LoginDropDown() {
   const toggling = () => setIsOpen(!isOpen);
   
   return (
-    <div className="main-drop-down-container">
+    // <div className="main-drop-down-container">
       <div className="drop-down-container">
         <div className="drop-down-header" onClick={toggling}>
        {"Login"}
@@ -51,6 +51,6 @@ export default function LoginDropDown() {
           </div>
         )}
       </div>
-    </div>
+    // </div>
   );
 }
