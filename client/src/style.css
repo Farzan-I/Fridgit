@@ -2,23 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
 /* give everything a min-width */
-
+/* consider fixed position for header */
+/* rename summary ingredients */
+/* reduce width of attribute (e.g. vegetarian, gluten-free
+components and put them in a row above instructions or a column 
+next to it, depending on which format we opt for */
+/* can't see the titles of the recipes anymore */
+/* some of the recipes are in mealcard divs, the others
+are in mealcard--info divs, this might have to do with
+the mixed-up heights
+When you click on a meal, it should jump to the recipe
+What happens to formatting when you have one meal with 
+a lot of ingredients? Does it push entire div below down or 
+just the mealcard below. If latter then that's a problem
+*/
 * {
   box-sizing: border-box;
 }
 
 body {
-  border: 1px solid #000;
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
+  background-attachment: fixed;
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
   background-image: url('../public/table.jpg');
   background-size: cover;
-  background-position: center center;
 
 }
 
@@ -64,7 +77,8 @@ nav {
   /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
-  background-color: #da7b93;
+  /* background-color: #da7b93; */
+  background-color: rgba(218,123,147,0.5);
   /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
@@ -522,3 +536,29 @@ nav {
   /* background-color: #730071; */
 }
  
+/* ----------- footer -----------------------*/
+
+.footer {
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  background-color: rgba(218,123,147,0.5);
+  position: fixed;
+  bottom: 0;
+  height: 35px;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: white; */
+  width: 30vw;
+
+}
+
+.footer-links {
+  display: flex;
+  padding-top: 7px;
+}
+
