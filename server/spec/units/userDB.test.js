@@ -6,7 +6,10 @@ require('../mongodb_helper');
 describe('User model', () => {
   let user;
 
-  beforeEach(() => {
+  beforeEach((done) => {
+    mongoose.connection.collections.users.drop(() => {
+      done();
+    });
     user = new User({
       userName: 'Test name',
       email: 'test@test.com',
@@ -38,7 +41,7 @@ describe('User model', () => {
         expect(error).toBeNull();
   
         expect(testusers[0].userName).toBe("Test name");
-      });
+      })
 
       done();
     });
