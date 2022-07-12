@@ -6,7 +6,10 @@ require('../mongodb_helper');
 describe('User model', () => {
   let user;
 
-  beforeEach(() => {
+  beforeEach((done) => {
+    mongoose.connection.collections.users.drop(() => {
+      done();
+    });
     user = new User({
       userName: 'Test name',
       email: 'test@test.com',
@@ -30,16 +33,17 @@ describe('User model', () => {
   it('has an id', () => {
     expect(user._id).not.toBe(null)
   })
-  // it('can save a user', (done) => {
-  //   user.save((err) => {
-  //     expect(err).toBeNull();
+  it('can save a user', (done) => {
+    user.save((err) => {
+      expect(err).toBeNull();
 
-  //     done();
-  //   });
-  //   User.find((error, users) => {
-  //     expect(error).toBeNull();
+      User.find((error, testusers) => {
+        expect(error).toBeNull();
+  
+        expect(testusers[0].userName).toBe("Test name");
+      })
 
-  //     expect(users[0].userName).toBe('Test name');
-  //   });
-  // })
+      done();
+    });
+  })
 })
