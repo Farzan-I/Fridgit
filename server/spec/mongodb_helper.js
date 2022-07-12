@@ -1,9 +1,9 @@
 var mongoose = require("mongoose");
 import {setCollectionName} from "../models/user.js"
+import dotenv from "dotenv";
 
 beforeAll(function (done) {
-  setCollectionName('testuser');
-  mongoose.connect("mongodb+srv://BoB:BrainsOnBrioche@bobcluster.ntzdqlk.mongodb.net/?retryWrites=true&w=majority", {
+  mongoose.connect("mongodb+srv://BoBTest:brainsonbriochetest@cluster0.3x6pb1s.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
