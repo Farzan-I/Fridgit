@@ -41,7 +41,7 @@ const Login = (props, {Login, error}) => {
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
-        <button>Login</button>
+        <button className="form--button">Login</button>
       </form>
     </div>
   );
