@@ -24,18 +24,18 @@ const App = () => {
   }, [dispatch]);
 
 
-  const [loggedInStatus, setLoggedInStatus] = useState(false)
+  // const [loggedInStatus, setLoggedInStatus] = useState(false)
  
   return (
     <div className="app">
 
       <Navbar />
-      {!loggedInStatus &&
+      {/* {!loggedInStatus && */}
         <>
       {/* <SignUp /> */}
       {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
         </>
-      }
+      {/* } */}
       <div className="search-container">
         <Input />
       </div>

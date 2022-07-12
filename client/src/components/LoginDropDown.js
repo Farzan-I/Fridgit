@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 // import styled from "styled-components";
 import { useDispatch } from 'react-redux';
-import { addUser } from '../actions/addUser.js'
-import SignUp from "./SignUp.js";
+// import { addUser } from '../actions/addUser.js'
+import Login from "./Login.js";
 
 //need to move all of this to sign-up. No need for two different components and routes
 //are already established
 
-export default function SignUpDropDown() {
+export default function LoginDropDown() {
 
   const [userData, setUserData] = useState({
     userName: '',
@@ -29,8 +29,8 @@ export default function SignUpDropDown() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(addUser(userData));
-    // clear()
+    dispatch(loginUser(userData));
+    // props.setLoggedInStatus(true)
   };
 
   const [isOpen, setIsOpen] = useState(false);
