@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { AddFridgeItem } from "../../controllers/users.js";
 import User from '../../models/user.js'
 
 require('../mongodb_helper');

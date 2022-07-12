@@ -16,10 +16,15 @@ export const CreateUser = (req, res) => {
 }
 
 export const AddFridgeItem = (req, res) => {
+  console.log("fridge controller: " + req.body)
   User.findByIdAndUpdate(
     req.body.userID, 
-    {$push: {fridge: req.body.fridgeItem},
-  }, res.send({
-    addedItem: req.body.fridgeItem
-  }))
+    {$push: { fridge: req.body.fridgeItem }}, 
+    (err, result) => {
+      res.send({
+        userID: result._id,
+        userName: result.userName,
+        fridge: result.fridge
+      })
+    })
 }
