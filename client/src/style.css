@@ -591,7 +591,8 @@ nav {
     border-radius: 30px;
     padding: 10px;
     /* display: block; */
-    height: 250px;
+    font-size: 12px;
+    height: 300px;
     width: 500px;
     bottom: 40px;
     right: 250px;
@@ -603,5 +604,6 @@ nav {
 .contact-us-drop-up {
   right: 10px;
   width: 230px;
+  height:520px;
 }
 
