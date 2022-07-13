@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
 import SignUp from './components/SignUp.js'
 import Login from './components/Login.js'
+import Fridge from './components/Fridge.js'
 
 import { useDispatch } from "react-redux";
 
@@ -31,12 +32,8 @@ const App = () => {
     <div>
 
       <Navbar />
-      {/* {!loggedInStatus && */}
-        <>
-      {/* <SignUpDropDown /> */}
-      {/* <Login setLoggedInStatus={setLoggedInStatus}/> */}
-        </>
-      {/* } */}
+      
+      <Fridge />
       <div className="search-container">
         <Input />
       </div>
