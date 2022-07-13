@@ -49,9 +49,9 @@ export default function Meal(props) {
         <div className="meal-card--info" onClick={handleClick}>
           <img className="meal-card--image" src={props.image} alt="meal"></img>
       
-          {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
         </div>
           <div class="badge">
+          {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
             <div className="meal-card--spec">
               <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
               <span className="meal-card--likes-count">{props.likes}</span>
