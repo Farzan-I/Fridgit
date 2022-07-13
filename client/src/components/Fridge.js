@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FridgeItem from './FridgeItem/FridgeItem.js'
 import { addFridgeItem } from "../actions/addFridgeItem.js";
+import { removeFridgeItem } from "../actions/removeFridgeItem.js"
 
 export default function Fridge() {
   let userState = useSelector((state) => state.user)
@@ -27,7 +28,10 @@ export default function Fridge() {
   const handleClick = (item) => {
     // setRemoveItem(item)
     console.log(item)
-    //dispatch(removeFridgeItem(item))
+    dispatch(removeFridgeItem(
+      item,
+      userState._id
+    ))
   }
 
   const fridgeContents = userState.fridge.map((item) => {

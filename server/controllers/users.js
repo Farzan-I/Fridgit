@@ -16,10 +16,22 @@ export const CreateUser = (req, res) => {
 }
 
 export const AddFridgeItem = (req, res) => {
-  console.log("fridge controller: " + req.body)
   User.findByIdAndUpdate(
     req.body._id, 
     {$push: { fridge: req.body.fridgeItem }}, 
+    (err, result) => {
+      res.send({
+        _id: result._id,
+        userName: result.userName,
+        fridge: result.fridge
+      })
+    })
+}
+
+export const RemoveFridgeItem = (req, res) => {
+  User.findByIdAndUpdate(
+    req.body._id, 
+    {$pull: { fridge: req.body.fridgeItem }}, 
     (err, result) => {
       res.send({
         _id: result._id,
