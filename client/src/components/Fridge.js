@@ -40,9 +40,12 @@ export default function Fridge() {
   
   return (
     <div className="fridge--container">
-        <div className="fridge--add-form">
-          <form className="session--form" onSubmit={handleSubmit}>
-          <h2>Your fridge</h2>
+        {/* <div className="fridge--add-form">
+          
+        </div> */}
+        <div className="fridge--contents">
+          <div className="fridge-session-form-subcontainer">
+            <form className="fridge-session-form" onSubmit={handleSubmit}>
             <input
               type="text"
               className="form--input"
@@ -52,10 +55,14 @@ export default function Fridge() {
             />
             <input type="submit" className="form--button"/>
 
-          </form>
-        </div>
-        <div className="fridge--contents">
-          {fridgeContents}
+            </form>
+          </div>
+          <div className="fridge-contents-subcontainer">
+            {fridgeContents}
+          </div>
+          <div className="fridge-what-for-dinner-subcontainer">
+          button here
+          </div>
         </div>
     </div>
   )

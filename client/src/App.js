@@ -36,13 +36,13 @@ const App = () => {
       <div class="main-body-container">
         <div class="fridge--container">
           <Fridge />
-          <div class="search-container">
+          <div className="search-container">
           <Input />
           </div>
         </div>
-          <div className="search-container">
+          {/* <div className="search-container">
             
-          </div>
+          </div> */}
 
           <div className="meals-container">
             <Meals />
