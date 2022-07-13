@@ -23,43 +23,20 @@ const Input = () => {
 
   const dispatch = useDispatch();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
     //this is what prevents the page re-rendering  
-    dispatch(getMealData(searchData.ingredients));
+    dispatch(getMealData(userFridge.join(",")));
   };
 
   return (
     <div>
       <h1 className="input--header">What's in your fridge?</h1>
 
-      <div className="form">
-        <form onSubmit={handleSubmit}>
-          <div style={{width:0,height:0}}>
-            <input 
-              type="hidden"
-              className="form--input"
-              placeholder="Ingredients here..."
-              value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
-            />
-          </div>
-          <input type="submit" className="form--button"/>
-        </form>
+      <div>
+        <button className="form--button" onClick={handleSubmit}>What's for Dinner?</button>
       </div>
     </div>
     
-    // <div className="form">
-    //   <form onSubmit={handleSubmit}>
-    //     <input 
-    //       type="text"
-    //       className="form--input"
-    //       placeholder="Ingredients here..."
-    //       value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
-    //     />
-    //     <input type="submit" className="form--button"/>
-        
-    //   </form>
-    // </div>
   );
 }
 

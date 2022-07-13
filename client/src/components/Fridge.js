@@ -20,7 +20,7 @@ export default function Fridge() {
       userState._id
       )
     foo(dispatch)
-
+    setFridgeItem({item: ""})
   }
 
   const handleClick = (item) => {
