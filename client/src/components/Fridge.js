@@ -5,24 +5,22 @@ import { addFridgeItem } from "../actions/addFridgeItem.js";
 import { removeFridgeItem } from "../actions/removeFridgeItem.js"
 
 export default function Fridge() {
-  let userState = useSelector((state) => state.user)
+  const userState = useSelector((state) => state.user)
 
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
-  //set removal item
-  const [removeItem, setRemoveItem] = useState("")
-  // get data of fridge
-  const [fridgeState, setFridgeState] = useState(userState.fridge)
 
-  
   const dispatch = useDispatch()
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    dispatch(addFridgeItem(
+    
+    let foo = addFridgeItem(
       fridgeItem.item,
       userState._id
-    ))
+      )
+    foo(dispatch)
+
   }
 
   const handleClick = (item) => {

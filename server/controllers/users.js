@@ -18,7 +18,8 @@ export const CreateUser = (req, res) => {
 export const AddFridgeItem = (req, res) => {
   User.findByIdAndUpdate(
     req.body._id, 
-    {$push: { fridge: req.body.fridgeItem }}, 
+    {$push: { fridge: req.body.fridgeItem }},
+    {new: true}, 
     (err, result) => {
       res.send({
         _id: result._id,
@@ -32,6 +33,7 @@ export const RemoveFridgeItem = (req, res) => {
   User.findByIdAndUpdate(
     req.body._id, 
     {$pull: { fridge: req.body.fridgeItem }}, 
+    {new: true},
     (err, result) => {
       res.send({
         _id: result._id,
