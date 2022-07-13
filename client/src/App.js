@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
 import SignUp from './components/SignUp.js'
 import Login from './components/Login.js'
+import Footer from './components/Footer.js'
 
 import { useDispatch } from "react-redux";
 
@@ -49,8 +50,7 @@ const App = () => {
       </div>
 
       <div>
-        <AboutUs />
-        <ContactUs />
+        <Footer />
       </div>
 
     </div>

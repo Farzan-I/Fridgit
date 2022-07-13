@@ -41,7 +41,7 @@ export default function Meals() {
   return (
     <div>
       <section className="meal--list">
-    {/* <div className="meal-list-parent"> */}
+    {/* <div className="-parent"> */}
         {meals}
     {/* </div> */}
       </section>

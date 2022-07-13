@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ContactUS() {
+export default function ContactUs() {
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -8,20 +8,13 @@ export default function ContactUS() {
   const toggling = () => setIsOpen(!isOpen);
   
   return (
-    <div className="footer">
-      <div className="about-us" onClick={toggling}>
-        {"About us"}
-      </div>
-      <div className="about-us" onClick={toggling}>
+    <div>
+      <div className="" onClick={toggling}>
         {"Contact us"}
       </div>
         {isOpen && (
-          <div className="drop-down-list-container">
-            <div className="drop-down-list">
-              {/* <form className="fields-container"> */}
-                {/* <SignUp/> */}
-              {/* </form> */}
-            </div>
+          <div className="contact-us-drop-up">
+            <h4>Contact us</h4>
           </div>
         )}
     </div>
