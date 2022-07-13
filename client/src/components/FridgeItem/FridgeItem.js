@@ -7,8 +7,8 @@ export default function FridgeItem(props) {
     props.handleClick(props.name)
   }
   return (
-    <div className="fridge--item-tile">
-      {props.name}<span className="bold-gray" onClick={handleClick}>-</span>
+    <div className="fridge--item-tile" >
+      {props.name} <span className="bold-gray" onClick={handleClick}>-</span>
     </div>
   )
 }

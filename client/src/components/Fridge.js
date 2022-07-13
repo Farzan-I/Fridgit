@@ -64,10 +64,10 @@ export default function Fridge() {
           <div className="fridge-contents-subcontainer">
             {fridgeContents}
           </div>
-          <div className="fridge-what-for-dinner-subcontainer">
-          < Input />
-          </div>
         </div>
+          <div className="fridge-what-for-dinner-subcontainer">
+          <Input />
+          </div>
         
           {/* <div className="meal-test">
           <Instruction
