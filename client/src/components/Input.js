@@ -30,10 +30,10 @@ const Input = () => {
 
   return (
     <div>
-      <h1 className="input--header">What's in your fridge?</h1>
+      {/* <h1 className="input--header">What's in your fridge?</h1> */}
 
       <div>
-        <button className="form--button" onClick={handleSubmit}>What's for Dinner?</button>
+        <button className="what-for-dinner-button" onClick={handleSubmit}>What's for Dinner?</button>
       </div>
     </div>
     

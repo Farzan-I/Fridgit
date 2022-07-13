@@ -42,7 +42,7 @@ export default function Fridge() {
     <div className="fridge--container">
         <div className="fridge--add-form">
           <form className="session--form" onSubmit={handleSubmit}>
-          <h2>Add to your fridge!</h2>
+          <h2>Your fridge</h2>
             <input
               type="text"
               className="form--input"

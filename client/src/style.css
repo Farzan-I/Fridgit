@@ -17,7 +17,8 @@ body {
   background-attachment: fixed;
   /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
-  background-image: url('../public/tile.png');
+  /* background-image: url('../public/tile.png'); */
+  background-color: ghostwhite;
   background-size: cover;
   /* background-position: center center; */
 
@@ -34,6 +35,11 @@ body {
 .bold-gray {
   color: gray;
   font-weight: bold;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ----------nav-------------------*/
@@ -127,6 +133,7 @@ nav {
 }
 
 .form--button {
+  
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
@@ -138,16 +145,25 @@ nav {
   background-color: #730071;
 }
 
+/*-------------- fridge --------------*/
+
 .fridge--container {
   display: flex;
-  justify-content: column;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40vw;
+  background-color: grey;
+  height: 70vw;
 }
 
 .fridge--contents {
-  max-width: 500px;
-  height: 500px;
+  max-width: 95%;
+  height: 75%;
   width: 700px;
-  background-image: url('../public/fridge-interior.png');
+  background-color: white;
+  /* background-image: url('../public/fridge-interior.png'); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 5px;
@@ -167,12 +183,27 @@ nav {
   font-weight: bold;
 }
 
+.what-for-dinner-button {
+  
+  width: 50%;
+  font-family: "Inter", sans-serif;
+  grid-column: 2 / -1;
+  border-radius: 5px;
+  margin: 10px;
+  /* border-style: solid; */
+  border-color: #730071;
+  color: white;
+  background: #da7b93;
+  background-color: #730071;
+}
+
 /*-------------- meal tiles --------------*/
 
 
 .meals-container {
   /* margin-top: 10px; */
-  width: 100vw;
+  max-width: 60vw;
+  overflow: scroll;
   display: flex;
   padding: 30px;
   font-family: 'Lobster', cursive;
@@ -244,6 +275,7 @@ nav {
 .meal--list {
   /* padding: 30px; */
   width: 90vw;
+  background-color: darkgray;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -279,12 +311,19 @@ nav {
 }
 
 .search-container {
+  width: 100%;
+
+}
+
+/* delete me, I mess things up */
+.search--container {
   /* margin-top: 10px; */
   width: 100vw;
   display: flex;
   padding: 30px;
   font-family: 'Lobster', cursive;
   color: #DA7B93;
+  z-index: 3;
 }
 
 .recipe--instructions {
