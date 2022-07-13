@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const fetchInstructions = (input = '1003464') => {
+const fetchInstructions = (input = '') => {
   const options = {
     method: 'GET',
     url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${input}/information`,
