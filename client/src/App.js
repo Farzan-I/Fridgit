@@ -37,7 +37,7 @@ const App = () => {
         <div class="fridge--container">
           <Fridge />
           <div className="search-container">
-          <Input />
+          {/* <Input /> */}
           </div>
         </div>
           {/* <div className="search-container">

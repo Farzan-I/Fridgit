@@ -39,7 +39,7 @@ body {
 
 .main-body-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /* ----------nav-------------------*/
@@ -153,9 +153,10 @@ nav {
   text-align: center;
   justify-content: flex-start;
   align-items: center;
+  height: 90vh;
   width: 40vw;
   background-color: grey;
-  height: 70vw;
+  /* overflow: scroll; */
 }
 
 .fridge--contents {
@@ -164,7 +165,7 @@ nav {
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 95%;
-  height: 75%;
+  height: 40%;
   width: 700px;
   background-color: white;
   /* background-image: url('../public/fridge-interior.png'); */
@@ -200,13 +201,14 @@ nav {
 
 .fridge-what-for-dinner-subcontainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  background-color: grey;
-  margin-top: 100%;
+  justify-items: center;
+  margin-top: 110%;
   
 }
 .what-for-dinner-button {
-  width: 50%;
+  width: 100%;
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
@@ -223,10 +225,14 @@ nav {
 
 .meals-container {
   /* margin-top: 10px; */
+  border: solid black 1px;
   max-width: 60vw;
-  overflow: scroll;
+  max-height: 90vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   display: flex;
-  padding: 30px;
+  justify-content: start;
+  /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color:black;
 }
@@ -301,7 +307,7 @@ nav {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 20px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .meal--title {

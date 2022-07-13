@@ -3,9 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import FridgeItem from './FridgeItem/FridgeItem.js'
 import { addFridgeItem } from "../actions/addFridgeItem.js";
 import { removeFridgeItem } from "../actions/removeFridgeItem.js"
+import Input from './Input.js'
+import Instruction from './Meals/Instruction/Instruction.js'
+import Measures from './Meals/Measures/Measures.js'
 
 export default function Fridge() {
   const userState = useSelector((state) => state.user)
+  const recipeData = useSelector((state) => state.instructions)
 
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
@@ -61,9 +65,19 @@ export default function Fridge() {
             {fridgeContents}
           </div>
           <div className="fridge-what-for-dinner-subcontainer">
-          button here
+          < Input />
           </div>
         </div>
+        
+          {/* <div className="meal-test">
+          <Instruction
+        {...recipeData}
+      /> 
+      <Measures 
+        {...recipeData}
+      />
+
+          </div> */}
     </div>
   )
 }

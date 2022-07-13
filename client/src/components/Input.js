@@ -32,9 +32,9 @@ const Input = () => {
     <div>
       {/* <h1 className="input--header">What's in your fridge?</h1> */}
 
-      <div>
+      
         <button className="what-for-dinner-button" onClick={handleSubmit}>What's for Dinner?</button>
-      </div>
+      
     </div>
     
   );
