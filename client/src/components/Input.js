@@ -32,12 +32,13 @@ const Input = () => {
       <div className="form">
         <form onSubmit={handleSubmit}>
           <input 
+            data-cy="recipe-search"
             type="text"
             className="form--input"
             placeholder="Ingredients here..."
             value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
           />
-          <input type="submit" className="form--button"/>
+          <input type="submit" className="form--button" data-cy="recipe-search-button"/>
         </form>
       </div>
     </div>
