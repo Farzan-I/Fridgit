@@ -184,9 +184,9 @@ nav {
 .fridge--contents {
   margin-top: 40px;
   /* display: flex; */
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
   max-width: 95%;
   height: 40%;
   width: 700px;
@@ -215,14 +215,14 @@ nav {
 
 .fridge-session-form-subcontainer {
   /* display: inline-block; */
-  flex-direction: row;
+  flex-direction: column;
   /* justify-content: flex-start; */
-
+  
 }
 
 .fridge-contents-subcontainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: flex-start;
 }
 
@@ -231,11 +231,12 @@ nav {
   flex-direction: row;
   justify-content: center;
   justify-items: center;
+  
   /* margin-top: 110%; */
   
 }
 .what-for-dinner-button {
-  width: 100%;
+  width: 100px;
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
@@ -745,6 +746,8 @@ nav {
   width: 0;
   height: 0;
 }
+
+
 
 .slider {
   position: absolute;
