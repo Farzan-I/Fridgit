@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ContactUs from './ContactUs.js';
+import AboutUs from './AboutUs.js';
 
 
 export default function Footer() {
@@ -7,8 +9,12 @@ export default function Footer() {
     <footer className="footer">
       <>
       <div className="footer-links-container">
-        <div class="footer-links">About us</div>
-        <div class="footer-links">Contact us</div>
+        <div className="footer-links">
+          <AboutUs/>
+        </div>
+        <div className="footer-links">
+          <ContactUs/>
+        </div>
       </div>
       </>
     </footer>

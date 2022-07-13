@@ -2,15 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
 /* give everything a min-width */
-
+/* consider fixed position for header */
+/* rename summary ingredients */
+/* reduce width of attribute (e.g. vegetarian, gluten-free
+components and put them in a row above instructions or a column 
+next to it, depending on which format we opt for */
+/* can't see the titles of the recipes anymore */
+/* some of the recipes are in mealcard divs, the others
+are in mealcard--info divs, this might have to do with
+the mixed-up heights
+When you click on a meal, it should jump to the recipe
+What happens to formatting when you have one meal with 
+a lot of ingredients? Does it push entire div below down or 
+just the mealcard below. If latter then that's a problem
+*/
 * {
   box-sizing: border-box;
 }
 
+/* 
+.whole-page {
+  
+} */
+
+
 body {
-  border: 1px solid #000;
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
+  background-attachment: fixed;
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +92,8 @@ nav {
   /* padding: 30px 25px; */
   left: 0px;
   top: 0px;
-  background-color: #da7b93;
+  /* background-color: #da7b93; */
+  background-color: rgba(218,123,147,0.5);
   /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
@@ -467,6 +489,14 @@ nav {
   display: flex;
 }
 
+.session--form {
+  margin-left: 25px;
+  color: #DA7B93;
+}
+
+/* -------- signup -------- */
+
+
 .signup-form {
   margin-left: 25;
 }
@@ -489,12 +519,6 @@ nav {
   background-color: grey;
 }
 
-.dropDownSignUp-container {
-  background-color: grey;
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-}
 
 /*/ --------- dropdowns-container -------------/*/
 
@@ -531,7 +555,7 @@ nav {
 }
 
 .main-drop-down-container {
-
+  
   display: flex;
   font-family: sans-serif;
   width: 30%;
@@ -539,8 +563,15 @@ nav {
   height: 5vh;
   z-index: 2;
   position: relative;
-;
+  ;
+  
+}
 
+.dropDownSignUp-container {
+  background-color: grey;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .signup-dropdown-container {
@@ -562,6 +593,7 @@ nav {
   }
   
 
+
 .drop-down-header {
   display: flex;
   width: 200px;
@@ -570,9 +602,13 @@ nav {
   /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
   font-weight: 500;
   font-size: 1.3rem;
+  color: #da7b93;
+  font-size: 20px;
+  font-weight: bold;
   color: #3faffa;
   /* background: rgb(150, 202, 192); */
   
+
 }
 
 .drop-down-list-container {
@@ -650,6 +686,8 @@ nav {
   position: fixed;
   bottom: 0;
   height: 35px;
+  padding-bottom: 30px;
+  color: #730071
 }
 
 .footer-links-container {
@@ -664,4 +702,87 @@ nav {
 .footer-links {
   display: flex;
   padding-top: 7px;
+}
+
+
+.about-us-drop-up,
+.contact-us-drop-up {
+    position: absolute;
+    opacity: 0.8;
+    border-radius: 30px;
+    padding: 10px;
+    /* display: block; */
+    font-size: 12px;
+    height: 300px;
+    width: 500px;
+    bottom: 40px;
+    right: 250px;
+    z-index: 1;
+    background-color: rgba(238, 238, 238);
+    color: #730071;
+}
+
+.contact-us-drop-up {
+  right: 10px;
+  width: 230px;
+  height:520px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
