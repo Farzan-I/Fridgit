@@ -47,17 +47,20 @@ export default function Meal(props) {
     <div className="meal-card">
         <div className="meal--title">{props.title}</div>
         <div className="meal-card--info" onClick={handleClick}>
-        <img className="meal-card--image" src={props.image} alt="meal"></img>
-        <div className="meal-card--spec">
-          <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
-          <span className="meal-card--likes-count">{props.likes}</span>
-          <div className="meal--ingredient-count">
-            <span className="bold">{ingredientCount}</span>Ingredients
-          </div>
+          <img className="meal-card--image" src={props.image} alt="meal"></img>
+      
+          {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
         </div>
-      {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
-      </div>
-      <div className="ingredient-info">
+          <div class="badge">
+            <div className="meal-card--spec">
+              <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
+              <span className="meal-card--likes-count">{props.likes}</span>
+              <div className="meal--ingredient-count">
+                <span className="bold">{ingredientCount}</span>Ingredients
+              </div>
+            </div>
+          </div>
+      {/* <div className="ingredient-info">
       <p className="bold-gray">Ingredients you have:</p>
         <div className="used-ingredients">
           {usedIngredients}
@@ -66,7 +69,7 @@ export default function Meal(props) {
         <div className="missed-ingredients">
           {missedIngredients}
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
