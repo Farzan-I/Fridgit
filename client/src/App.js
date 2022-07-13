@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 
 import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
+import AboutUs from "./components/AboutUs.js";
 
 const App = () => {
 
@@ -42,6 +43,11 @@ const App = () => {
 
       <div className="meals-container">
         <Meals />
+      </div>
+
+      <div>
+        <AboutUs />
+        
       </div>
 
     </div>
