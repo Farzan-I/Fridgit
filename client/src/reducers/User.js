@@ -2,7 +2,7 @@
 export default (user = {
   "_id": "",
   "userName": "",
-  "fridge": ["banana"]
+  "fridge": []
 }, action) => {
   switch (action.type) {
     case 'SEND_USER_DATA':
@@ -10,6 +10,8 @@ export default (user = {
     case 'VERIFY_USER':
       return action.payload;
     case 'ADD_FRIDGE_ITEM':
+      return action.payload;
+    case 'REMOVE_FRIDGE_ITEM':
       return action.payload;
     default:
       return user;

@@ -14,3 +14,7 @@ export const loginUser = (userData) => axios.post(loginUserUrl, userData)
 
 const addFridgeURL = 'http://localhost:4000/user/fridge/add';
 export const addItemToFridge = (fridgeData) => axios.post(addFridgeURL, fridgeData)
+
+const removeFridgeURL = 'http://localhost:4000/user/fridge/remove';
+export const removeItemFromFridge = (fridgeData) => axios.post(removeFridgeURL, fridgeData)
+ 
