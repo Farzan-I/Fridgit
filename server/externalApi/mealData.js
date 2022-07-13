@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authKey from '../auth.js';
 
-const fetchMealData = (input) => {
+const fetchMealData = (input, ranking) => {
     const options = {
       method: 'GET',
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
@@ -9,7 +9,7 @@ const fetchMealData = (input) => {
         ingredients: input,
         number: '15',
         ignorePantry: 'true',
-        ranking: '1'
+        ranking: ranking
       },
       headers: {
         'X-RapidAPI-Key': authKey,

@@ -24,8 +24,10 @@ const Input = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = async () => {
-    //this is what prevents the page re-rendering  
-    dispatch(getMealData(userFridge.join(",")));
+    dispatch(getMealData(
+      userFridge.join(","),
+      2
+      ));
   };
 
   return (
