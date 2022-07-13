@@ -4,22 +4,22 @@ import FridgeItem from './FridgeItem/FridgeItem.js'
 import { addFridgeItem } from "../actions/addFridgeItem.js";
 
 export default function Fridge() {
+  let userState = useSelector((state) => state.user)
 
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
   //set removal item
   const [removeItem, setRemoveItem] = useState("")
   // get data of fridge
+  const [fridgeState, setFridgeState] = useState(userState.fridge)
 
-  const userState = useSelector((state) => state.user)
   
   const dispatch = useDispatch()
 
   const handleSubmit = async (event) => {
-    console.log(userState._id)
     event.preventDefault()
     dispatch(addFridgeItem(
-      "cheese",
+      fridgeItem.item,
       userState._id
     ))
   }
@@ -32,7 +32,7 @@ export default function Fridge() {
 
   const fridgeContents = userState.fridge.map((item) => {
     return(
-      <FridgeItem name={item} onClick={handleClick}/>
+      <FridgeItem name={item} handleClick={handleClick}/>
     )
   })
   
@@ -46,7 +46,7 @@ export default function Fridge() {
               className="form--input"
               placeholder="Ingredients here..."
               value={fridgeItem.item} 
-              onChange={(event) => setFridgeItem({...fridgeItem, fridgeItem: event.target.value})}
+              onChange={(event) => setFridgeItem({...fridgeItem, item: event.target.value})}
             />
             <input type="submit" className="form--button"/>
 
