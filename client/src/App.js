@@ -12,6 +12,9 @@ import { useDispatch } from "react-redux";
 import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
 
+import AboutUs from "./components/AboutUs.js";
+import ContactUs from "./components/ContactUs.js";
+import SignUpDropDown from "./components/SignUpDropDown.js";
 
 const App = () => {
 
