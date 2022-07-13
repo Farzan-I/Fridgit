@@ -35,9 +35,12 @@ body {
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
+  background-attachment: fixed;
+  /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
-  background-image: url('../public/table.jpg');
+  background-image: url('../public/tile.png');
   background-size: cover;
+  /* background-position: center center; */
 
 }
 
@@ -90,15 +93,7 @@ nav {
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   font-family: 'Lobster', cursive;
-}
-
-.instructions--tile {
-  display: flex;
-  align-items: flex-start;
-}
-
-.link--ref {
-  color:#730071
+  opacity: 0.9;
 }
 
 .nav--logo {
@@ -122,6 +117,17 @@ nav {
   font-family: "Inter";
   text-align: right;
   color: rgba(255, 255, 255, 0.802);
+}
+
+/* --------------instructions--------------- */
+
+.instructions--tile {
+  display: flex;
+  align-items: flex-start;
+}
+
+.link--ref {
+  color:#730071
 }
 
 .form {
@@ -154,20 +160,77 @@ nav {
   background-color: #730071;
 }
 
+.fridge--container {
+  display: flex;
+  justify-content: column;
+}
+
+.fridge--contents {
+  max-width: 500px;
+  height: 500px;
+  width: 700px;
+  background-image: url('../public/fridge-interior.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+}
+
+.fridge--item-tile {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: black;
+  padding: 5px 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(111,111,111,0);
+  font-weight: bold;
+}
+
+/*-------------- meal tiles --------------*/
+
+
+.meals-container {
+  /* margin-top: 10px; */
+  width: 100vw;
+  display: flex;
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  color:black;
+}
+
+/* meals-container contains meal-cards */
+
 .meal-card {
   width: 250px;
+  margin: 30px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
   flex-direction: column; 
-  position: relative;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  /* position: relative; */
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* each meal-card contains meal-card--image and ingredient-info*/
+
+.meal-card--image {
+  width: 225px;
+  height: auto;
+  border-radius: 9px;
+  
 }
 
 .ingredient-info {
   margin-left: 10px;
   max-width: 200px;
 }
+
+/* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
   margin-top: 50px;
@@ -185,6 +248,8 @@ nav {
   margin-bottom: 10px;
   margin-left: 5px;
 }
+
+/*meal-badge shows info like gluten-free etc*/
 
 .meal--ingredient-count {
   margin-top: -2px;
@@ -209,16 +274,14 @@ nav {
 }
 
 .meal--title {
+  display: flex;
+  height: 100px;
+  justify-content: center;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
-}
-
-.meal-card--image {
-  width: 225px;
-  height: auto;
-  border-radius: 9px;
+  text-align: left;
 }
 
 .meal-card--info {
@@ -238,15 +301,6 @@ nav {
 }
 
 .search-container {
-  /* margin-top: 10px; */
-  width: 100vw;
-  display: flex;
-  padding: 30px;
-  font-family: 'Lobster', cursive;
-  color: #DA7B93;
-}
-
-.meals-container {
   /* margin-top: 10px; */
   width: 100vw;
   display: flex;
@@ -584,6 +638,7 @@ nav {
   padding-top: 7px;
 }
 
+
 .about-us-drop-up,
 .contact-us-drop-up {
     position: absolute;
@@ -607,3 +662,61 @@ nav {
   height:520px;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
