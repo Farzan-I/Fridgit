@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { getMealData } from '../actions/fetchMeals.js'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
 const Input = () => {
 
+  const userFridge = useSelector((state) => state.user.fridge)
+
   const [searchData, setSearchData] = useState({
     ingredients: ''
   })
+
+  console.log(userFridge)
 
   // const mealsUrl = 'http://localhost:4000/meals/search';
 
@@ -31,12 +35,14 @@ const Input = () => {
 
       <div className="form">
         <form onSubmit={handleSubmit}>
-          <input 
-            type="text"
-            className="form--input"
-            placeholder="Ingredients here..."
-            value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
-          />
+          <div style={{width:0,height:0}}>
+            <input 
+              type="hidden"
+              className="form--input"
+              placeholder="Ingredients here..."
+              value={searchData.ingredients} onChange={(e) => setSearchData({ ...searchData, ingredients: e.target.value })}
+            />
+          </div>
           <input type="submit" className="form--button"/>
         </form>
       </div>
