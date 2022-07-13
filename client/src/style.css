@@ -14,11 +14,12 @@ body {
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
+  background-attachment: fixed;
   /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
   background-image: url('../public/tile.png');
   background-size: cover;
-  background-position: center center;
+  /* background-position: center center; */
 
 }
 
@@ -70,15 +71,7 @@ nav {
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   font-family: 'Lobster', cursive;
-}
-
-.instructions--tile {
-  display: flex;
-  align-items: flex-start;
-}
-
-.link--ref {
-  color:#730071
+  opacity: 0.9;
 }
 
 .nav--logo {
@@ -102,6 +95,17 @@ nav {
   font-family: "Inter";
   text-align: right;
   color: rgba(255, 255, 255, 0.802);
+}
+
+/* --------------instructions--------------- */
+
+.instructions--tile {
+  display: flex;
+  align-items: flex-start;
+}
+
+.link--ref {
+  color:#730071
 }
 
 .form {
@@ -163,20 +167,48 @@ nav {
   font-weight: bold;
 }
 
+/*-------------- meal tiles --------------*/
+
+
+.meals-container {
+  /* margin-top: 10px; */
+  width: 100vw;
+  display: flex;
+  padding: 30px;
+  font-family: 'Lobster', cursive;
+  color:black;
+}
+
+/* meals-container contains meal-cards */
+
 .meal-card {
   width: 250px;
+  margin: 30px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
   flex-direction: column; 
-  position: relative;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  /* position: relative; */
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* each meal-card contains meal-card--image and ingredient-info*/
+
+.meal-card--image {
+  width: 225px;
+  height: auto;
+  border-radius: 9px;
+  
 }
 
 .ingredient-info {
   margin-left: 10px;
   max-width: 200px;
 }
+
+/* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
   margin-top: 50px;
@@ -194,6 +226,8 @@ nav {
   margin-bottom: 10px;
   margin-left: 5px;
 }
+
+/*meal-badge shows info like gluten-free etc*/
 
 .meal--ingredient-count {
   margin-top: -2px;
@@ -218,16 +252,14 @@ nav {
 }
 
 .meal--title {
+  display: flex;
+  height: 100px;
+  justify-content: center;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
-}
-
-.meal-card--image {
-  width: 225px;
-  height: auto;
-  border-radius: 9px;
+  text-align: left;
 }
 
 .meal-card--info {
@@ -247,15 +279,6 @@ nav {
 }
 
 .search-container {
-  /* margin-top: 10px; */
-  width: 100vw;
-  display: flex;
-  padding: 30px;
-  font-family: 'Lobster', cursive;
-  color: #DA7B93;
-}
-
-.meals-container {
   /* margin-top: 10px; */
   width: 100vw;
   display: flex;
@@ -551,3 +574,28 @@ nav {
   /* background-color: #730071; */
 }
  
+/* ----------- footer -----------------------*/
+
+.footer {
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  background-color: rgba(218,123,147,0.5);
+  position: fixed;
+  bottom: 0;
+  height: 35px;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: white; */
+  width: 30vw;
+
+}
+
+.footer-links {
+  display: flex;
+  padding-top: 7px;
+}

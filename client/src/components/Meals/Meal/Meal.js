@@ -44,10 +44,10 @@ export default function Meal(props) {
   
 
   return (
-    <div className="meal-card" >
-      <div className="meal-card--info" onClick={handleClick}>
+    <div className="meal-card">
+        <div className="meal--title">{props.title}</div>
+        <div className="meal-card--info" onClick={handleClick}>
         <img className="meal-card--image" src={props.image} alt="meal"></img>
-        <p className="meal--title">{props.title}</p>
         <div className="meal-card--spec">
           <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
           <span className="meal-card--likes-count">{props.likes}</span>
