@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 
 import { getMealData } from './actions/fetchMeals.js'
 import { getMealInstructions} from './actions/fetchInstructions.js'
+import SignUpDropDown from "./components/SignUpDropDown.js";
 
 const App = () => {
 
@@ -25,18 +26,13 @@ const App = () => {
   }, [dispatch]);
 
 
-  const [loggedInStatus, setLoggedInStatus] = useState(false)
+  // const [loggedInStatus, setLoggedInStatus] = useState(false)
  
   return (
     <div>
 
       <Navbar />
-      {!loggedInStatus &&
-        <>
-      <SignUp />
-      <Login setLoggedInStatus={setLoggedInStatus}/>
-        </>
-      }
+      
       <Fridge />
       <div className="search-container">
         <Input />

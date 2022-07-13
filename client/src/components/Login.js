@@ -22,13 +22,12 @@ const Login = (props, {Login, error}) => {
   };
 
   return (
-    <div className="session--form">
-      <h2>Login</h2>
+    <div>
       <form onSubmit={handleSubmit}>
         <input 
           type="email"
           name="email"
-          className="form--input"
+          className="drop-down-list-item"
           placeholder="Enter your email"
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
@@ -36,12 +35,12 @@ const Login = (props, {Login, error}) => {
         <input 
           type="password"
           name="password"
-          className="form--input"
+          className="drop-down-list-item"
           placeholder="Choose password"
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
-        <button className="form--button">Login</button>
+        <button className="drop-down-list-item">Login</button>
       </form>
     </div>
   );
