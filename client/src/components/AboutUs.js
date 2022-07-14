@@ -9,7 +9,7 @@ export default function AboutUs() {
   
   return (
     <div>
-      <div className="" onClick={toggling}>
+      <div className="footer-buttons" onClick={toggling}>
         {"About Us"}
       </div>
         {isOpen && (

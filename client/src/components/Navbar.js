@@ -12,10 +12,15 @@ export default function Navbar() {
     <nav>
       <div className="nav-container">
         <div className="logo-and-title">
-          <img className="nav--logo" src='./brains-on-brioche.png' alt="logo"></img>
-          <h3 className="nav--title">Brains On Brioche</h3>
-          {userData.userName && <h2 className="nav--username">Hi, {userData.userName}!</h2>}
+          <img className="nav--logo" src='./brioche_sliced.png' alt="logo"></img>
+          <div className="nav-title-and-slogan"> 
+            <h1 className="nav--title">Brains On Brioche</h1>
+            <h5 className="nav-slogan">The no-waste revolution</h5>
+          </div>
         </div>    
+        {/* <div className="nav--username--container">
+          {userData.userName && <h2 className="nav--username">Hi, {userData.userName[0].toUpperCase() + userData.userName.substring(1)}!</h2>}
+        </div> */}
         <div className="navbar-main-drop-down-container">
           <div className="signup-dropdown-container">  
             <SignUpDropDown/>

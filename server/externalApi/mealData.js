@@ -7,7 +7,7 @@ const fetchMealData = (input, ranking) => {
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients',
       params: {
         ingredients: input,
-        number: '15',
+        number: '25',
         ignorePantry: 'true',
         ranking: ranking
       },

@@ -14,6 +14,7 @@ export default function Fridge(props) {
   const userState = useSelector((state) => state.user)
   const recipeData = useSelector((state) => state.instructions)
 
+
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
 
@@ -80,17 +81,22 @@ const missedIngredients = props.selectedMeal.missedIngredients.map((ingredient) 
 
   
   return (
+
+  
     <div className="fridge--container">
-        {/* <div className="fridge--add-form">
-          
-        </div> */}
+        <div className="fridge--add-form">
+        </div>
         <div className="fridge--contents">
+        <div className="welcome-container">
+          {userState.userName && <h2 className="welcome">Hi, {userState.userName[0].toUpperCase() + userState.userName.substring(1)},<br></br>
+              here's what's in your fridge!</h2>}
+          </div>
           <div className="fridge-session-form-subcontainer">
             <form className="fridge-session-form" onSubmit={handleSubmit}>
             <input
               type="text"
               className="form--input"
-              placeholder="Ingredients here..."
+              placeholder="add ingredient..."
               value={fridgeItem.item} 
               onChange={(event) => setFridgeItem({...fridgeItem, item: event.target.value})}
             />
