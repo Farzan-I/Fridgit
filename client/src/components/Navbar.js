@@ -13,7 +13,10 @@ export default function Navbar() {
       <div className="nav-container">
         <div className="logo-and-title">
           <img className="nav--logo" src='./brioche_sliced.png' alt="logo"></img>
-          <h3 className="nav--title">Brains On Brioche</h3>
+          <div className="nav-title-and-slogan"> 
+            <h3 className="nav--title">Brains On Brioche</h3>
+            <h4 className="nav-slogan">The no-waste revolution</h4>
+          </div>
         </div>    
         <div className="nav--username--container">
           {userData.userName && <h2 className="nav--username">Hi, {userData.userName[0].toUpperCase() + userData.userName.substring(1)}!</h2>}

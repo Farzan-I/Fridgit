@@ -31,17 +31,16 @@ body {
   max-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
-  background-attachment: fixed;
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  background-position: center;
   /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
   background-image: url('../public/tabletop.jpg');
   background-color: ghostwhite;
   background-size: cover;
-  /* background-position: center center; */
 
 }
 
@@ -111,7 +110,9 @@ nav {
 .nav--title {
   color: #3faffa;
   font-size: 30px;
-  text-shadow: 2px 2px #FF0000;
+  text-shadow: 2px 2px black;
+  margin-top: 10px;
+  margin-bottom: 0px;
   /* -webkit-text-stroke: 0.000005px black; */
 }
 
@@ -135,6 +136,18 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
+.nav-title-and-slogan {
+  display: flex;
+  flex-direction: column;
+  max-height: 90px
+}
+
+.nav-slogan {
+  margin-top: 5px;
+  text-align: center;
+}
+
 
 /* --------------instructions--------------- */
 
