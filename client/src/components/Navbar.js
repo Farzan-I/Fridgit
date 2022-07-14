@@ -13,8 +13,10 @@ export default function Navbar() {
         <div className="logo-and-title">
           <img className="nav--logo" src='./brains-on-brioche.png' alt="logo"></img>
           <h3 className="nav--title">Brains On Brioche</h3>
-          {userData.userName && <h2 className="nav--username">Hi, {userData.userName}!</h2>}
         </div>    
+        <div className="nav--username--container">
+          {userData.userName && <h2 className="nav--username">Hi, {userData.userName[0].toUpperCase() + userData.userName.substring(1)}!</h2>}
+        </div>
         <div className="navbar-main-drop-down-container">
           <div className="signup-dropdown-container">  
             <SignUpDropDown/>

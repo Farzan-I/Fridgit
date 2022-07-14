@@ -124,6 +124,13 @@ nav {
   color: rgba(255, 255, 255, 0.802);
 }
 
+.nav--username--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* --------------instructions--------------- */
 
 .instructions--tile {
