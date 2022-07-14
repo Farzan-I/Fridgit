@@ -330,7 +330,7 @@ ach meal-card contains meal-card--image and ingredient-info*/
 .meal-badge-box {
   display: flex;
   align-items: flex-start;
-  position: sticky;
+  /* position: sticky; */
   margin-left: 10px;
 }
 
@@ -530,6 +530,7 @@ ach meal-card contains meal-card--image and ingredient-info*/
   flex-flow: row wrap;
   justify-content: auto ; 
   align-items: flex-start;
+  margin-bottom: 0px;
 }
 
 .missed-ingredient--plus {
