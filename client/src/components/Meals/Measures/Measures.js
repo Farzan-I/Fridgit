@@ -14,8 +14,8 @@ export default function Measures(props) {
     )
   })
   return (
-    <div className="recipe--measures">
-      <h1>Summary:</h1>
+    <div className="recipe--instructions">
+      <h1>Ingredient Summary:</h1>
         {summaryPoints}
       <h2>Credit:</h2>
        <a className="link--ref" href={props.sourceUrl}>{props.sourceName}</a>

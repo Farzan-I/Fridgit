@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Reenie+Beanie&family=Rock+Salt&family=Rubik+Mono+One&family=Sansita&family=Shrikhand&display=swap');
 /* give everything a min-width */
 /* consider fixed position for header */
 /* rename summary ingredients */
@@ -92,22 +93,25 @@ nav {
   left: 0px;
   top: 0px;
   /* background-color: #da7b93; */
-  background-color: rgba(218,123,147,0.5);
+  background-color: rgba(218,123,147,0.3);
   /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-  font-family: 'Lobster', cursive;
+  font-family: 'Sansita', cursive;
   opacity: 0.9;
 }
 
 .nav--logo {
-  max-width: 120px
+  margin-top: 12px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .nav--title {
-  color: wheat;
+  color: #3faffa;
   font-size: 30px;
+  text-shadow: 2px 2px #FF0000;
   /* -webkit-text-stroke: 0.000005px black; */
 }
 
@@ -121,11 +125,12 @@ nav {
 .nav--username {
   font-family: "Inter";
   text-align: right;
-  color: rgba(255, 255, 255, 0.802);
+  color: #3faffa;;
 }
 
 .nav--username--container {
   display: flex;
+  padding-top: 18px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -155,7 +160,7 @@ nav {
   /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid rgb(128, 28, 28);
+  border: 1px solid brown;
   text-indent: 5px;
   width: 125px;
 }
@@ -183,7 +188,7 @@ nav {
   align-items: center;
   height: 90vh;
   width: 40vw;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
   /* overflow: scroll; */
 }
 
@@ -217,7 +222,8 @@ nav {
 
 .fridge--contents {
   margin-top: 40px;
-  border: solid 1px rgb(139,69,19);
+  /* border: solid 1px rgb(139,69,19); */
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35);  
   /* display: flex; */
   /* flex-direction: column; */
   /* flex-wrap: wrap; */
@@ -234,19 +240,32 @@ nav {
   border-radius: 5px;
 }
 
+.fridge--instructions-window {
+  width: 45vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+
+  
+
+}
+
 .fridge--item-tile {
   /* display: flex; */
   align-self:flex-start;
+  border: solid 1px black;
   
   /* flex-basis: 100px; */
-  background-color: pink;
-  color: green;
+  background-color: rgba(255, 192, 203, 0.6);
+  color: black;
   padding: 5px 5px;
   margin: 5px;
-  border-radius: 3px;
+  color: #0a1922;
+  text-shadow: black;
+  border-radius: 5px;
   /* border: solid; */
   /* border-color: ; */
-  font-weight: bold;
+  font-weight: 500;
 }
 
 
@@ -305,7 +324,8 @@ nav {
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* each meal-card contains meal-card--image and ingredient-info*/
+/* e
+ach meal-card contains meal-card--image and ingredient-info*/
 
 .meal-card--image {
   width: 225px;
@@ -328,14 +348,23 @@ nav {
   max-width: 200px;
 }
 
+.meal-badge-box {
+  display: flex;
+  align-items: flex-start;
+  position: sticky;
+  margin-left: 50px;
+}
+
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
+  align-self: flex-start;
   margin-top: 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  position: sticky;
 }
 
 .meal--badge {
@@ -428,7 +457,7 @@ nav {
   /* border-width: 10px; */
   border-radius: 2px;
   background-color: white;
-  padding: 30px;
+  padding: 40px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 18px;
 }
@@ -450,6 +479,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-width: 400px;
 }
 
 .home--link, .about--link, .contact--link {
@@ -648,10 +678,9 @@ nav {
   color: #da7b93;
   font-size: 20px;
   font-weight: bold;
+  text-shadow: 1px 1px #1f0808;
   color: #3faffa;
   /* background: rgb(150, 202, 192); */
-  
-
 }
 
 .drop-down-list-container {
@@ -684,7 +713,7 @@ nav {
   width: 95%;
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid rgb(128, 28, 28);
+  border: 1px solid ghostwhite;
   text-indent: 5px;
 }
 
@@ -730,7 +759,7 @@ nav {
   bottom: 0;
   height: 2vh;
   padding-bottom: 30px;
-  color: #730071
+  color: #3faffa;
 }
 
 .footer-links-container {
@@ -753,7 +782,7 @@ nav {
 .about-us-drop-up,
 .contact-us-drop-up {
     position: absolute;
-    opacity: 0.8;
+    opacity: 1;
     border-radius: 30px;
     padding: 10px;
     /* display: block; */
@@ -763,8 +792,8 @@ nav {
     bottom: 40px;
     right: 250px;
     z-index: 1;
-    background-color: rgba(238, 238, 238);
-    color: #730071;
+    background-color: rgba(255, 255, 255);
+    color: black;
 }
 
 .contact-us-drop-up {

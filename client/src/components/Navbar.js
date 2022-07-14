@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Login from './Login.js'
+import Logout from './Logout.js'
 import LoginDropDown from "./LoginDropDown.js";
 import SignUpDropDown from "./SignUpDropDown.js";
 
@@ -11,7 +12,7 @@ export default function Navbar() {
     <nav>
       <div className="nav-container">
         <div className="logo-and-title">
-          <img className="nav--logo" src='./brains-on-brioche.png' alt="logo"></img>
+          <img className="nav--logo" src='./brioche_sliced.png' alt="logo"></img>
           <h3 className="nav--title">Brains On Brioche</h3>
         </div>    
         <div className="nav--username--container">
@@ -23,6 +24,9 @@ export default function Navbar() {
           </div>
           <div className="login-dropdown-container">
             <LoginDropDown/>
+          </div>
+          <div className="login-dropdown-container">
+            <Logout />
           </div>
         </div>
         {/* <div className="nav-links">
