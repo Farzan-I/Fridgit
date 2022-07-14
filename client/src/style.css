@@ -637,8 +637,21 @@ nav {
   font-weight: bold;
   color: #3faffa;
   /* background: rgb(150, 202, 192); */
-  
+}
 
+.logout-header {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #da7b93;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3faffa;
+  /* background: rgb(150, 202, 192); */
 }
 
 .drop-down-list-container {
