@@ -9,6 +9,7 @@ export default function Meal(props) {
   
   const handleClick = () => {
     dispatch(getMealInstructions(props.id))
+    props.setSelectedMeal(props)
     props.setShowInstruction(true)
   }
 
@@ -17,29 +18,6 @@ export default function Meal(props) {
   }
 
   const ingredientCount = `${props.usedIngredients.length}/${(props.usedIngredients.length + props.missedIngredients.length)} `
-  
-
-  const usedIngredients = props.usedIngredients.map((ingredient) => {
-      return(
-          <UsedIngredient
-            key={ingredient.id}
-            name={ingredient.name}
-            id={ingredient.id}
-            measure={ingredient.originalName}
-          />
-      )
-  })
-
-  const missedIngredients = props.missedIngredients.map((ingredient) => {
-    return (
-      <MissedIngredient
-        key={ingredient.id}
-        name={ingredient.name}
-        id={ingredient.id}
-        measure={ingredient.originalName}
-      />
-    )
-  })
   
   
 

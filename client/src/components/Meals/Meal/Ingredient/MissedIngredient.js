@@ -9,7 +9,7 @@ export default function MissedIngredient(props) {
   return (
     <div>
       <div className="missed-ingredient--tile">
-        {props.name} <span className="missed-ingredient--plus" onClick={handleClick}>+</span>
+        {props.name}
       </div>
     </div>
   )

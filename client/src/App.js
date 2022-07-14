@@ -33,6 +33,7 @@ const App = () => {
   // const [loggedInStatus, setLoggedInStatus] = useState(false)
     
   const [showInstruction, setShowInstruction] = useState(false)
+  const [selectedMeal, setSelectedMeal] = useState({"usedIngredients": [{"id": 0, "name": ""}], "missedIngredients": [{"id": 0, "name": ""}]})
 
  
   return (
@@ -41,7 +42,10 @@ const App = () => {
       <Navbar />
       <div class="main-body-container">
         <div class="fridge--container">
-          <Fridge showInstruction={showInstruction} />
+          <Fridge 
+            showInstruction={showInstruction} 
+            selectedMeal={selectedMeal}
+            />
           <div className="search-container">
           {/* <Input /> */}
           </div>
@@ -51,7 +55,10 @@ const App = () => {
           </div> */}
 
           <div className="meals-container">
-            <Meals setShowInstruction={setShowInstruction}/>
+            <Meals 
+              setShowInstruction={setShowInstruction}
+              setSelectedMeal={setSelectedMeal}
+              />
           </div>
       </div>
 

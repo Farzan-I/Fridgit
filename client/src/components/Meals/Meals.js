@@ -20,6 +20,7 @@ export default function Meals(props) {
       key={meal.id}
       {...meal}
       setShowInstruction={props.setShowInstruction}
+      setSelectedMeal={props.setSelectedMeal}
     />
   )
   })
