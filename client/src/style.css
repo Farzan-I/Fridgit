@@ -110,7 +110,7 @@ nav {
 
 .nav--title {
   color: #3faffa;
-  font-size: 30px;
+  font-size: 40px;
   text-shadow: 2px 2px black;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -147,9 +147,18 @@ nav {
 
 .nav-slogan {
   margin-top: 5px;
+  font-size: 17px;
   text-align: center;
+  margin-bottom: 2px;
 }
 
+.logo-and-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 400px;
+  margin-left: 20px;
+}
 
 /* --------------instructions--------------- */
 
@@ -509,13 +518,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   font-size: 14px;
 }
 
-.logo-and-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  min-width: 400px;
-}
-
 .home--link, .about--link, .contact--link {
   font-size: 20px;
   text-align: right;
@@ -709,12 +711,13 @@ ach meal-card contains meal-card--image and ingredient-info*/
   align-items: center;
   /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
   font-weight: 500;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   color: #da7b93;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   text-shadow: 1px 1px #1f0808;
   color: #3faffa;
+  font-family: 'Sansita', cursive;
   /* background: rgb(150, 202, 192); */
 }
 
