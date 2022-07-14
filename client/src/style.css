@@ -324,14 +324,14 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .ingredient-info {
   margin-left: 10px;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
 }
 
 .meal-badge-box {
   display: flex;
   align-items: flex-start;
   position: sticky;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
