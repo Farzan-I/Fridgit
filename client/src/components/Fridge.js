@@ -7,6 +7,8 @@ import Input from './Input.js'
 import Instruction from './Meals/Instruction/Instruction.js'
 import Measures from './Meals/Measures/Measures.js'
 import MealBadge from "./Meals/MealBadge.js";
+import UsedIngredient from "./Meals/Meal/Ingredient/UsedIngredient.js";
+import MissedIngredient from "./Meals/Meal/Ingredient/MissedIngredient.js";
 
 export default function Fridge(props) {
   const userState = useSelector((state) => state.user)
@@ -19,7 +21,7 @@ export default function Fridge(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    if (!userState.username === "") {
+    if (userState.username !== "") {
       let foo = addFridgeItem(
         fridgeItem.item,
         userState._id
@@ -58,6 +60,27 @@ export default function Fridge(props) {
 
     }
   console.log(recipeData)
+
+  const usedIngredients = props.selectedMeal.usedIngredients.map((ingredient) => {
+    return(
+        <UsedIngredient
+          key={ingredient.id}
+          name={ingredient.name}
+          id={ingredient.id}
+        />
+    )
+})
+
+const missedIngredients = props.selectedMeal.missedIngredients.map((ingredient) => {
+  return (
+    <MissedIngredient
+      key={ingredient.id}
+      name={ingredient.name}
+      id={ingredient.id}
+    />
+  )
+})
+
   
   return (
     <div className="fridge--container">
@@ -86,6 +109,16 @@ export default function Fridge(props) {
           <Input />
         </div>
         {props.showInstruction && <div className="fridge--instructions-window">
+            <div className="ingredient-info">
+            <p className="bold-gray">Ingredients you have:</p>
+              <div className="used-ingredients">
+                {usedIngredients}
+              </div>
+            <p className="bold-gray">Ingredients you're missing:</p>
+              <div className="missed-ingredients">
+                {missedIngredients}
+              </div>
+            </div>
             <div className="meal-badge-box">
               {mealBadges()}
             </div>

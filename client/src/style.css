@@ -55,6 +55,7 @@ body {
 .bold-gray {
   color: gray;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .main-body-container {
@@ -323,7 +324,7 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .ingredient-info {
   margin-left: 10px;
-  max-width: 200px;
+  flex-flow: row wrap;
 }
 
 .meal-badge-box {
@@ -495,6 +496,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
   background-color: white;
   color: green;
   padding: 5px 5px;
+  margin-top: 5px;
+  margin-left: 5px;
   border-radius: 2px;
   border-color: brown;
   font-weight: bold;
@@ -504,6 +507,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
   background-color: white;
   color: red;
   padding: 5px 5px;
+  margin-left: 5px;
+  margin-top: 5px;
   border-radius: 2px;
   border-color: brown;
   border-radius: 1px;
@@ -512,7 +517,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .used-ingredients {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-flow: row wrap;
   justify-content: auto ; 
   align-items: flex-start;
   
@@ -520,15 +526,10 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .missed-ingredients {
   display: flex;
-  flex-direction: column;
-  justify-content: auto ; 
-  align-items:flex-start;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-flow: row wrap;
   justify-content: auto ; 
   align-items: flex-start;
-  padding-bottom: 10px;
-  border-radius: 1px;
-  padding-bottom: 15px;
 }
 
 .missed-ingredient--plus {

@@ -9,6 +9,7 @@ export default function Meal(props) {
   
   const handleClick = () => {
     dispatch(getMealInstructions(props.id))
+    props.setSelectedMeal(props)
     props.setShowInstruction(true)
   }
 
