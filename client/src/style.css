@@ -41,7 +41,7 @@ body {
   background-image: url('../public/tabletop.jpg');
   background-color: ghostwhite;
   background-size: cover;
-
+  color: rgb(85, 84, 84);
 }
 
 .gray {
@@ -125,9 +125,10 @@ nav {
 }
 
 .nav--username {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   text-align: right;
-  color: #3faffa;;
+  color: #3faffa;
+  text-shadow: 1px 1px black;
 }
 
 .nav--username--container {
@@ -174,7 +175,7 @@ nav {
   /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid brown;
+  border: 1px solid rgb(123, 123, 123);
   text-indent: 5px;
   width: 125px;
 }
@@ -186,10 +187,10 @@ nav {
   border-radius: 5px;
   margin: 10px;
   /* border-style: solid; */
-  border-color: #730071;
+  border-color: #DA7B93;
   color: white;
   background: #da7b93;
-  background-color: #730071;
+  background-color: #DA7B93;
 }
 
 /*-------------- fridge --------------*/
@@ -219,7 +220,7 @@ nav {
   /* padding: 30px; */
   background-color: rgba(255, 255, 255, 0.3);
   font-family: 'Lobster', cursive;
-  color:black;
+  color:rgb(85, 84, 84);
 }
 
 .meal--list {
@@ -235,15 +236,14 @@ nav {
 }
 
 .fridge--contents {
-  margin-top: 40px;
   /* border: solid 1px rgb(139,69,19); */
+  margin-top: 10px;
   box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35);  
   /* display: flex; */
   /* flex-direction: column; */
   /* flex-wrap: wrap; */
   /* align-items: flex-start; */
   max-width: 95%;
-  min-height: 100px;
   height: auto;
   width: 700px;
   background-color: white;
@@ -288,13 +288,14 @@ nav {
   /* display: flex; */
   align-self:flex-start;
   border: solid 1px black;
+  font-size: 13px;
   
   /* flex-basis: 100px; */
   background-color: rgba(255, 192, 203, 0.6);
-  color: black;
+  color: rgb(85, 84, 84);
   padding: 5px 5px;
   margin: 5px;
-  color: #0a1922;
+  color: rgb(85, 84, 84);
   text-shadow: black;
   border-radius: 5px;
   /* border: solid; */
@@ -311,6 +312,7 @@ nav {
 }
 
 .fridge-contents-subcontainer {
+  padding-top: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -332,10 +334,21 @@ nav {
   border-radius: 5px;
   margin: 10px;
   /* border-style: solid; */
-  border-color: #730071;
+  border-color: #DA7B93;
   color: white;
   background: #da7b93;
-  background-color: #730071;
+  background-color: #DA7B93;
+}
+
+.welcome-container {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.welcome {
+  font-size: 28px;
+  font-family: 'Edu SA Beginner', cursive;
+  color: rgb(85, 84, 84);
 }
 
 /*-------------- meal tiles --------------*/
@@ -536,8 +549,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .used-ingredient--tile {
   display: inline-block;
-  background-color: white;
-  color: green;
+  background-color: rgb(13, 205, 13);
+  color: white;
   padding: 5px 5px;
   margin-top: 5px;
   margin-left: 5px;
@@ -547,8 +560,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 }
 
 .missed-ingredient--tile {
-  background-color: white;
-  color: red;
+  background-color: red;
+  color: white;
   padding: 5px 5px;
   margin-left: 5px;
   margin-top: 5px;
@@ -883,4 +896,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.drop-down-header:hover, .drop-down-list-item:hover,
+.form--button:hover, .what-for-dinner-button:hover,
+.footer-buttons:hover, .meal-card--image:hover {
+  cursor:pointer;
+}
+
+.bold-gray:hover {
+  cursor: pointer;
+  color: red;
 }

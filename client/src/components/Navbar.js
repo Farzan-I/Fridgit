@@ -18,9 +18,9 @@ export default function Navbar() {
             <h4 className="nav-slogan">The no-waste revolution</h4>
           </div>
         </div>    
-        <div className="nav--username--container">
+        {/* <div className="nav--username--container">
           {userData.userName && <h2 className="nav--username">Hi, {userData.userName[0].toUpperCase() + userData.userName.substring(1)}!</h2>}
-        </div>
+        </div> */}
         <div className="navbar-main-drop-down-container">
           <div className="signup-dropdown-container">  
             <SignUpDropDown/>
