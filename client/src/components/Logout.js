@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { logoutUser } from '../actions/logoutUserAction.js'
 import { useDispatch } from 'react-redux';
+import { resetMealData } from "../actions/resetMealsData.js";
 
 
 
@@ -18,7 +19,8 @@ const Logout = (props, {Logout, error}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(logoutUser(userData));
-    props.setLoggedInStatus(false)
+    dispatch(resetMealData())
+    // props.setLoggedInStatus(false);
   };
 
   return (
