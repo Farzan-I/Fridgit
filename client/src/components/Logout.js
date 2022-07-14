@@ -22,12 +22,14 @@ const Logout = (props, {Logout, error}) => {
   };
 
   return (
-    <div>
-      <form onClick={handleSubmit}>
-        <div className="logout-header">
-          {"Logout"}
-        </div>
-      </form>
+    <div className="main-drop-down-container">
+      <div className="drop-down-container"> 
+        <form onClick={handleSubmit}>
+          <div className="drop-down-header">
+            {"Logout"}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
