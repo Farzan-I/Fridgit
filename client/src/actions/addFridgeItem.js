@@ -2,7 +2,6 @@
 import * as api from '../api/index.js'
 
 export const addFridgeItem = (fridgeItem, userState) => {
-  console.log("acrtion line 5 ", userState)
   switch (userState._id) {
     case "":
       let array = userState.fridge
