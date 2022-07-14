@@ -18,23 +18,20 @@ export default function Fridge(props) {
   const dispatch = useDispatch()
 
   const handleSubmit = async (event) => {
+    console.log("line 21")
     event.preventDefault()
-    if (!userState.username === "") {
-      let foo = addFridgeItem(
+      let asyncAddFridgeItem = addFridgeItem(
         fridgeItem.item,
-        userState._id
+        userState
         )
-      foo(dispatch)
-    } else {
-      userState.fridge.push(fridgeItem.item)
-    }
+        asyncAddFridgeItem(dispatch)
     setFridgeItem({item: ""})
   }
 
   const handleClick = (item) => {
     dispatch(removeFridgeItem(
       item,
-      userState._id
+      userState
     ))
   }
 

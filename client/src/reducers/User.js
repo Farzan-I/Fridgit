@@ -15,6 +15,8 @@ export default (user = {
       return action.payload;
     case 'REMOVE_FRIDGE_ITEM':
       return action.payload;
+    case 'NO_USER_REMOVE_FRIDGE_ITEM':
+      return action.payload;
     default:
       return user;
   }
