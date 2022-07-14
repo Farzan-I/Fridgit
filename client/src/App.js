@@ -36,14 +36,20 @@ const App = () => {
     <div>
 
       <Navbar />
-      
-      <Fridge />
-      <div className="search-container">
-      <Input />
-      </div>
+      <div class="main-body-container">
+        <div class="fridge--container">
+          <Fridge />
+          <div className="search-container">
+          {/* <Input /> */}
+          </div>
+        </div>
+          {/* <div className="search-container">
+            
+          </div> */}
 
-      <div className="meals-container">
-        <Meals />
+          <div className="meals-container">
+            <Meals />
+          </div>
       </div>
 
       <div>

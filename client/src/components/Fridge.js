@@ -3,9 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import FridgeItem from './FridgeItem/FridgeItem.js'
 import { addFridgeItem } from "../actions/addFridgeItem.js";
 import { removeFridgeItem } from "../actions/removeFridgeItem.js"
+import Input from './Input.js'
+import Instruction from './Meals/Instruction/Instruction.js'
+import Measures from './Meals/Measures/Measures.js'
 
 export default function Fridge() {
   const userState = useSelector((state) => state.user)
+  const recipeData = useSelector((state) => state.instructions)
 
   // set state of fridge item input value
   const [fridgeItem, setFridgeItem] = useState({item: ""})
@@ -40,9 +44,12 @@ export default function Fridge() {
   
   return (
     <div className="fridge--container">
-        <div className="fridge--add-form">
-          <form className="session--form" onSubmit={handleSubmit}>
-          <h2>Add to your fridge!</h2>
+        {/* <div className="fridge--add-form">
+          
+        </div> */}
+        <div className="fridge--contents">
+          <div className="fridge-session-form-subcontainer">
+            <form className="fridge-session-form" onSubmit={handleSubmit}>
             <input
               type="text"
               className="form--input"
@@ -52,11 +59,25 @@ export default function Fridge() {
             />
             <input type="submit" className="form--button"/>
 
-          </form>
+            </form>
+          </div>
+          <div className="fridge-contents-subcontainer">
+            {fridgeContents}
+          </div>
+          <div className="fridge-what-for-dinner-subcontainer">
+          < Input />
+          </div>
         </div>
-        <div className="fridge--contents">
-          {fridgeContents}
-        </div>
+        
+          {/* <div className="meal-test">
+          <Instruction
+        {...recipeData}
+      /> 
+      <Measures 
+        {...recipeData}
+      />
+
+          </div> */}
     </div>
   )
 }

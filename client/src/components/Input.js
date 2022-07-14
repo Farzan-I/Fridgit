@@ -45,7 +45,8 @@ const Input = () => {
       </label>
       </div>
       <div>
-        <button className="form--button" onClick={handleSubmit}>What's for Dinner?</button>
+        {/* <button className="form--button" onClick={handleSubmit}>What's for Dinner?</button> */}
+        <button className="what-for-dinner-button" onClick={handleSubmit}>What's for Dinner?</button>
       </div>
     </div>
     

@@ -25,7 +25,6 @@ just the mealcard below. If latter then that's a problem
   
 } */
 
-
 body {
   min-height: 100vh;
   max-height: 100vh;
@@ -38,7 +37,8 @@ body {
   background-attachment: fixed;
   /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
-  background-image: url('../public/tile.png');
+  /* background-image: url('../public/tile.png'); */
+  background-color: ghostwhite;
   background-size: cover;
   /* background-position: center center; */
 
@@ -55,6 +55,11 @@ body {
 .bold-gray {
   color: gray;
   font-weight: bold;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: row;
 }
 
 /* ----------nav-------------------*/
@@ -149,6 +154,7 @@ nav {
 }
 
 .form--button {
+  
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
@@ -160,16 +166,30 @@ nav {
   background-color: #730071;
 }
 
+/*-------------- fridge --------------*/
+
 .fridge--container {
   display: flex;
-  justify-content: column;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90vh;
+  width: 40vw;
+  background-color: grey;
+  /* overflow: scroll; */
 }
 
 .fridge--contents {
-  max-width: 500px;
-  height: 500px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 95%;
+  height: 40%;
   width: 700px;
-  background-image: url('../public/fridge-interior.png');
+  background-color: white;
+  /* background-image: url('../public/fridge-interior.png'); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 5px;
@@ -189,22 +209,72 @@ nav {
   font-weight: bold;
 }
 
+.fridge-session-form-subcontainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fridge-contents-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fridge-what-for-dinner-subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 110%;
+  
+}
+.what-for-dinner-button {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  grid-column: 2 / -1;
+  border-radius: 5px;
+  margin: 10px;
+  /* border-style: solid; */
+  border-color: #730071;
+  color: white;
+  background: #da7b93;
+  background-color: #730071;
+}
+
 /*-------------- meal tiles --------------*/
 
 
 .meals-container {
   /* margin-top: 10px; */
-  width: 100vw;
+  /* border: solid black 1px; */
   display: flex;
-  padding: 30px;
+  justify-content: start;
+  max-width: 60vw;
+  max-height: 90vh; 
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color:black;
+}
+
+.meal--list {
+  /* padding: 30px; */
+  width: 60vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  /* overflow-y: auto; */
 }
 
 /* meals-container contains meal-cards */
 
 .meal-card {
-  width: 250px;
+  width: 225px;
   margin: 30px;
   font-size: 12px;
   flex: 0 0 auto;         
@@ -222,7 +292,15 @@ nav {
   width: 225px;
   height: auto;
   border-radius: 9px;
-  
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35);  
+}
+
+.meal-card--image:hover {
+  width: 225px;
+  height: auto;
+  border-radius: 9px;  
+  box-shadow: 0px 0px;
+  opacity: 0.5;
 }
 
 .ingredient-info {
@@ -233,7 +311,10 @@ nav {
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
-  margin-top: 50px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .meal--badge {
@@ -263,16 +344,6 @@ nav {
   margin-right: 15px;
 }
 
-.meal--list {
-  /* padding: 30px; */
-  width: 90vw;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-  overflow-y: auto;
-}
-
 .meal--title {
   display: flex;
   height: 100px;
@@ -281,7 +352,7 @@ nav {
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .meal-card--info {
@@ -294,6 +365,13 @@ nav {
   margin: 5px;
 }
 
+.meal-card--spec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
 .input--header {
   /* padding: 30px; */
   font-family: 'Lobster', cursive;
@@ -301,12 +379,19 @@ nav {
 }
 
 .search-container {
+  width: 100%;
+
+}
+
+/* delete me, I mess things up */
+.search--container {
   /* margin-top: 10px; */
   width: 100vw;
   display: flex;
   padding: 30px;
   font-family: 'Lobster', cursive;
   color: #DA7B93;
+  z-index: 3;
 }
 
 .recipe--instructions {
