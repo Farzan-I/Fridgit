@@ -148,7 +148,7 @@ nav {
   /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid rgb(128, 28, 28);
+  border: 1px solid brown;
   text-indent: 5px;
   width: 125px;
 }
@@ -175,8 +175,8 @@ nav {
   justify-content: flex-start;
   align-items: center;
   height: 90vh;
-  width: 40vw;
-  background-color: grey;
+  width: 45vw;
+  /* background-color: grey; */
   /* overflow: scroll; */
 }
 
@@ -187,13 +187,23 @@ nav {
   /* flex-wrap: wrap; */
   /* align-items: flex-start; */
   max-width: 95%;
-  height: 40%;
+  height:  auto;
   width: 700px;
   background-color: white;
   /* background-image: url('../public/fridge-interior.png'); */
   /* background-repeat: no-repeat; */
   /* background-size: 100% 100%; */
   border-radius: 5px;
+}
+
+.fridge--instructions-window {
+  width: 45vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+
+  
+
 }
 
 .fridge--item-tile {
@@ -267,7 +277,7 @@ nav {
 
 .meal--list {
   /* padding: 30px; */
-  width: 60vw;
+  width: 55vw;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -292,7 +302,8 @@ nav {
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* each meal-card contains meal-card--image and ingredient-info*/
+/* e
+ach meal-card contains meal-card--image and ingredient-info*/
 
 .meal-card--image {
   width: 225px;
@@ -315,14 +326,23 @@ nav {
   max-width: 200px;
 }
 
+.meal-badge-box {
+  display: flex;
+  align-items: flex-start;
+  position: sticky;
+  margin-left: 50px;
+}
+
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
+  align-self: flex-start;
   margin-top: 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  position: sticky;
 }
 
 .meal--badge {
@@ -415,7 +435,7 @@ nav {
   /* border-width: 10px; */
   border-radius: 2px;
   background-color: white;
-  padding: 30px;
+  padding: 40px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 18px;
 }
@@ -671,7 +691,7 @@ nav {
   width: 95%;
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid rgb(128, 28, 28);
+  border: 1px solid ghostwhite;
   text-indent: 5px;
 }
 
