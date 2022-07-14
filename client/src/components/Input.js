@@ -35,17 +35,17 @@ const Input = () => {
 
   return (
     <div>
-      <h1 className="input--header">What's in your fridge?</h1>
-      <div>
+      <div className="bold">
         <h3>How do you want to use your ingredients?</h3>
-        {isChecked ? "Use as many as I can" : "See recipes I have all the ingredients for"}
-        <label class="switch">
-        <input type="checkbox" checked={isChecked} onChange={handleOnChange}/>
-        <span class="slider round"></span>
-      </label>
+        <div>
+          <label class="switch">
+            <input type="checkbox" checked={isChecked} onChange={handleOnChange}/>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        {isChecked ? "use as many as I can" : "see recipes I have all the ingredients for"}
       </div>
       <div>
-        {/* <button className="form--button" onClick={handleSubmit}>What's for Dinner?</button> */}
         <button className="what-for-dinner-button" onClick={handleSubmit}>What's for Dinner?</button>
       </div>
     </div>

@@ -106,9 +106,9 @@ nav {
 }
 
 .nav--title {
-  color: #376E6F;
-  font-size: 40px;
-  -webkit-text-stroke: 0.000005px black;
+  color: wheat;
+  font-size: 30px;
+  /* -webkit-text-stroke: 0.000005px black; */
 }
 
 .nav--tagline {
@@ -150,7 +150,7 @@ nav {
   border-radius: 5px;
   border: 1px solid rgb(128, 28, 28);
   text-indent: 5px;
-  width: 200px;
+  width: 125px;
 }
 
 .form--button {
@@ -182,42 +182,47 @@ nav {
 
 .fridge--contents {
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
   max-width: 95%;
   height: 40%;
   width: 700px;
   background-color: white;
   /* background-image: url('../public/fridge-interior.png'); */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% 100%; */
   border-radius: 5px;
 }
 
 .fridge--item-tile {
-  display: inline-block;
-  background-color: #f6f6f6;
-  color: black;
+  /* display: flex; */
+  align-self:flex-start;
+  
+  /* flex-basis: 100px; */
+  background-color: pink;
+  color: green;
   padding: 5px 5px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin: 5px;
   border-radius: 3px;
-  border-style: solid;
-  border-width: 1.5px;
-  border-color: rgba(111,111,111,0);
+  /* border: solid; */
+  /* border-color: ; */
   font-weight: bold;
 }
 
-.fridge-session-form-subcontainer {
-  display: flex;
-  flex-direction: column;
 
+.fridge-session-form-subcontainer {
+  /* display: inline-block; */
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  
 }
 
 .fridge-contents-subcontainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .fridge-what-for-dinner-subcontainer {
@@ -225,11 +230,12 @@ nav {
   flex-direction: row;
   justify-content: center;
   justify-items: center;
-  margin-top: 110%;
+  
+  /* margin-top: 110%; */
   
 }
 .what-for-dinner-button {
-  width: 100%;
+  width: 100px;
   font-family: "Inter", sans-serif;
   grid-column: 2 / -1;
   border-radius: 5px;
@@ -759,6 +765,8 @@ nav {
   width: 0;
   height: 0;
 }
+
+
 
 .slider {
   position: absolute;
