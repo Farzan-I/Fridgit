@@ -25,7 +25,6 @@ just the mealcard below. If latter then that's a problem
   
 } */
 
-
 body {
   min-height: 100vh;
   max-height: 100vh;
@@ -253,22 +252,35 @@ nav {
 
 .meals-container {
   /* margin-top: 10px; */
-  border: solid black 1px;
-  max-width: 60vw;
-  max-height: 90vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  /* border: solid black 1px; */
   display: flex;
   justify-content: start;
+  max-width: 60vw;
+  max-height: 90vh; 
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
   /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color:black;
 }
 
+.meal--list {
+  /* padding: 30px; */
+  width: 60vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  /* overflow-y: auto; */
+}
+
 /* meals-container contains meal-cards */
 
 .meal-card {
-  width: 250px;
+  width: 225px;
   margin: 30px;
   font-size: 12px;
   flex: 0 0 auto;         
@@ -286,7 +298,15 @@ nav {
   width: 225px;
   height: auto;
   border-radius: 9px;
-  
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35);  
+}
+
+.meal-card--image:hover {
+  width: 225px;
+  height: auto;
+  border-radius: 9px;  
+  box-shadow: 0px 0px;
+  opacity: 0.5;
 }
 
 .ingredient-info {
@@ -297,7 +317,10 @@ nav {
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
 
 .badge {
-  margin-top: 50px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .meal--badge {
@@ -327,17 +350,6 @@ nav {
   margin-right: 15px;
 }
 
-.meal--list {
-  /* padding: 30px; */
-  width: 90vw;
-  background-color: darkgray;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-  /* overflow-y: auto; */
-}
-
 .meal--title {
   display: flex;
   height: 100px;
@@ -346,7 +358,7 @@ nav {
   text-overflow: ellipsis;
   font-weight: bold;
   font-size: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .meal-card--info {
@@ -357,6 +369,13 @@ nav {
 .meal-card--like-thumb {
   width: 10px;
   margin: 5px;
+}
+
+.meal-card--spec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .input--header {
