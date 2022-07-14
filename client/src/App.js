@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import Meals from './components/Meals/Meals.js'
 import Navbar from './components/Navbar.js'
 import Input from './components/Input.js'
@@ -31,6 +31,9 @@ const App = () => {
 
 
   // const [loggedInStatus, setLoggedInStatus] = useState(false)
+    
+  const [showInstruction, setShowInstruction] = useState(false)
+
  
   return (
     <div>
@@ -38,7 +41,7 @@ const App = () => {
       <Navbar />
       <div class="main-body-container">
         <div class="fridge--container">
-          <Fridge />
+          <Fridge showInstruction={showInstruction} />
           <div className="search-container">
           {/* <Input /> */}
           </div>
@@ -48,7 +51,7 @@ const App = () => {
           </div> */}
 
           <div className="meals-container">
-            <Meals />
+            <Meals setShowInstruction={setShowInstruction}/>
           </div>
       </div>
 

@@ -6,8 +6,9 @@ import { removeFridgeItem } from "../actions/removeFridgeItem.js"
 import Input from './Input.js'
 import Instruction from './Meals/Instruction/Instruction.js'
 import Measures from './Meals/Measures/Measures.js'
+import MealBadge from "./Meals/MealBadge.js";
 
-export default function Fridge() {
+export default function Fridge(props) {
   const userState = useSelector((state) => state.user)
   const recipeData = useSelector((state) => state.instructions)
 
@@ -31,8 +32,6 @@ export default function Fridge() {
   }
 
   const handleClick = (item) => {
-    // setRemoveItem(item)
-    console.log(item)
     dispatch(removeFridgeItem(
       item,
       userState._id
@@ -44,6 +43,21 @@ export default function Fridge() {
       <FridgeItem name={item} handleClick={handleClick}/>
     )
   })
+
+  const mealBadges = () => {
+    let keyArray = ["vegetarian", "vegan", "dairyFree", "glutenFree", "veryPopular", "cheap", "sustainable", "lowFodmap"]
+
+    let mealBadges = keyArray.map((key) => {
+      if (recipeData[key] === true) {
+        return (
+          <MealBadge name={key}/>
+        )
+      }
+    })
+    return mealBadges
+
+    }
+  console.log(recipeData)
   
   return (
     <div className="fridge--container">
@@ -68,19 +82,21 @@ export default function Fridge() {
             {fridgeContents}
           </div>
         </div>
-          <div className="fridge-what-for-dinner-subcontainer">
+        <div className="fridge-what-for-dinner-subcontainer">
           <Input />
-          </div>
-        
-          {/* <div className="meal-test">
-          <Instruction
-        {...recipeData}
-      /> 
-      <Measures 
-        {...recipeData}
-      />
-
-          </div> */}
+        </div>
+        {props.showInstruction && <div className="fridge--instructions-window">
+            <div className="meal-badge-box">
+              {mealBadges()}
+            </div>
+            <Measures 
+              {...recipeData}
+            />
+            <Instruction
+            {...recipeData}
+            /> 
+        </div>
+        }
     </div>
   )
 }
