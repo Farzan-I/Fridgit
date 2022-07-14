@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Login from './Login.js'
+import Logout from './Logout.js'
 import LoginDropDown from "./LoginDropDown.js";
 import SignUpDropDown from "./SignUpDropDown.js";
 
@@ -21,6 +22,9 @@ export default function Navbar() {
           </div>
           <div className="login-dropdown-container">
             <LoginDropDown/>
+          </div>
+          <div className="login-dropdown-container">
+            <Logout />
           </div>
         </div>
         {/* <div className="nav-links">
