@@ -18,7 +18,7 @@ const Login = (props, {Login, error}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(loginUser(userData));
-    props.setLoggedInStatus(true)
+    // props.setLoggedInStatus(true)
   };
 
   return (
