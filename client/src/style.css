@@ -55,6 +55,7 @@ body {
 .bold-gray {
   color: gray;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .main-body-container {
@@ -253,6 +254,26 @@ nav {
   border-radius: 5px;
 }
 
+.recipe--instructions {
+  /* padding: 30px; */
+  margin-top: 20px;
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35); 
+  max-width: 95%;
+  margin-right: 45px;
+  /* margin-left: 6px;
+  
+  margin-top: 10px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 5px;
+  background-color: white;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 18px;
+}
+
 .fridge--instructions-window {
   width: 45vw;
   overflow-x: hidden;
@@ -358,14 +379,16 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .ingredient-info {
   margin-left: 10px;
-  max-width: 200px;
+  padding-left: 50px;
+  /* flex-flow: row wrap; */
 }
 
 .meal-badge-box {
   display: flex;
   align-items: flex-start;
-  position: sticky;
-  margin-left: 50px;
+  /* position: sticky; */
+  margin-left: 10px;
+  padding-left: 50px;
 }
 
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
@@ -460,21 +483,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   z-index: 3;
 }
 
-.recipe--instructions {
-  /* padding: 30px; */
-  max-width: 750px;
-  margin-left: 6px;
-  margin-right: 5px;
-  margin-top: 2px;
-  /* border-style: solid; */
-  /* border-width: 10px; */
-  border-radius: 2px;
-  background-color: white;
-  padding: 40px;
-  font-family: 'Edu SA Beginner', cursive;
-  font-size: 18px;
-}
-
 .recipe--measures {
   max-width: 500px;
   margin-left: 5px;
@@ -531,6 +539,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
   background-color: white;
   color: green;
   padding: 5px 5px;
+  margin-top: 5px;
+  margin-left: 5px;
   border-radius: 2px;
   border-color: brown;
   font-weight: bold;
@@ -540,6 +550,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
   background-color: white;
   color: red;
   padding: 5px 5px;
+  margin-left: 5px;
+  margin-top: 5px;
   border-radius: 2px;
   border-color: brown;
   border-radius: 1px;
@@ -548,7 +560,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .used-ingredients {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-flow: row wrap;
   justify-content: auto ; 
   align-items: flex-start;
   
@@ -556,15 +569,11 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .missed-ingredients {
   display: flex;
-  flex-direction: column;
-  justify-content: auto ; 
-  align-items:flex-start;
-  flex-direction: column;
+  /* flex-direction: column; */
+  flex-flow: row wrap;
   justify-content: auto ; 
   align-items: flex-start;
-  padding-bottom: 10px;
-  border-radius: 1px;
-  padding-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .missed-ingredient--plus {

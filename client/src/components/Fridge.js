@@ -7,6 +7,8 @@ import Input from './Input.js'
 import Instruction from './Meals/Instruction/Instruction.js'
 import Measures from './Meals/Measures/Measures.js'
 import MealBadge from "./Meals/MealBadge.js";
+import UsedIngredient from "./Meals/Meal/Ingredient/UsedIngredient.js";
+import MissedIngredient from "./Meals/Meal/Ingredient/MissedIngredient.js";
 
 export default function Fridge(props) {
   const userState = useSelector((state) => state.user)
@@ -18,23 +20,20 @@ export default function Fridge(props) {
   const dispatch = useDispatch()
 
   const handleSubmit = async (event) => {
+    console.log("line 21")
     event.preventDefault()
-    if (userState.username !== "") {
-      let foo = addFridgeItem(
+      let asyncAddFridgeItem = addFridgeItem(
         fridgeItem.item,
-        userState._id
+        userState
         )
-      foo(dispatch)
-    } else {
-      userState.fridge.push(fridgeItem.item)
-    }
+        asyncAddFridgeItem(dispatch)
     setFridgeItem({item: ""})
   }
 
   const handleClick = (item) => {
     dispatch(removeFridgeItem(
       item,
-      userState._id
+      userState
     ))
   }
 
@@ -58,6 +57,27 @@ export default function Fridge(props) {
 
     }
   console.log(recipeData)
+
+  const usedIngredients = props.selectedMeal.usedIngredients.map((ingredient) => {
+    return(
+        <UsedIngredient
+          key={ingredient.id}
+          name={ingredient.name}
+          id={ingredient.id}
+        />
+    )
+})
+
+const missedIngredients = props.selectedMeal.missedIngredients.map((ingredient) => {
+  return (
+    <MissedIngredient
+      key={ingredient.id}
+      name={ingredient.name}
+      id={ingredient.id}
+    />
+  )
+})
+
   
   return (
     <div className="fridge--container">
@@ -86,6 +106,16 @@ export default function Fridge(props) {
           <Input />
         </div>
         {props.showInstruction && <div className="fridge--instructions-window">
+            <div className="ingredient-info">
+            <p className="bold-gray">Ingredients you have:</p>
+              <div className="used-ingredients">
+                {usedIngredients}
+              </div>
+            <p className="bold-gray">Ingredients you're missing:</p>
+              <div className="missed-ingredients">
+                {missedIngredients}
+              </div>
+            </div>
             <div className="meal-badge-box">
               {mealBadges()}
             </div>
