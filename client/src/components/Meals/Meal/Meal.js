@@ -51,7 +51,6 @@ export default function Meal(props) {
       
         </div>
           <div class="badge">
-          {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
             <div className="meal-card--spec">
               <img className="meal-card--like-thumb" src="./like-thumb.png" alt="like-thumb"></img>
               <span className="meal-card--likes-count">{props.likes}</span>
@@ -59,6 +58,7 @@ export default function Meal(props) {
                 <span className="bold">{ingredientCount}</span>Ingredients
               </div>
             </div>
+          {isReadyToMake() && <div className="badge">Ready to Make ✅</div>}
           </div>
       {/* <div className="ingredient-info">
       <p className="bold-gray">Ingredients you have:</p>
