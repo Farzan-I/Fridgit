@@ -1,4 +1,4 @@
-# Brains On Brioche
+# Brains On Brioche (B.O.B)
 
 | [![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | [![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description)| [![Production](https://img.shields.io/badge/-Production-red)](#production) | [![Demo](https://img.shields.io/badge/-Demo-inactive)](#demo) | [![Technologies used](https://img.shields.io/badge/-Technologies%20used-yellow)](#technologies-used) | [![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-blue)](#how-to-run-locally) | [![Card wall](https://img.shields.io/badge/-Card%20wall-orange)](#card-wall) | [![Team approach](https://img.shields.io/badge/-Team%20approach-informational)](#team-approach) | [![User stories](https://img.shields.io/badge/-User%20stories-green)](#user-stories) | [![Further User Stories](https://img.shields.io/badge/-Further%20User%20Stories-blueviolet)](#further-user-stories) | [![Minimum Viable Product](https://img.shields.io/badge/-%20Minimum%20Viable%20Product-lightgrey)](#minimum-viable-product-mvp) | [![Wireframes](https://img.shields.io/badge/-Wireframes-important)](#wireframes) | [![Edge cases](https://img.shields.io/badge/-Edge%20cases-brown)](#edge-cases) | [![Future improvements](https://img.shields.io/badge/-Future%20Improvements-skyblue)](#future-improvements) |
 
@@ -10,14 +10,19 @@
 - [Stevie Spiegl](https://github.com/S-Spiegl)
 
 ## Project description
-<p>Welcome to Brains on Brioche, the food app we were requested to build, as our final group project of the Makers Academy bootcamp during weeks 11 and 12. We designed and developed from scratch a program(?) where a user can enter some ingredients that are available at the moment and get access to a number of meals (and their recipes) that they can prepare according to them. 
+<p>Welcome to Brains On Brioche (B.O.B), the food web application we built as our final group project of the Makers Academy bootcamp during weeks 11 and 12. We designed and developed a web app where a user can enter some ingredients at their disposal and get access to a wide range of meal recipes that they can prepare using the given instructions.
 </p>
 <p>
-As a team we thought that an app like this would be quite useful for many different reasons. Food waste is real and it results to a financial burden for everyone that can be avoided; it affects the enviroment too, since a larger amount of food is required for each person than it would if we were utilizing most of, if not all of the food resources we are paying for. And here Brains on Brioche comes to the rescue, as it can help minimize food waste significantly, if frequently used.
-Also, for many people who actually want to cook their food themselves, but know only a limited time of recipes, or they cannot figure out the way to put together different ingredients, in order to make delicious food, this app is really helpful as well. We managed to implement a wide database with thousands of recipes from many different cuisines, so the user can find recipes even with ingredients that at first glance look like they could not be combined. Even users who can actually cook, by using this app, they can find many alternative options and prepare meals that didn't even know they exist from all around the world, thus having a nice break from their usual meals and adding much more variety to their diet.
+As a team, we thought an app like this would be useful for many different reasons. Food waste is real and it results in a financial burden for everyone. This is where B.O.B comes to the rescue. If frequently used, it can help minimise food waste significantly as it encourages you to use the ingredients at your disposal. From salmon and marmite to pork and peanut butter, we have you covered.<br>
+For those who want to cook their food themselves, whether they're on a specific diet such as low FODMAP, gluten free or anything in between, B.O.B provides the basis for anyone seeking to make the most of their fridge leftovers and create something that brings restaurant quality food to their dinner table.
 </p>
 <p>
-Another really cool feature of our app is that the user can sign up and via their profile they can enter the ingredients they have in their fridge, without having to interact with the search bar everytime. This way their shopping becomes much easier, as they can find out quicker what exactly they need to buy, without needing a new shopping list everytime.
+We managed to implement into our web app an external API from Spoonacular that contains thousands of recipes from many different cuisines, so the user can find recipes even with ingredients that at first glance may look like they could not be combined. Even users who can actually cook, by using this web app, they can find many alternative options and prepare meals that they didn't even know existed from all around the world, thus having a nice break from their usual meals and adding much more variety to their diet.
+</p>
+<p>
+</p>
+<p>
+We've also implemented another feature of our app that the user can sign up and via their profile they can enter the ingredients they have in their fridge, without having to interact with the search bar everytime. This way their shopping becomes much easier, as they can find out quicker what exactly they need to buy, without needing a new shopping list everytime.
 Aside from the practicalities, there is the fun aspect of the app too, thanks to the mystery-meal function. By choosing a mystery meal, the app provides the user with a random meal (of course according to their available ingredients) so they can consume a surprise meal that wasn't their option, or in some cases, might not even know what it is, or how it tastes, making the whole process a lot more fun and unpredictable.
 </p>
 <p>
@@ -28,19 +33,35 @@ In conclusion, all members of our team we are extremely happy with our effort in
 
 ## Demo
 ### Home page
-![home](public/images/_____.png)
+![home](client/public/1-home-page.png)
+### Non-signed up/in user recipe search (1/2)
+![search-1](client/public/search-1.png)
+### Non-signed up/in user recipe search (2/2 - showing the instructions on the left)
+![search-2](client/public/search-2.png)
+### New user (Lucy) has logged in
+![sign-in](client/public/lucy-logged-in.png)
+### Lucy has stocked up her fridge and storeds in database
+![fridge-contents](client/public/lucy-fridge.png)
+### Lucy searches for recipes using the fridge contents
+![fridge-search](client/public/lucy-fridge-recipe.png)
+### Lucy searches for recipes using more than the fridge contents
+![fridge-extend](client/public/lucy-fridge-recipe-extend.png)
+### Contact us / About us footer dropdown(up) menus
+![contact-about](client/public/contact-about.png)
+
 
 ## Technologies Used
-- [![Express](https://img.shields.io/badge/-Express-lightpink)](https://expressjs.com/) web framework for Node.js.
-- [![Nodemon](https://img.shields.io/badge/-Nodemon-navy)](https://nodemon.io/) to reload the server automatically.
-- [![React](https://img.shields.io/badge/-React-green)](https://reactjs.org/) to build user interfaces.
-- [![Mongoose](https://img.shields.io/badge/-Mongoose-brown)](https://mongoosejs.com) to model objects in MongoDB.
-- [![ESLint](https://img.shields.io/badge/-ESLint-violet)](https://eslint.org) for linting.
-- [![Jest](https://img.shields.io/badge/-Jest-beige)](https://jestjs.io/) for testing.
-- [![Redux](https://img.shields.io/badge/-Redux-grey)](https://redux.js.org/) to help with consistency across client, server, and native environments and make testing easier.
-- [![Cypress](https://img.shields.io/badge/-Cypress-cyan)](https://www.cypress.io/) for end-to-end testing.
 - [![Axios](https://img.shields.io/badge/-Axios-fccb71)](https://axios-http.com/) promise based HTTP client for the browser and node.js.
 - [![CSS](https://img.shields.io/badge/-CSS-5454e9)](https://www.w3.org/Style/CSS/Overview.en.html) for styling of the webpages.
+- [![Cypress](https://img.shields.io/badge/-Cypress-cyan)](https://www.cypress.io/) for end-to-end testing.
+- [![ESLint](https://img.shields.io/badge/-ESLint-violet)](https://eslint.org) for linting.
+- [![Express](https://img.shields.io/badge/-Express-lightpink)](https://expressjs.com/) web framework for Node.js.
+- [![Jest](https://img.shields.io/badge/-Jest-beige)](https://jestjs.io/) for testing.
+- [![MongoDB](https://img.shields.io/badge/-MongoDB-green)](https://www.mongodb.com/) for testing.
+- [![Mongoose](https://img.shields.io/badge/-Mongoose-brown)](https://mongoosejs.com) to model objects in MongoDB.
+- [![Nodemon](https://img.shields.io/badge/-Nodemon-navy)](https://nodemon.io/) to reload the server automatically.
+- [![React](https://img.shields.io/badge/-React-green)](https://reactjs.org/) to build user interfaces.
+- [![Redux](https://img.shields.io/badge/-Redux-grey)](https://redux.js.org/) to help with consistency across client, server, and native environments and make testing easier.
 
 ## How to run locally
 
@@ -68,10 +89,21 @@ npm install --save --legacy-peer-deps
 ## Card wall
 We used a [Trello](https://trello.com/b/b9m4qtRa/brainsonbrioche) board to keep track of the features we want to implement. We organised tickets amongst the team and moved the tickets accordingly to demonstrate at what stage that feature's at (To do/In progress/In review etc.).
 
+![Trello](client/public/Trello-board.png)
+
+### Diagramming
+#### JavaScript sequence Diagram
+![JS Diagram](client/public/js-sequence-diagram.png)
+#### Early Sequence Diagram
+![Early Sequence Diagram](client/public/sequence-2.jpg)
+#### Final Sequence Diagram
+![Final Sequence Diagram](client/public/sequence-diagram.png)
+
 ## Team approach
 * Standups every morning at 10:00
 * Retro at 5:30 every evening
 * Pair programming throughout the whole project
+* Use of mobbing to ensure every member understands the code and eliminate blockers
 * Regular check-ins with team members to make sure nobody was left behind
 * Trello board for distributing work and staying on track
 
@@ -108,14 +140,19 @@ I would like to have a profile page that saves all my available ingredients.
 <details>
 <summary> 🍽 Search bar on the home page </summary>
 
-* User can type an ingredient and get a maximum of 5 recipes given back
+* User can type an ingredient and get recipes given back
 * 
 </details>
 
 ## Wireframes
-![Wireframe 1](public/images/_____.png)
+### Figma wireframe (early development)
+![Wireframe 1](client/public/figma-wire.png)
+### Board wireframe (late development)
+![Wireframe 2](client/public/wireframe.jpg)
 
 ## Edge cases
 
+
 ## Future improvements
 
+![Team B.o.B](client/public/team.jpg)

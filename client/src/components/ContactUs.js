@@ -9,7 +9,7 @@ export default function ContactUs() {
   
   return (
     <div>
-      <div className="" onClick={toggling}>
+      <div className="footer-buttons" onClick={toggling}>
         {"Contact us"}
       </div>
         {isOpen && (
@@ -21,11 +21,6 @@ export default function ContactUs() {
             <p>Email: brains.on.brioche@gmail.com</p>
             <p>Address: 33 Brains Ln, Sparkford, Yeovil</p>
             <img src="./Brains-Lane.png" alt="google-map" width="220" height="260"></img>
-            {/* above image will be changed to google map view */}
-            {/* hello alex :) does it work now that i uploaded it? */}
-            {/* I can't use your terminal so I can't see */}
-            {/* let's try see it working now */}
-            {/* i actually think it works, cause when i open the file i can see the preview */}
           </div>
         )}
     </div>

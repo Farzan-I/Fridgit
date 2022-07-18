@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Reenie+Beanie&family=Rock+Salt&family=Rubik+Mono+One&family=Sansita&family=Shrikhand&display=swap');
 /* give everything a min-width */
 /* consider fixed position for header */
 /* rename summary ingredients */
@@ -30,18 +31,17 @@ body {
   max-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
-  background-attachment: fixed;
 	margin: 0;
   display: flex;
   flex-wrap: wrap;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  background-position: center;
   /* flex-direction: column; */
   font-family: 'Inter', sans-serif;
-  /* background-image: url('../public/tile.png'); */
+  background-image: url('../public/tabletop.jpg');
   background-color: ghostwhite;
   background-size: cover;
-  /* background-position: center center; */
-
+  color: rgb(85, 84, 84);
 }
 
 .gray {
@@ -93,22 +93,27 @@ nav {
   left: 0px;
   top: 0px;
   /* background-color: #da7b93; */
-  background-color: rgba(218,123,147,0.5);
+  background-color: rgba(218,123,147,0.3);
   /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-  font-family: 'Lobster', cursive;
+  font-family: 'Sansita', cursive;
   opacity: 0.9;
 }
 
 .nav--logo {
-  max-width: 120px
+  margin-top: 12px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .nav--title {
-  color: wheat;
-  font-size: 30px;
+  color: #3faffa;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
+  margin-top: 10px;
+  margin-bottom: 0px;
   /* -webkit-text-stroke: 0.000005px black; */
 }
 
@@ -120,9 +125,41 @@ nav {
 }
 
 .nav--username {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   text-align: right;
-  color: rgba(255, 255, 255, 0.802);
+  color: #3faffa;
+  text-shadow: 1px 1px black;
+}
+
+.nav--username--container {
+  display: flex;
+  padding-top: 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-title-and-slogan {
+  display: flex;
+  flex-direction: column;
+  max-height: 90px
+}
+
+.nav-slogan {
+  margin-top: 5px;
+  font-size: 17px;
+  color: #000000;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.logo-and-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 400px;
+  margin-left: 20px;
 }
 
 /* --------------instructions--------------- */
@@ -149,7 +186,7 @@ nav {
   /* flex-align:  */
   font-family: "Inter", sans-serif;
   border-radius: 5px;
-  border: 1px solid brown;
+  border: 1px solid rgb(123, 123, 123);
   text-indent: 5px;
   width: 125px;
 }
@@ -161,10 +198,10 @@ nav {
   border-radius: 5px;
   margin: 10px;
   /* border-style: solid; */
-  border-color: #730071;
+  border-color: #DA7B93;
   color: white;
   background: #da7b93;
-  background-color: #730071;
+  background-color: #DA7B93;
 }
 
 /*-------------- fridge --------------*/
@@ -176,25 +213,76 @@ nav {
   justify-content: flex-start;
   align-items: center;
   height: 90vh;
-  width: 45vw;
-  /* background-color: grey; */
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.15);
   /* overflow: scroll; */
 }
 
+.meals-container {
+  /* margin-top: 10px; */
+  /* border: solid black 1px; */
+  display: flex;
+  justify-content: start;
+  max-width: 60vw;
+  max-height: 90vh; 
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* padding: 30px; */
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: 'Lobster', cursive;
+  color:rgb(85, 84, 84);
+}
+
+.meal--list {
+  /* padding: 30px; */
+  width: 60vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  /* overflow-y: auto; */
+}
+
 .fridge--contents {
-  margin-top: 40px;
+  /* border: solid 1px rgb(139,69,19); */
+  margin-top: 10px;
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35);  
   /* display: flex; */
   /* flex-direction: column; */
   /* flex-wrap: wrap; */
   /* align-items: flex-start; */
   max-width: 95%;
-  height:  auto;
+  height: auto;
   width: 700px;
   background-color: white;
+  padding: 10px;
   /* background-image: url('../public/fridge-interior.png'); */
   /* background-repeat: no-repeat; */
   /* background-size: 100% 100%; */
   border-radius: 5px;
+}
+
+.recipe--instructions {
+  /* padding: 30px; */
+  margin-top: 20px;
+  box-shadow: 7px 7px 2px rgba(0, 0, 0, 0.35); 
+  max-width: 95%;
+  margin-right: 45px;
+  /* margin-left: 6px;
+  
+  margin-top: 10px;
+  /* border-style: solid; */
+  /* border-width: 10px; */
+  border-radius: 5px;
+  background-color: white;
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 18px;
 }
 
 .fridge--instructions-window {
@@ -210,16 +298,20 @@ nav {
 .fridge--item-tile {
   /* display: flex; */
   align-self:flex-start;
+  border: solid 1px black;
+  font-size: 13px;
   
   /* flex-basis: 100px; */
-  background-color: pink;
-  color: green;
+  background-color: rgba(255, 192, 203, 0.6);
+  color: rgb(85, 84, 84);
   padding: 5px 5px;
   margin: 5px;
-  border-radius: 3px;
+  color: rgb(85, 84, 84);
+  text-shadow: black;
+  border-radius: 5px;
   /* border: solid; */
   /* border-color: ; */
-  font-weight: bold;
+  font-weight: 500;
 }
 
 
@@ -231,6 +323,7 @@ nav {
 }
 
 .fridge-contents-subcontainer {
+  padding-top: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -252,41 +345,27 @@ nav {
   border-radius: 5px;
   margin: 10px;
   /* border-style: solid; */
-  border-color: #730071;
+  border-color: #DA7B93;
   color: white;
   background: #da7b93;
-  background-color: #730071;
+  background-color: #DA7B93;
+}
+
+.welcome-container {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.welcome {
+  font-size: 28px;
+  font-family: 'Edu SA Beginner', cursive;
+  color: rgb(85, 84, 84);
 }
 
 /*-------------- meal tiles --------------*/
 
 
-.meals-container {
-  /* margin-top: 10px; */
-  /* border: solid black 1px; */
-  display: flex;
-  justify-content: start;
-  max-width: 60vw;
-  max-height: 90vh; 
-  flex-wrap: wrap;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  /* padding: 30px; */
-  font-family: 'Lobster', cursive;
-  color:black;
-}
 
-.meal--list {
-  /* padding: 30px; */
-  width: 55vw;
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  /* overflow-y: auto; */
-}
 
 /* meals-container contains meal-cards */
 
@@ -324,6 +403,7 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .ingredient-info {
   margin-left: 10px;
+  padding-left: 50px;
   /* flex-flow: row wrap; */
 }
 
@@ -332,6 +412,7 @@ ach meal-card contains meal-card--image and ingredient-info*/
   align-items: flex-start;
   /* position: sticky; */
   margin-left: 10px;
+  padding-left: 50px;
 }
 
 /* ingredient-info contains used-ingredient and missed-ingredient divs*/
@@ -426,21 +507,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   z-index: 3;
 }
 
-.recipe--instructions {
-  /* padding: 30px; */
-  max-width: 750px;
-  margin-left: 6px;
-  margin-right: 5px;
-  margin-top: 2px;
-  /* border-style: solid; */
-  /* border-width: 10px; */
-  border-radius: 2px;
-  background-color: white;
-  padding: 40px;
-  font-family: 'Edu SA Beginner', cursive;
-  font-size: 18px;
-}
-
 .recipe--measures {
   max-width: 500px;
   margin-left: 5px;
@@ -452,12 +518,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   padding: 30px;
   font-family: 'Edu SA Beginner', cursive;
   font-size: 14px;
-}
-
-.logo-and-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .home--link, .about--link, .contact--link {
@@ -493,8 +553,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .used-ingredient--tile {
   display: inline-block;
-  background-color: white;
-  color: green;
+  background-color: rgb(13, 205, 13);
+  color: white;
   padding: 5px 5px;
   margin-top: 5px;
   margin-left: 5px;
@@ -504,8 +564,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
 }
 
 .missed-ingredient--tile {
-  background-color: white;
-  color: red;
+  background-color: red;
+  color: white;
   padding: 5px 5px;
   margin-left: 5px;
   margin-top: 5px;
@@ -653,11 +713,13 @@ ach meal-card contains meal-card--image and ingredient-info*/
   align-items: center;
   /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); */
   font-weight: 500;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   color: #da7b93;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  text-shadow: 1px 1px #1f0808;
   color: #3faffa;
+  font-family: 'Sansita', cursive;
   /* background: rgb(150, 202, 192); */
 }
 
@@ -735,9 +797,9 @@ ach meal-card contains meal-card--image and ingredient-info*/
   background-color: rgba(218,123,147,0.5);
   position: fixed;
   bottom: 0;
-  height: 35px;
+  height: 2vh;
   padding-bottom: 30px;
-  color: #730071
+  color: #3faffa;
 }
 
 .footer-links-container {
@@ -755,10 +817,12 @@ ach meal-card contains meal-card--image and ingredient-info*/
 }
 
 
+/* ---------- about us/contact us ------------- */
+
 .about-us-drop-up,
 .contact-us-drop-up {
     position: absolute;
-    opacity: 0.8;
+    opacity: 1;
     border-radius: 30px;
     padding: 10px;
     /* display: block; */
@@ -768,8 +832,8 @@ ach meal-card contains meal-card--image and ingredient-info*/
     bottom: 40px;
     right: 250px;
     z-index: 1;
-    background-color: rgba(238, 238, 238);
-    color: #730071;
+    background-color: rgba(255, 255, 255);
+    color: black;
 }
 
 .contact-us-drop-up {
@@ -837,4 +901,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.drop-down-header:hover, .drop-down-list-item:hover,
+.form--button:hover, .what-for-dinner-button:hover,
+.footer-buttons:hover, .meal-card--image:hover {
+  cursor:pointer;
+}
+
+.bold-gray:hover {
+  cursor: pointer;
+  color: red;
 }
