@@ -93,7 +93,7 @@ We used a [Trello](https://trello.com/b/b9m4qtRa/brainsonbrioche) board to keep 
 
 ### Diagramming
 #### JavaScript sequence Diagram
-![JS Diagram](client/public/js-sequence-diagram.png)
+![JS Diagram](client/public/JS-sequence-diagram.png)
 #### Early Sequence Diagram
 ![Early Sequence Diagram](client/public/sequence-2.jpg)
 #### Final Sequence Diagram
