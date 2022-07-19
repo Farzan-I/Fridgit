@@ -46,7 +46,7 @@ In conclusion, all members of our team we are extremely happy with our effort in
 ![fridge-search](client/public/lucy-fridge-recipe.png)
 ### Lucy searches for recipes using more than the fridge contents
 ![fridge-extend](client/public/lucy-fridge-recipe-extend.png)
-### Contact us / About us footer dropdown(up) menus
+### About us / Contact us footer dropdown(up) menus
 ![contact-about](client/public/contact-about.png)
 
 

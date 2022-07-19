@@ -290,9 +290,6 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
   text-align: left;
-
-  
-
 }
 
 .fridge--item-tile {
@@ -364,9 +361,6 @@ nav {
 
 /*-------------- meal tiles --------------*/
 
-
-
-
 /* meals-container contains meal-cards */
 
 .meal-card {
@@ -382,8 +376,7 @@ nav {
   font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* e
-ach meal-card contains meal-card--image and ingredient-info*/
+/* each meal-card contains meal-card--image and ingredient-info*/
 
 .meal-card--image {
   width: 225px;
@@ -493,7 +486,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
 
 .search-container {
   width: 100%;
-
 }
 
 /* delete me, I mess things up */
@@ -704,8 +696,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
     /* background-color: white; */
   }
   
-
-
 .drop-down-header {
   display: flex;
   width: 200px;
@@ -767,7 +757,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
 }
 
 .sign-up-button {
-  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -808,7 +797,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   justify-content: space-around;
   /* background-color: white; */
   width: 30vw;
-
 }
 
 .footer-links {
@@ -827,13 +815,19 @@ ach meal-card contains meal-card--image and ingredient-info*/
     padding: 10px;
     /* display: block; */
     font-size: 12px;
-    height: 300px;
-    width: 500px;
+    height: 340px;
+    width: 300px;
     bottom: 40px;
     right: 250px;
     z-index: 1;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.661);
     color: black;
+}
+
+.footer-title {
+  color: #3faffa;
+  font-size: 14px;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .contact-us-drop-up {
@@ -854,8 +848,6 @@ ach meal-card contains meal-card--image and ingredient-info*/
   width: 0;
   height: 0;
 }
-
-
 
 .slider {
   position: absolute;
