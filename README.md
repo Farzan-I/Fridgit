@@ -60,15 +60,12 @@ In conclusion, we are extremely happy with our effort in building this app and t
 1. Fork this repository (optional)
 2. Clone your fork (or this repo) to your local machine
 3. Navigate to the project directory in command line/terminal and run `npm install`
-4. Navigate to the server directory in a separate terminal using `cd server` and run `npm install`
-#### Client
-1. 
-* To initialise an empty react application `npx create-react-app ./` in the client directory
-* `npm install axios moment react-file-base64 redux redux-thunk` (in order of being installed: to make api requests, a library to work with time and date, to convert images, asynchronous actions using redux)
-
-#### Server
-* `npm init -y` to initialise an empty package.json file
-* `npm install body-parser cors express mongoose nodemon` to install all necessary dependencies (in order of being installed: enable app to send recipe requests, enable cross origin requests, framework of the application, create models for the recipes, to have the browser reload everytime a change is made)
+4. Navigate to the server folder in a separate terminal using `cd server` and run `npm install`
+5. In another terminal, navigate to the client folder using `cd client` and run `npm install`
+6. With two terminals open (one in the server folder and the other in the client folder), run `npm start` in both, first in the server then in the client
+7. This starts the server connection (app to database, app to the API) and automatically opens the website to `localhost:3000`
+8. Create an account (if you want to store your fridge contents for later use) and start typing in the ingredients you want recipes for, one at a time please
+9. Click on the recipe you find most intriguing and maybe even adjust the search to show more adventurous recipes!
 
 #### Cypress Testing
 * To install Cypress enter the `npm install cypress --save-dev` command.
@@ -76,9 +73,11 @@ In conclusion, we are extremely happy with our effort in building this app and t
 
 #### Configuration
 * If you run into any problems when using `npm install` to install dependencies, the following commands can be used to overcome the setbacks in case the node modules
-do not install properly
+do not install properly:
 ```
 npm config set legacy-peer-deps true
+```
+```
 npm install --save --legacy-peer-deps
 ```
 
@@ -127,18 +126,40 @@ I would like to see a list of the ingredients I am missing.
 ```
 As a user,
 So that I don't have to enter ingredients everytime,
-I would like to have a profile page that saves all my available ingredients.
+I would like to have a fridge that saves all my available ingredients.
 ```
 
 ## Further User Stories
-
+```
+As a user,
+So that I can save all of my progress,
+I want to be able to create an account and store my ingredients.
+```
+```
+As a user,
+So that no one can access my ingredients,
+I'd like to be able to sign out.
+```
+```
+As a user,
+So that I know what the company is about,
+I'd like to access more information about the company in an about us section.
+```
+```
+As a user,
+So that I can contact the company with feedback,
+I'd like to see a contact us page with the company's details.
+```
 ## Minimum Viable Product (MVP)
 <details>
-<summary> 🍽 Search bar on the home page </summary>
+<summary> Search bar on the home page 🍽</summary>
 
-* User can type an ingredient and get recipes given back
-* 
+* User can see a search bar 🔎
+* User can type an ingredient one by one 🧀
+* User gets recipes given back with their selected ingredients 🍝
 </details>
+
+<br>
 
 ## Wireframes
 ### Figma wireframe (early development)
@@ -147,9 +168,14 @@ I would like to have a profile page that saves all my available ingredients.
 ![Wireframe 2](client/public/wireframe.jpg)
 
 ## Edge cases
-
+* Sign up with invalid input
+* Ingredients don't get saved if the user is not signed up/signed in
 
 ## Future improvements
+* When a user arrives, they can't see the log out button
+* When the user signs in, they can only see the log out button, not create account or sign in options
+* 
+
 Aside from the practicalities, there is the fun aspect of the app too, thanks to the mystery-meal function. By choosing a mystery meal, the app provides the user with a random meal (of course according to their available ingredients) so they can consume a surprise meal that wasn't their option, or in some cases, might not even know what it is, or how it tastes, making the whole process a lot more fun and unpredictable.
 
 ![Team B.o.B](client/public/team.jpg)
