@@ -789,6 +789,8 @@ nav {
   height: 2vh;
   padding-bottom: 30px;
   color: #3faffa;
+  /* text-shadow: 0.5px 0.5px black; */
+  text-shadow: 0.5px 0.5px black;
 }
 
 .footer-links-container {
@@ -804,6 +806,9 @@ nav {
   padding-top: 7px;
 }
 
+.footer-info {
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
 
 /* ---------- about us/contact us ------------- */
 

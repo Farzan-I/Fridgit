@@ -1,6 +1,6 @@
 <div align="center">
 
-# Brains On Brioche (B.O.B)
+# Brains On Brioche (B.O.B) 
 
 [![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | 
 [![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description) | 
@@ -54,7 +54,7 @@ In conclusion, we are extremely happy with our effort in building this app and t
 ### Lucy searches for recipes using more than the fridge contents
 ![fridge-extend](client/public/lucy-fridge-recipe-extend.png)
 ### About us / Contact us footer dropdown(up) menus
-![contact-about](client/public/contact-about.png)
+![about-contact](client/public/about-contact.png)
 
 
 ## Technologies Used
@@ -191,9 +191,10 @@ I'd like to see a contact us page with the company's details.
 ## Future improvements
 * When a user arrives, they can't see the log out button
 * When the user signs in, they can only see the log out button, not create account or sign in options
-* User can filter recipes to 
-
-Aside from the practicalities, there is the fun aspect of the app too, thanks to the mystery-meal function. By choosing a mystery meal, the app provides the user with a random meal (of course according to their available ingredients) so they can consume a surprise meal that wasn't their option, or in some cases, might not even know what it is, or how it tastes, making the whole process a lot more fun and unpredictable.
+* User can filter recipes to show only the ones from a specific diet (lactose free, vegan, gluten free, low FODMAP etc.)
+* User can pick a random recipe that has all their ingredients and they have to make it
+* Instigate a forum section so users can share ideas, comment on recipes and build a Brains On Brioche community!
+* User can only sign up once with a specific email address
 
 ## The brains behind the brioche
 ###
