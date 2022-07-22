@@ -1,6 +1,22 @@
+<div align="center">
+
 # Brains On Brioche (B.O.B)
 
-| [![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | [![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description) | [![Demo](https://img.shields.io/badge/-Demo-inactive)](#demo) | [![Technologies used](https://img.shields.io/badge/-Technologies%20used-yellow)](#technologies-used) | [![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-blue)](#how-to-run-locally) | [![Card wall](https://img.shields.io/badge/-Card%20wall-orange)](#card-wall) | [![Team approach](https://img.shields.io/badge/-Team%20approach-informational)](#team-approach) | [![User stories](https://img.shields.io/badge/-User%20stories-green)](#user-stories) | [![Further User Stories](https://img.shields.io/badge/-Further%20User%20Stories-blueviolet)](#further-user-stories) | [![Minimum Viable Product](https://img.shields.io/badge/-%20Minimum%20Viable%20Product-lightgrey)](#minimum-viable-product-mvp) | [![Wireframes](https://img.shields.io/badge/-Wireframes-important)](#wireframes) | [![Edge cases](https://img.shields.io/badge/-Edge%20cases-brown)](#edge-cases) | [![Future improvements](https://img.shields.io/badge/-Future%20Improvements-skyblue)](#future-improvements) |
+[![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | 
+[![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description) | 
+[![Demo](https://img.shields.io/badge/-Demo-inactive)](#demo) | 
+[![Technologies used](https://img.shields.io/badge/-Technologies%20used-yellow)](#technologies-used) | 
+[![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-blue)](#how-to-run-locally) | 
+[![Card wall](https://img.shields.io/badge/-Card%20wall-orange)](#card-wall) | 
+[![Team approach](https://img.shields.io/badge/-Team%20approach-informational)](#team-approach) <br>
+[![User stories](https://img.shields.io/badge/-User%20stories-green)](#user-stories) | 
+[![Further User Stories](https://img.shields.io/badge/-Further%20User%20Stories-blueviolet)](#further-user-stories) | 
+[![Minimum Viable Product](https://img.shields.io/badge/-%20Minimum%20Viable%20Product-lightgrey)](#minimum-viable-product-mvp) | 
+[![Wireframes](https://img.shields.io/badge/-Wireframes-important)](#wireframes) | 
+[![Edge cases](https://img.shields.io/badge/-Edge%20cases-brown)](#edge-cases) | 
+[![Future improvements](https://img.shields.io/badge/-Future%20Improvements-skyblue)](#future-improvements)
+
+</div>
 
 ## Contributors:
 - [Alexandros Papagiannis](https://github.com/Alexandros91)
@@ -170,12 +186,15 @@ I'd like to see a contact us page with the company's details.
 ## Edge cases
 * Sign up with invalid input
 * Ingredients don't get saved if the user is not signed up/signed in
+* Clicking on a certain recipe, it shows only the recipe's information (ingredients, measurements and instructions)
 
 ## Future improvements
 * When a user arrives, they can't see the log out button
 * When the user signs in, they can only see the log out button, not create account or sign in options
-* 
+* User can filter recipes to 
 
 Aside from the practicalities, there is the fun aspect of the app too, thanks to the mystery-meal function. By choosing a mystery meal, the app provides the user with a random meal (of course according to their available ingredients) so they can consume a surprise meal that wasn't their option, or in some cases, might not even know what it is, or how it tastes, making the whole process a lot more fun and unpredictable.
 
+## The brains behind the brioche
+###
 ![Team B.o.B](client/public/team.jpg)
