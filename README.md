@@ -2,19 +2,19 @@
 
 # Brains On Brioche (B.O.B) 
 
-[![Contributors](https://img.shields.io/badge/-Contributors-brightgreen)](#contributors) | 
-[![Project description](https://img.shields.io/badge/-Project%20description-ff69b4)](#project-description) | 
-[![Demo](https://img.shields.io/badge/-Demo-inactive)](#demo) | 
-[![Technologies used](https://img.shields.io/badge/-Technologies%20used-yellow)](#technologies-used) | 
-[![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-blue)](#how-to-run-locally) | 
-[![Card wall](https://img.shields.io/badge/-Card%20wall-orange)](#card-wall) | 
-[![Team approach](https://img.shields.io/badge/-Team%20approach-informational)](#team-approach) <br>
-[![User stories](https://img.shields.io/badge/-User%20stories-green)](#user-stories) | 
-[![Further User Stories](https://img.shields.io/badge/-Further%20User%20Stories-blueviolet)](#further-user-stories) | 
-[![Minimum Viable Product](https://img.shields.io/badge/-%20Minimum%20Viable%20Product-lightgrey)](#minimum-viable-product-mvp) | 
-[![Wireframes](https://img.shields.io/badge/-Wireframes-important)](#wireframes) | 
-[![Edge cases](https://img.shields.io/badge/-Edge%20cases-brown)](#edge-cases) | 
-[![Future improvements](https://img.shields.io/badge/-Future%20Improvements-skyblue)](#future-improvements)
+[![Contributors](https://img.shields.io/badge/-Contributors-040f0f)](#contributors) | 
+[![Project description](https://img.shields.io/badge/-Project%20description-0e3013)](#project-description) | 
+[![Demo](https://img.shields.io/badge/-Demo-289944)](#demo) | 
+[![Technologies used](https://img.shields.io/badge/-Technologies%20used-abc798)](#technologies-used) | 
+[![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-ddeac1)](#how-to-run-locally) | 
+[![Card wall](https://img.shields.io/badge/-Card%20wall-abac7f)](#card-wall) | 
+[![Team approach](https://img.shields.io/badge/-Team%20approach-717744)](#team-approach) <br>
+[![User stories](https://img.shields.io/badge/-User%20stories-49111c)](#user-stories) | 
+[![Further User Stories](https://img.shields.io/badge/-Further%20user%20stories-ff0022)](#further-user-stories) | 
+[![Minimum Viable Product](https://img.shields.io/badge/-Minimum%20viable%20product-e8268e)](#minimum-viable-product-mvp) | 
+[![Wireframes](https://img.shields.io/badge/-Wireframes-f475c6)](#wireframes) | 
+[![Edge cases](https://img.shields.io/badge/-Edge%20cases-ffc4eb)](#edge-cases) | 
+[![Future improvements](https://img.shields.io/badge/-Future%20improvements-f8e9f2)](#future-improvements)
 
 </div>
 
