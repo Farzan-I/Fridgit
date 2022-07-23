@@ -2,23 +2,30 @@
 
 # Brains On Brioche (B.O.B) 
 
-[![Contributors](https://img.shields.io/badge/-Contributors-0e3013)](#contributors) | 
-[![Project description](https://img.shields.io/badge/-Project%20description-013220)](#project-description) | 
-[![Demo](https://img.shields.io/badge/-Demo-289944)](#demo) | 
-[![Technologies used](https://img.shields.io/badge/-Technologies%20used-brightgreen)](#technologies-used) | 
-[![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-green)](#how-to-run-locally) | 
-[![Card wall](https://img.shields.io/badge/-Card%20wall-yellowgreen)](#card-wall) | 
-[![Team approach](https://img.shields.io/badge/-Team%20approach-717744)](#team-approach) <br>
-[![User stories](https://img.shields.io/badge/-User%20stories-maroon)](#user-stories) | 
-[![Further User Stories](https://img.shields.io/badge/-Further%20user%20stories-e8268e)](#further-user-stories) | 
-[![Minimum Viable Product](https://img.shields.io/badge/-Minimum%20viable%20product-E75480)](#minimum-viable-product-mvp) | 
-[![Wireframes](https://img.shields.io/badge/-Wireframes-f475c6)](#wireframes) | 
-[![Edge cases](https://img.shields.io/badge/-Edge%20cases-ffc4eb)](#edge-cases) | 
-[![Future improvements](https://img.shields.io/badge/-Future%20improvements-f8e9f2)](#future-improvements)
+<img src="client/public/brioche_sliced.png" height="300">
+
+<br>
+<br>
+
+[![Contributors](https://img.shields.io/badge/-Contributors-gold)](#contributors) <br>
+[![Project description](https://img.shields.io/badge/-Project%20description-FF0000)](#project-description) | 
+[![Demo](https://img.shields.io/badge/-Demo-DC143C)](#demo) | 
+[![Technologies used](https://img.shields.io/badge/-Technologies%20used-e8268e)](#technologies-used) | 
+[![How to run locally](https://img.shields.io/badge/-How%20to%20run%20locally-E75480)](#how-to-run-locally) | 
+[![Card wall](https://img.shields.io/badge/-Card%20wall-f475c6)](#card-wall) | 
+[![Team approach](https://img.shields.io/badge/-Team%20approach-ffc4eb)](#team-approach) <br>
+[![User stories](https://img.shields.io/badge/-User%20stories-%23FFBE7C)](#user-stories) | 
+[![Further user stories](https://img.shields.io/badge/-Further%20user%20stories-%23FFA74F)](#further-user-stories) | 
+[![Minimum viable product](https://img.shields.io/badge/-Minimum%20viable%20product-%23FF9021)](#minimum-viable-product-mvp) | 
+[![Wireframes](https://img.shields.io/badge/-Wireframes-%23F27900)](#wireframes) | 
+[![Edge cases](https://img.shields.io/badge/-Edge%20cases-%23C46200)](#edge-cases) | 
+[![Future integrations](https://img.shields.io/badge/-Future%20integrations-%23964B00)](#future-integrations)
 
 </div>
 
-## Contributors:
+<br>
+
+## Contributors
 - [Alexandros Papagiannis](https://github.com/Alexandros91)
 - [Archie Martin](https://github.com/archiemartini)
 - [Farzan Imanzadeh](https://github.com/Farzan-I)
@@ -188,7 +195,7 @@ I'd like to see a contact us page with the company's details.
 * Ingredients don't get saved if the user is not signed up/signed in
 * Clicking on a certain recipe, it shows only the recipe's information (ingredients, measurements and instructions)
 
-## Future improvements
+## Future integrations
 * When a user arrives, they can't see the log out button
 * When the user signs in, they can only see the log out button, not create account or sign in options
 * User can filter recipes to show only the ones from a specific diet (lactose free, vegan, gluten free, low FODMAP etc.)
@@ -196,6 +203,5 @@ I'd like to see a contact us page with the company's details.
 * Instigate a forum section so users can share ideas, comment on recipes and build a Brains On Brioche community!
 * User can only sign up once with a specific email address
 
-## The brains behind the brioche
-###
+# The brains behind the brioche
 ![Team B.o.B](client/public/team.jpg)
