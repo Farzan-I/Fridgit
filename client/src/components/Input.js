@@ -35,7 +35,7 @@ const Input = () => {
 
   return (
     <div>
-      <div className="bold">
+      <div className="bold input-box">
         <h3>How do you want to use your ingredients?</h3>
         <div>
           <label class="switch">
@@ -43,10 +43,10 @@ const Input = () => {
             <span class="slider round"></span>
           </label>
         </div>
-        {isChecked ? "use as many as I can" : "see recipes I have all the ingredients for"}
+        {isChecked ? "Recipes I can potentially make" : "Recipes I have all the ingredients"}
       </div>
       <div>
-        <button className="what-for-dinner-button" onClick={handleSubmit}>What's for Dinner?</button>
+        <button className="what-for-dinner-button" onClick={handleSubmit}>What's on the menu?</button>
       </div>
     </div>
     

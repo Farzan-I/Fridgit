@@ -93,13 +93,13 @@ nav {
   left: 0px;
   top: 0px;
   /* background-color: #da7b93; */
-  background-color: rgba(218,123,147,0.3);
+  background-color: rgba(218, 123, 147, 0.821);
   /* background-image: linear-gradient(#950740, #c3073f); */
   display: flex;
   align-items: center;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   font-family: 'Sansita', cursive;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .nav--logo {
@@ -206,6 +206,16 @@ nav {
 
 /*-------------- fridge --------------*/
 
+/* .input-box {
+  /* background: #ffffffa5; */
+  /* padding: 15px; */
+  /* font-size: 19px;
+  font-family: 'Sansita', cursive;
+  text-shadow: 1px 1px rgb(255, 255, 255); */
+  /* color: #000000; */
+  /* -webkit-text-stroke: 0.1px rgb(255, 255, 255); */
+  /* text-shadow: #f6f6f6; */
+
 .fridge--container {
   display: flex;
   flex-direction: column;
@@ -215,7 +225,10 @@ nav {
   height: 90vh;
   width: 40vw;
   background-color: rgba(255, 255, 255, 0.15);
+  /* color: red; */
+  padding-bottom: 40px;
   /* overflow: scroll; */
+  /* border: solid 1px black; */
 }
 
 .meals-container {
@@ -243,6 +256,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 40px
   /* overflow-y: auto; */
 }
 
@@ -277,7 +291,7 @@ nav {
   /* border-style: solid; */
   /* border-width: 10px; */
   border-radius: 5px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.768);
   padding-top: 30px;
   padding-left: 70px;
   padding-right: 70px;
@@ -479,7 +493,6 @@ nav {
 }
 
 .input--header {
-  /* padding: 30px; */
   font-family: 'Lobster', cursive;
   color: #DA7B93;
 }
@@ -488,9 +501,7 @@ nav {
   width: 100%;
 }
 
-/* delete me, I mess things up */
 .search--container {
-  /* margin-top: 10px; */
   width: 100vw;
   display: flex;
   padding: 30px;
@@ -503,8 +514,6 @@ nav {
   max-width: 500px;
   margin-left: 5px;
   margin-top: 2px;
-  /* border-style: solid; */
-  /* border-width: 10px; */
   border-radius: 2px;
   background-color: white;
   padding: 30px;
@@ -518,15 +527,6 @@ nav {
   margin: 10px;
   /* padding: 5px; */
 }
-
-/* .about--link {
-  font-size: 25px;
-  text-align: right;
-}
-.contact--link {
-  font-size: 25px;
-  text-align: right;
-} */
 
 .app {
   display: flex;
@@ -600,7 +600,6 @@ nav {
 
 /* -------- signup -------- */
 
-
 .signup-form {
   margin-left: 25;
 }
@@ -623,7 +622,6 @@ nav {
   background-color: grey;
 }
 
-
 /*/ --------- dropdowns-container -------------/*/
 
 .main-drop-down-container {
@@ -638,8 +636,6 @@ nav {
   /* min-width: 30vw; */
   min-height: 90px;
 }
-
-
 
 /*/ --------- drop-down-sign-up -------------/*/
 
@@ -659,7 +655,6 @@ nav {
 }
 
 .main-drop-down-container {
-  
   display: flex;
   font-family: sans-serif;
   width: 30%;
@@ -667,8 +662,6 @@ nav {
   height: 5vh;
   z-index: 2;
   position: relative;
-  ;
-  
 }
 
 .dropDownSignUp-container {
@@ -783,12 +776,13 @@ nav {
   display: flex;
   justify-content: end;
   width: 100vw;
-  background-color: rgba(218,123,147,0.5);
+  background-color: rgba(218, 123, 147, 0.821);
   position: fixed;
   bottom: 0;
-  height: 2vh;
+  height: 4vh;
   padding-bottom: 30px;
   color: #3faffa;
+  font-family: 'Sansita', cursive;
   /* text-shadow: 0.5px 0.5px black; */
   text-shadow: 0.5px 0.5px black;
 }
@@ -817,9 +811,10 @@ nav {
     position: absolute;
     opacity: 1;
     border-radius: 30px;
-    padding: 10px;
+    padding: 7px;
+    padding-left: 10px;
     /* display: block; */
-    font-size: 12px;
+    font-size: 13px;
     height: 340px;
     width: 300px;
     bottom: 40px;
@@ -831,7 +826,7 @@ nav {
 
 .footer-title {
   color: #3faffa;
-  font-size: 14px;
+  font-size: 16px;
   text-shadow: 0.5px 0.5px black;
 }
 
@@ -904,6 +899,11 @@ input:checked + .slider:before {
 .form--button:hover, .what-for-dinner-button:hover,
 .footer-buttons:hover, .meal-card--image:hover {
   cursor:pointer;
+}
+
+.footer-buttons {
+  font-size: 22px;
+  /* text-style: bold; */
 }
 
 .bold-gray:hover {
