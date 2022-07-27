@@ -256,7 +256,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 40px
+  /* padding-bottom: 40px */
   /* overflow-y: auto; */
 }
 
