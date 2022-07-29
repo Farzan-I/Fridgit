@@ -80,15 +80,24 @@ In conclusion, we are extremely happy with our effort in building this app and t
 ## How to run locally
 
 ### Set up
+#### Initial set up
+**Before doing anything, please sign up to the [Rapid api for spoonacular](https://rapidapi.com/spoonacular/api/recipe-food-nutrition) and subscribe to the test api (providing your card details(won't be charged)) to be able to make your own authorisation token**
+
 1. Fork this repository (optional)
-2. Clone your fork (or this repo) to your local machine
+2. Clone your fork (or this repo) to your local machine 
 3. Navigate to the project directory in command line/terminal and run `npm install`
 4. Navigate to the server folder in a separate terminal using `cd server` and run `npm install`
-5. In another terminal, navigate to the client folder using `cd client` and run `npm install`
-6. With two terminals open (one in the server folder and the other in the client folder), run `npm start` in both, first in the server then in the client
-7. This starts the server connection (app to database, app to the API) and automatically opens the website to `localhost:3000`
-8. Create an account (if you want to store your fridge contents for later use) and start typing in the ingredients you want recipes for, one at a time please
-9. Click on the recipe you find most intriguing and maybe even adjust the search to show more adventurous recipes!
+5. In the same folder (server) create a `auth.js` file and put in it your authKey/API-Key obtained from Rapid Api's website in the following format:
+```
+const authKey = '<YOUR-AUTHKEY-IN-COMMAS>'
+
+export default authKey;
+```
+6. In another terminal, navigate to the client folder using `cd client` and run `npm install`
+7. With two terminals open (one in the server folder and the other in the client folder), run `npm start` in both, first in the server then in the client
+8. This starts the server connection (app to database, app to the API) and automatically opens the website to `localhost:3000`
+9. Create an account (if you want to store your fridge contents for later use) and start typing in the ingredients you want recipes for, one at a time please
+10. Click on the recipe you find most intriguing and maybe even adjust the search to show more adventurous recipes!
 
 #### Cypress Testing
 * To install Cypress enter the `npm install cypress --save-dev` command.
