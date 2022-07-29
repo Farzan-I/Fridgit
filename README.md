@@ -80,7 +80,7 @@ In conclusion, we are extremely happy with our effort in building this app and t
 ## How to run locally
 
 ### Set up
-#### Initial set up
+
 **Before doing anything, please sign up to the [Rapid api for spoonacular](https://rapidapi.com/spoonacular/api/recipe-food-nutrition) and subscribe to the test api (providing your card details(won't be charged)) to be able to make your own authorisation token**
 
 1. Fork this repository (optional)
