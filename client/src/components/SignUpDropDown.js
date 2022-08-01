@@ -38,9 +38,9 @@ export default function SignUpDropDown() {
   const toggling = () => setIsOpen(!isOpen);
   
   return (
-    <div className="main-drop-down-container">
+    <div className="main-drop-down-container" >
       <div className="drop-down-container">
-        <div className="drop-down-header" onClick={toggling}>
+        <div className="drop-down-header" onClick={toggling} data-cy="signup-dropdown">
        {"Create Account"}
         </div>
         {isOpen && (

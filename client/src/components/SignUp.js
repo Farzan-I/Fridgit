@@ -22,6 +22,7 @@ const SignUp = ({Signup, error}) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input 
+          data-cy="signup-username"
           type="text"
           name="username"
           className="drop-down-list-item"
@@ -30,6 +31,7 @@ const SignUp = ({Signup, error}) => {
           value={userData.userName} onChange={e => setUserData({...userData, userName: e.target.value})}
         />
         <input 
+          data-cy="signup-password"
           type="password"
           name="password"
           className="drop-down-list-item"
@@ -38,6 +40,7 @@ const SignUp = ({Signup, error}) => {
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
         <input 
+          data-cy="signup-email"
           type="email"
           name="email"
           className="drop-down-list-item"
@@ -45,7 +48,7 @@ const SignUp = ({Signup, error}) => {
           required
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
-        <button className="drop-down-list-item">Signup</button>
+        <button className="drop-down-list-item" data-cy="signup-button">Signup</button>
       </form>
     </div>
   );
