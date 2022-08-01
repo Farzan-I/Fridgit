@@ -14,8 +14,8 @@ export default function Navbar() {
         <div className="logo-and-title">
           <img className="nav--logo" src='./brioche_sliced.png' alt="logo"></img>
           <div className="nav-title-and-slogan"> 
-            <h1 className="nav--title">Brains On Brioche</h1>
-            <h5 className="nav-slogan">The no-waste revolution</h5>
+            <h1 className="nav--title" data-cy="nav-title">Brains On Brioche</h1>
+            <h5 className="nav-slogan" data-cy="nav--slogan">The no-waste revolution</h5>
           </div>
         </div>    
         {/* <div className="nav--username--container">
