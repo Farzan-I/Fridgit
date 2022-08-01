@@ -46,7 +46,7 @@ const Input = () => {
         {isChecked ? "Recipes I can potentially make" : "Recipes I have all the ingredients"}
       </div>
       <div>
-        <button className="what-for-dinner-button" onClick={handleSubmit}>What's on the menu?</button>
+        <button data-cy="recipe-search-button" className="what-for-dinner-button" onClick={handleSubmit}>What's on the menu?</button>
       </div>
     </div>
     

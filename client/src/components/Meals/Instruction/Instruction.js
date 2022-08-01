@@ -18,13 +18,13 @@ const Instruction = (props) => {
     })
   
   return (
-    <div className="recipe--instructions">
+    <div className="recipe--instructions" data-cy="recipe-instructions">
       <h1> Instructions:</h1>
       {instructionList}
     </div>
   )
 } else {
-  return (<div className="recipe--instructions">
+  return (<div className="recipe--instructions" data-cy="recipe-instructions">
     <h1 className="instructions-title">Instructions:</h1>
     <p >Sorry this recipe does not have any available instructions. Please visit:</p>
     <a href={props.sourceUrl}>{props.sourceUrl}</a>

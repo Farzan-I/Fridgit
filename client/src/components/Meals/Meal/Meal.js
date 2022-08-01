@@ -23,8 +23,8 @@ export default function Meal(props) {
 
   return (
     <div className="meal-card">
-        <div className="meal--title">{props.title}</div>
-        <div className="meal-card--info" onClick={handleClick}>
+        <div className="meal--title" data-cy="meal--title">{props.title}</div>
+        <div className="meal-card--info" data-cy="meal-card-info" onClick={handleClick}>
           <img className="meal-card--image" src={props.image} alt="meal"></img>
       
         </div>

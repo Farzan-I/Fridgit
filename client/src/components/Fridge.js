@@ -94,13 +94,14 @@ const missedIngredients = props.selectedMeal.missedIngredients.map((ingredient) 
           <div className="fridge-session-form-subcontainer">
             <form className="fridge-session-form" onSubmit={handleSubmit}>
             <input
+              data-cy="recipe-search"
               type="text"
               className="form--input"
               placeholder="add ingredient..."
               value={fridgeItem.item} 
               onChange={(event) => setFridgeItem({...fridgeItem, item: event.target.value})}
             />
-            <input type="submit" className="form--button"/>
+            <input type="submit" className="form--button" data-cy="ingredient-button"/>
 
             </form>
           </div>

@@ -14,7 +14,7 @@ export default function Measures(props) {
     )
   })
   return (
-    <div className="recipe--instructions">
+    <div className="recipe--instructions" data-cy="recipe-measurements">
       <h1>Ingredient Summary:</h1>
         {summaryPoints}
       <h2>Credit:</h2>
