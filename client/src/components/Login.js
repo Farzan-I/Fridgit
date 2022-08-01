@@ -25,6 +25,7 @@ const Login = (props, {Login, error}) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input 
+          data-cy="login-email"
           type="email"
           name="email"
           className="drop-down-list-item"
@@ -33,6 +34,7 @@ const Login = (props, {Login, error}) => {
           value={userData.email} onChange={e => setUserData({...userData, email: e.target.value})} 
         />
         <input 
+          data-cy="login-password"
           type="password"
           name="password"
           className="drop-down-list-item"
@@ -40,7 +42,7 @@ const Login = (props, {Login, error}) => {
           required
           value={userData.password} onChange={e => setUserData({...userData, password: e.target.value})}
         />
-        <button className="drop-down-list-item">Login</button>
+        <button className="drop-down-list-item" data-cy='login-button'>Login</button>
       </form>
     </div>
   );

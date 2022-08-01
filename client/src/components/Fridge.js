@@ -87,8 +87,8 @@ const missedIngredients = props.selectedMeal.missedIngredients.map((ingredient) 
         <div className="fridge--add-form">
         </div>
         <div className="fridge--contents">
-        <div className="welcome-container">
-        {userState.userName && <h2 className="welcome">Hi, {userState.userName[0].toUpperCase() + userState.userName.substring(1)},<br></br>
+        <div className="welcome-container" >
+        {userState.userName && <h2 className="welcome" data-cy="nav-username">Hi, {userState.userName[0].toUpperCase() + userState.userName.substring(1)},<br></br>
               here's what's in your fridge!</h2>}
           </div>
           <div className="fridge-session-form-subcontainer">

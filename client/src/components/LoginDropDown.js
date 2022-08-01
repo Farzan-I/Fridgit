@@ -40,7 +40,7 @@ export default function LoginDropDown() {
   return (
     <div className="main-drop-down-container">
       <div className="drop-down-container">
-        <div className="drop-down-header" onClick={toggling}>
+        <div className="drop-down-header" onClick={toggling} data-cy="login-dropdown">
        {"Login"}
         </div>
         {isOpen && (
