@@ -2,8 +2,6 @@
 
 # Brains On Brioche (B.O.B) 
 
-<img src="client/public/brioche_sliced.png" height="300">
-
 <br>
 <br>
 
@@ -33,15 +31,13 @@
 - [Stevie Spiegl](https://github.com/S-Spiegl)
 
 ## Project description
-Welcome to Brains On Brioche (B.O.B), the food web application we built as our final group project of the Makers Academy bootcamp during weeks 11 and 12. We designed and developed a web app where a user can enter some ingredients at their disposal and get access to a wide range of meal recipes that they can prepare using their instructions.
+Welcome to Brains On Brioche (BoB), our final engineering project of the Makers Academy bootcamp. BoB is a web app that keeps track of the contents of a user's pantry and provides them with a range of exciting recipes. 
 
-As a team, we thought an app like this would be useful for many different reasons. Food waste is real and it results in a financial burden for everyone. This is where B.O.B comes to the rescue. If frequently used, it can help minimise food waste significantly as it encourages you to use the ingredients at your disposal. From salmon and marmite to pork and peanut butter, we got it covered. For those who want to cook their food themselves, whether they're on a specific diet such as low FODMAP, gluten free or anything in between, B.O.B provides the basis for anyone seeking to make the most of their fridge leftovers and create something that brings restaurant quality food to their dinner table.
+Food waste is a growing problem with a significant carbon footprint. Every kilogram of food that goes in the bin represents over 2.5kg of CO<sub>2</sub> emissions in terms of the resources that went into producing it. Furthermore, once that food reaches landfill, it breaks down to produce methane, a greenhouse gas 25 times more potent than CO<sub>2</sub>. Apart from its impact on the planet, food waste also represents a financial burden, while making interesting meals on a budget can be challenging. Against the backdrop of growing inflation, energy crises, and a global food crisis, technology represents an important method of ameliorating this situation on a personal level. By allowing a user to keep track of food in their kitchen, BoB injects variety into mealtime. If frugality is key, a user can set the search to prioritise recipes that require the fewest additional ingredients; if the aim is to use up food, the user can have the search bring back recipes that use up the most ingredients (but which may also result in buying more).  In addition to the basic info such as ingredients and instructions, BoB also takes into account special dietary requirements, allowing a user to check whether a meal is gluten-free, low FODMAP etc. 
 
-We managed to implement into our web app an external API from [Spoonacular](https://spoonacular.com/food-api) that contains thousands of recipes from many different cuisines, so the user can find recipes even with ingredients that at first glance may look like they could not be combined. Even users who can actually cook, by using this web app, they can find many alternative options and prepare meals that they didn't even know existed from all around the world, thus having a nice break from their usual meals and adding much more variety to their diet.
+The app uses an external API from [Spoonacular](https://spoonacular.com/food-api) to access thousands of recipes from many different cuisines, so the user can find recipes even with ingredients that at first glance might seem completely incompatible. Whether you're the kind of person who struggles to boil an egg, or you're waiting for your michelin star, BoB has something for you. Upon signing up, a user is able to add items to their 'fridge' and save them there (or, in reality, in our cloud-hosted database). They can add and remove items as is required to build an accurate picture of what is at their disposal. 
 
-We've also implemented another feature of our app that the user can sign up and have their own 'fridge' which contains all the ingredients they have. This way they can enter the ingredients they have in their fridge, without having to interact with the search bar everytime. Their ingredients get saved in our database and make it a lot more convenient for the user as they can log out and come back to their pre-made 'fridge'!
-
-In conclusion, we are extremely happy with our effort in building this app and the features we managed to include. In total, we had a great time, of course with our highs and lows, while working on this and we are very pleased with our final product. We hope the users of our app will find it equally useful and fun to use. We are more than open to hear your opinion and any constructive crisicism that would improve our program even further. 
+We had a great time building this app, and we hope you will find it equally useful and fun to use. We are more than open to hear your opinion and any constructive crisicism that would improve our program even further. 
 
 ## Demo
 ### Home page
@@ -81,7 +77,7 @@ In conclusion, we are extremely happy with our effort in building this app and t
 
 ### Set up
 
-**Before doing anything, please sign up to the [Rapid api for spoonacular](https://rapidapi.com/spoonacular/api/recipe-food-nutrition) and subscribe to the test api (providing your card details(won't be charged)) to be able to make your own authorisation token**
+**Before doing anything, please sign up to the [Rapid api for spoonacular](https://rapidapi.com/spoonacular/api/recipe-food-nutrition) and subscribe to the test api to be able to make your own authorisation token (this requires submitting your card details - please note that there is an initial small charge, and that there are limits to how many API calls you can make in a day before being charged)**
 
 1. Fork this repository (optional)
 2. Clone your fork (or this repo) to your local machine 
