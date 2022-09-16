@@ -1,6 +1,8 @@
 <div align="center">
 
 # Brains On Brioche (B.O.B) 
+  
+<img src="client/public/brioche_sliced.png" height="300">
 
 <br>
 <br>
