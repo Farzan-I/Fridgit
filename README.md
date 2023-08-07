@@ -43,7 +43,7 @@ We had a great time building this app, and we hope you will find it equally usef
 
 ## Demo
 
-Full live demo of the website can be found on [YouTube](https://www.youtube.com/watch?v=Q8ubu80GSio).
+Due to the high running costs of the Spoonacular API, we have taken a team decision to take down the website. The full live demo of Brains on Brioche can be found on [YouTube](https://www.youtube.com/watch?v=Q8ubu80GSio).
 
 ### Home page
 ![home](client/public/1-home-page.png)
